@@ -1,0 +1,26 @@
+object fTeste: TfTeste
+  Left = 943
+  Height = 494
+  Top = 144
+  Width = 357
+  Caption = 'Teste Programa'
+  ClientHeight = 494
+  ClientWidth = 357
+  LCLVersion = '2.2.2.0'
+  object button: TButton
+    Left = 248
+    Height = 23
+    Top = 67
+    Width = 75
+    Caption = 'Enviar'
+    OnClick = buttonClick
+    TabOrder = 0
+  end
+  object input: TEdit
+    Left = 40
+    Height = 23
+    Top = 67
+    Width = 192
+    TabOrder = 1
+  end
+end
