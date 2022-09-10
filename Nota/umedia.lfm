@@ -1,0 +1,139 @@
+object Form1: TForm1
+  Left = 988
+  Height = 541
+  Top = 114
+  Width = 341
+  Caption = 'Form1'
+  ClientHeight = 541
+  ClientWidth = 341
+  LCLVersion = '2.2.2.0'
+  object input1: TEdit
+    Left = 256
+    Height = 23
+    Top = 64
+    Width = 64
+    TabOrder = 0
+  end
+  object input2: TEdit
+    Left = 256
+    Height = 23
+    Top = 104
+    Width = 64
+    TabOrder = 1
+  end
+  object input3: TEdit
+    Left = 256
+    Height = 23
+    Top = 144
+    Width = 64
+    TabOrder = 2
+  end
+  object input4: TEdit
+    Left = 256
+    Height = 23
+    Top = 184
+    Width = 64
+    TabOrder = 3
+  end
+  object button: TButton
+    Left = 256
+    Height = 24
+    Top = 264
+    Width = 64
+    Caption = 'Calcular'
+    OnClick = buttonClick
+    TabOrder = 4
+  end
+  object resMedia: TEdit
+    Left = 240
+    Height = 23
+    Top = 376
+    Width = 85
+    TabOrder = 5
+  end
+  object inputFaltas: TEdit
+    Left = 216
+    Height = 23
+    Top = 224
+    Width = 104
+    TabOrder = 6
+  end
+  object resTxt: TEdit
+    Left = 24
+    Height = 23
+    Top = 488
+    Width = 301
+    TabOrder = 7
+  end
+  object resFaltas: TEdit
+    Left = 240
+    Height = 23
+    Top = 416
+    Width = 85
+    TabOrder = 8
+  end
+  object Label1: TLabel
+    Left = 24
+    Height = 15
+    Top = 64
+    Width = 63
+    Caption = '1° Bimestre:'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 24
+    Height = 15
+    Top = 104
+    Width = 63
+    Caption = '2° Bimestre:'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 24
+    Height = 15
+    Top = 144
+    Width = 63
+    Caption = '3° Bimestre:'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 24
+    Height = 15
+    Top = 184
+    Width = 63
+    Caption = '4° Bimestre:'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 40
+    Height = 15
+    Top = 224
+    Width = 33
+    Caption = 'Faltas:'
+    ParentColor = False
+  end
+  object Label6: TLabel
+    Left = 24
+    Height = 15
+    Top = 376
+    Width = 64
+    Caption = 'Média Total:'
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 40
+    Height = 15
+    Top = 416
+    Width = 30
+    Caption = 'Faltas'
+    ParentColor = False
+  end
+  object Label8: TLabel
+    Left = 128
+    Height = 15
+    Top = 464
+    Width = 83
+    Caption = 'Resultado Final:'
+    ParentColor = False
+  end
+end

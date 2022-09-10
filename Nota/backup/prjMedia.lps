@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="prjMedia.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="23"/>
+      </Unit>
+      <Unit>
+        <Filename Value="umedia.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uMedia"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="87"/>
+        <CursorPos X="40" Y="90"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="38" Column="55" TopLine="30"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="43" Column="12" TopLine="34"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="56" Column="3" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="55" Column="61" TopLine="46"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="57" Column="32" TopLine="46"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="55" Column="12" TopLine="43"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="49" Column="16" TopLine="43"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="58" Column="31" TopLine="49"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="56" Column="3" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="58" Column="33" TopLine="44"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="55" Column="3" TopLine="46"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="48" Column="43" TopLine="46"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="49" Column="43" TopLine="47"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="50" Column="43" TopLine="48"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="47" Column="5" TopLine="44"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="52" Column="15" TopLine="39"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="49" Column="5" TopLine="43"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="56" Column="45" TopLine="41"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="78" Column="14" TopLine="66"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="82" Column="6" TopLine="70"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="75" Column="42" TopLine="65"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="79" Column="42" TopLine="68"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="80" Column="42" TopLine="69"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="81" Column="42" TopLine="70"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="82" Column="42" TopLine="71"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="83" Column="42" TopLine="72"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="84" Column="42" TopLine="73"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="85" Column="42" TopLine="74"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="87" Column="42" TopLine="76"/>
+      </Position>
+      <Position>
+        <Filename Value="umedia.pas"/>
+        <Caret Line="96" Column="3" TopLine="86"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

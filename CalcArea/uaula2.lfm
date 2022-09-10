@@ -1,0 +1,49 @@
+object fAula2: TfAula2
+  Left = 1008
+  Height = 240
+  Top = 122
+  Width = 320
+  Caption = 'fAula2'
+  ClientHeight = 240
+  ClientWidth = 320
+  LCLVersion = '2.2.2.0'
+  object input1: TEdit
+    Left = 96
+    Height = 23
+    Top = 56
+    Width = 146
+    TabOrder = 0
+  end
+  object calc: TButton
+    Left = 184
+    Height = 27
+    Top = 88
+    Width = 61
+    Caption = 'Calcular'
+    OnClick = calcClick
+    TabOrder = 1
+  end
+  object Label1: TLabel
+    Left = 32
+    Height = 15
+    Top = 56
+    Width = 27
+    Caption = 'Area:'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 32
+    Height = 15
+    Top = 160
+    Width = 55
+    Caption = 'Resultado:'
+    ParentColor = False
+  end
+  object res: TEdit
+    Left = 96
+    Height = 23
+    Top = 160
+    Width = 146
+    TabOrder = 2
+  end
+end

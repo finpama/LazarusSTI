@@ -1,0 +1,54 @@
+object Form1: TForm1
+  Left = 998
+  Height = 541
+  Top = 122
+  Width = 341
+  Caption = 'Form1'
+  ClientHeight = 541
+  ClientWidth = 341
+  LCLVersion = '2.2.2.0'
+  object input1: TEdit
+    Left = 24
+    Height = 23
+    Top = 24
+    Width = 160
+    TabOrder = 0
+  end
+  object input2: TEdit
+    Left = 24
+    Height = 23
+    Top = 64
+    Width = 160
+    TabOrder = 1
+  end
+  object input3: TEdit
+    Left = 24
+    Height = 23
+    Top = 104
+    Width = 160
+    TabOrder = 2
+  end
+  object input4: TEdit
+    Left = 24
+    Height = 23
+    Top = 144
+    Width = 160
+    TabOrder = 3
+  end
+  object button: TButton
+    Left = 24
+    Height = 24
+    Top = 192
+    Width = 64
+    Caption = 'Calcular'
+    OnClick = buttonClick
+    TabOrder = 4
+  end
+  object res: TEdit
+    Left = 99
+    Height = 23
+    Top = 193
+    Width = 85
+    TabOrder = 5
+  end
+end
