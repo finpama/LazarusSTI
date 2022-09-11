@@ -12,83 +12,24 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="22"/>
       </Unit>
       <Unit>
         <Filename Value="usalario.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="SalarioForm"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uSalario"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="98"/>
-        <CursorPos X="23" Y="110"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="146"/>
+        <CursorPos X="48" Y="162"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="usalario.pas"/>
-        <Caret Line="36" Column="16" TopLine="22"/>
-      </Position>
-      <Position>
-        <Filename Value="usalario.pas"/>
-        <Caret Line="35" Column="16" TopLine="22"/>
-      </Position>
-      <Position>
-        <Filename Value="usalario.pas"/>
-        <Caret Line="34" Column="16" TopLine="21"/>
-      </Position>
-      <Position>
-        <Filename Value="usalario.pas"/>
-        <Caret Line="33" Column="16" TopLine="20"/>
-      </Position>
-      <Position>
-        <Filename Value="usalario.pas"/>
-        <Caret Line="32" Column="16" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="usalario.pas"/>
-        <Caret Line="31" Column="16" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="usalario.pas"/>
-        <Caret Line="35" Column="16" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="usalario.pas"/>
-        <Caret Line="39" Column="16" TopLine="23"/>
-      </Position>
-      <Position>
-        <Filename Value="usalario.pas"/>
-        <Caret Line="43" Column="16" TopLine="27"/>
-      </Position>
-      <Position>
-        <Filename Value="usalario.pas"/>
-        <Caret Line="64" Column="16" TopLine="48"/>
-      </Position>
-      <Position>
-        <Filename Value="usalario.pas"/>
-        <Caret Line="81" Column="3" TopLine="68"/>
-      </Position>
-      <Position>
-        <Filename Value="usalario.pas"/>
-        <Caret Line="82" Column="3" TopLine="69"/>
-      </Position>
-      <Position>
-        <Filename Value="usalario.pas"/>
-        <Caret Line="83" Column="3" TopLine="70"/>
-      </Position>
-      <Position>
-        <Filename Value="usalario.pas"/>
-        <Caret Line="84" Column="3" TopLine="71"/>
-      </Position>
-      <Position>
-        <Filename Value="usalario.pas"/>
-        <Caret Line="85" Column="3" TopLine="72"/>
-      </Position>
       <Position>
         <Filename Value="usalario.pas"/>
         <Caret Line="88" TopLine="74"/>
@@ -108,10 +49,6 @@
       <Position>
         <Filename Value="usalario.pas"/>
         <Caret Line="107" Column="6" TopLine="96"/>
-      </Position>
-      <Position>
-        <Filename Value="usalario.pas"/>
-        <Caret Line="38" Column="23" TopLine="67"/>
       </Position>
       <Position>
         <Filename Value="usalario.pas"/>
@@ -148,6 +85,70 @@
       <Position>
         <Filename Value="usalario.pas"/>
         <Caret Line="107" Column="11" TopLine="99"/>
+      </Position>
+      <Position>
+        <Filename Value="usalario.pas"/>
+        <Caret Line="137" Column="60" TopLine="131"/>
+      </Position>
+      <Position>
+        <Filename Value="usalario.pas"/>
+        <Caret Line="110" Column="48" TopLine="96"/>
+      </Position>
+      <Position>
+        <Filename Value="usalario.pas"/>
+        <Caret Line="111" Column="21" TopLine="104"/>
+      </Position>
+      <Position>
+        <Filename Value="usalario.pas"/>
+        <Caret Line="113" Column="21" TopLine="106"/>
+      </Position>
+      <Position>
+        <Filename Value="usalario.pas"/>
+        <Caret Line="116" Column="21" TopLine="109"/>
+      </Position>
+      <Position>
+        <Filename Value="usalario.pas"/>
+        <Caret Line="138" Column="62" TopLine="130"/>
+      </Position>
+      <Position>
+        <Filename Value="usalario.pas"/>
+        <Caret Line="137" Column="56" TopLine="130"/>
+      </Position>
+      <Position>
+        <Filename Value="usalario.pas"/>
+        <Caret Line="135" TopLine="127"/>
+      </Position>
+      <Position>
+        <Filename Value="usalario.pas"/>
+        <Caret Line="148" Column="51" TopLine="146"/>
+      </Position>
+      <Position>
+        <Filename Value="usalario.pas"/>
+        <Caret Line="154" TopLine="143"/>
+      </Position>
+      <Position>
+        <Filename Value="usalario.pas"/>
+        <Caret Line="150" Column="54" TopLine="144"/>
+      </Position>
+      <Position>
+        <Filename Value="usalario.pas"/>
+        <Caret Line="111" Column="30" TopLine="96"/>
+      </Position>
+      <Position>
+        <Filename Value="usalario.pas"/>
+        <Caret Line="117" Column="46" TopLine="98"/>
+      </Position>
+      <Position>
+        <Filename Value="usalario.pas"/>
+        <Caret Line="104" Column="11" TopLine="93"/>
+      </Position>
+      <Position>
+        <Filename Value="usalario.pas"/>
+        <Caret Line="113" Column="48" TopLine="99"/>
+      </Position>
+      <Position>
+        <Filename Value="usalario.pas"/>
+        <Caret Line="151" Column="12" TopLine="136"/>
       </Position>
     </JumpHistory>
     <RunParams>

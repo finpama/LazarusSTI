@@ -90,7 +90,7 @@ function TSalarioForm.calcLiquido(bru:Double; des:Double):Double;
 var
   liq, reducao: Double;
 begin
-  reducao := (bru * des)* 100;
+  reducao := (bru * des)/ 100;
   liq := bru - reducao;
 
   result := liq
@@ -100,16 +100,68 @@ end;
 
 procedure TSalarioForm.calcularClick(Sender: TObject);
 var
-  brutos: array[0..11] of Integer;
-
+  brutoMes, descontoMes, liquidoMes: array[1..12] of TEdit;
+  brutoTotal, descontoTotal, liquidoTotal: Double;
   i: Integer;
-begin
-   i := 0;
-   while i < 11 do
-   begin
 
-      i := i+1;
+begin
+   brutoMes[1] := janBruto;
+   brutoMes[2] := fevBruto;
+   brutoMes[3] := marBruto;
+   brutoMes[4] := abrBruto;
+   brutoMes[5] := maiBruto;
+   brutoMes[6] := junBruto;
+   brutoMes[7] := julBruto;
+   brutoMes[8] := agoBruto;
+   brutoMes[9] := setBruto;
+   brutoMes[10] := outBruto;
+   brutoMes[11] := novBruto;
+   brutoMes[12] := dezBruto;
+   brutoTotal := 0;
+
+   descontoMes[1] := janDesconto;
+   descontoMes[2] := fevDesconto;
+   descontoMes[3] := marDesconto;
+   descontoMes[4] := abrDesconto;
+   descontoMes[5] := maiDesconto;
+   descontoMes[6] := junDesconto;
+   descontoMes[7] := julDesconto;
+   descontoMes[8] := agoDesconto;
+   descontoMes[9] := setDesconto;
+   descontoMes[10] := outDesconto;
+   descontoMes[11] := novDesconto;
+   descontoMes[12] := dezDesconto; 
+   descontoTotal := 0;
+
+   liquidoMes[1] := janLiquido;
+   liquidoMes[2] := fevLiquido;
+   liquidoMes[3] := marLiquido;
+   liquidoMes[4] := abrLiquido;
+   liquidoMes[5] := maiLiquido;
+   liquidoMes[6] := junLiquido;
+   liquidoMes[7] := julLiquido;
+   liquidoMes[8] := agoLiquido;
+   liquidoMes[9] := setLiquido;
+   liquidoMes[10] := outLiquido;
+   liquidoMes[11] := novLiquido;
+   liquidoMes[12] := dezLiquido;  
+   liquidoTotal := 0;
+
+   i := 1;
+   while i<12 do
+   begin
+       liquidoMes[i].Text := FloatToStr(calcLiquido(StrToFloat(brutoMes[i].Text), StrToFloat(descontoMes[i].Text)));
+
+       brutoTotal := brutoTotal + StrToFloat(brutoMes[i].Text);
+       descontoTotal := descontoTotal + StrToFloat(descontoMes[i].Text);
+       liquidoTotal := liquidoTotal + StrToFloat(liquidoMes[i].Text);
+
+       i := i+1;
    end;
+
+   totalBruto.Text := FloatToStr(brutoTotal);
+   totalDesconto.Text := FloatToStr(descontoTotal);
+   totalLiquido.Text := FloatToStr(liquidoTotal);
 
 end;
 

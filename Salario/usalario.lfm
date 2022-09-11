@@ -1,11 +1,11 @@
 object SalarioForm: TSalarioForm
-  Left = 1006
-  Height = 562
-  Top = 114
-  Width = 320
+  Left = 235
+  Height = 546
+  Top = 144
+  Width = 352
   Caption = 'Calculo De Salário'
-  ClientHeight = 562
-  ClientWidth = 320
+  ClientHeight = 546
+  ClientWidth = 352
   LCLVersion = '2.2.2.0'
   object Label1: TLabel
     Left = 16
@@ -20,21 +20,27 @@ object SalarioForm: TSalarioForm
     Height = 23
     Top = 32
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 0
+    Text = '0'
   end
   object janDesconto: TEdit
     Left = 176
     Height = 23
     Top = 32
     Width = 40
+    Alignment = taRightJustify
     TabOrder = 1
+    Text = '0'
   end
   object janLiquido: TEdit
     Left = 232
     Height = 23
     Top = 32
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 2
+    Text = '0'
   end
   object Label2: TLabel
     Left = 16
@@ -49,21 +55,27 @@ object SalarioForm: TSalarioForm
     Height = 23
     Top = 64
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 3
+    Text = '0'
   end
   object fevDesconto: TEdit
     Left = 176
     Height = 23
     Top = 64
     Width = 40
+    Alignment = taRightJustify
     TabOrder = 4
+    Text = '0'
   end
   object fevLiquido: TEdit
     Left = 232
     Height = 23
     Top = 64
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 5
+    Text = '0'
   end
   object Label3: TLabel
     Left = 16
@@ -78,21 +90,27 @@ object SalarioForm: TSalarioForm
     Height = 23
     Top = 96
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 6
+    Text = '0'
   end
   object marDesconto: TEdit
     Left = 176
     Height = 23
     Top = 96
     Width = 40
+    Alignment = taRightJustify
     TabOrder = 7
+    Text = '0'
   end
   object marLiquido: TEdit
     Left = 232
     Height = 23
     Top = 96
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 8
+    Text = '0'
   end
   object Label4: TLabel
     Left = 16
@@ -107,21 +125,27 @@ object SalarioForm: TSalarioForm
     Height = 23
     Top = 128
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 9
+    Text = '0'
   end
   object abrDesconto: TEdit
     Left = 176
     Height = 23
     Top = 128
     Width = 40
+    Alignment = taRightJustify
     TabOrder = 10
+    Text = '0'
   end
   object abrLiquido: TEdit
     Left = 232
     Height = 23
     Top = 128
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 11
+    Text = '0'
   end
   object Label5: TLabel
     Left = 16
@@ -136,21 +160,27 @@ object SalarioForm: TSalarioForm
     Height = 23
     Top = 160
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 12
+    Text = '0'
   end
   object maiDesconto: TEdit
     Left = 176
     Height = 23
     Top = 160
     Width = 40
+    Alignment = taRightJustify
     TabOrder = 13
+    Text = '0'
   end
   object maiLiquido: TEdit
     Left = 232
     Height = 23
     Top = 160
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 14
+    Text = '0'
   end
   object Label6: TLabel
     Left = 16
@@ -165,21 +195,27 @@ object SalarioForm: TSalarioForm
     Height = 23
     Top = 192
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 15
+    Text = '0'
   end
   object junDesconto: TEdit
     Left = 176
     Height = 23
     Top = 192
     Width = 40
+    Alignment = taRightJustify
     TabOrder = 16
+    Text = '0'
   end
   object junLiquido: TEdit
     Left = 232
     Height = 23
     Top = 192
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 17
+    Text = '0'
   end
   object Label7: TLabel
     Left = 16
@@ -194,21 +230,27 @@ object SalarioForm: TSalarioForm
     Height = 23
     Top = 224
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 18
+    Text = '0'
   end
   object julDesconto: TEdit
     Left = 176
     Height = 23
     Top = 224
     Width = 40
+    Alignment = taRightJustify
     TabOrder = 19
+    Text = '0'
   end
   object julLiquido: TEdit
     Left = 232
     Height = 23
     Top = 224
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 20
+    Text = '0'
   end
   object Label8: TLabel
     Left = 16
@@ -223,21 +265,27 @@ object SalarioForm: TSalarioForm
     Height = 23
     Top = 256
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 21
+    Text = '0'
   end
   object agoDesconto: TEdit
     Left = 176
     Height = 23
     Top = 256
     Width = 40
+    Alignment = taRightJustify
     TabOrder = 22
+    Text = '0'
   end
   object agoLiquido: TEdit
     Left = 232
     Height = 23
     Top = 256
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 23
+    Text = '0'
   end
   object Label9: TLabel
     Left = 16
@@ -252,21 +300,27 @@ object SalarioForm: TSalarioForm
     Height = 23
     Top = 288
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 24
+    Text = '0'
   end
   object setDesconto: TEdit
     Left = 176
     Height = 23
     Top = 288
     Width = 40
+    Alignment = taRightJustify
     TabOrder = 25
+    Text = '0'
   end
   object setLiquido: TEdit
     Left = 232
     Height = 23
     Top = 288
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 26
+    Text = '0'
   end
   object Label10: TLabel
     Left = 16
@@ -281,21 +335,27 @@ object SalarioForm: TSalarioForm
     Height = 23
     Top = 320
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 27
+    Text = '0'
   end
   object outDesconto: TEdit
     Left = 176
     Height = 23
     Top = 320
     Width = 40
+    Alignment = taRightJustify
     TabOrder = 28
+    Text = '0'
   end
   object outLiquido: TEdit
     Left = 232
     Height = 23
     Top = 320
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 29
+    Text = '0'
   end
   object Label11: TLabel
     Left = 16
@@ -310,21 +370,27 @@ object SalarioForm: TSalarioForm
     Height = 23
     Top = 352
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 30
+    Text = '0'
   end
   object novDesconto: TEdit
     Left = 176
     Height = 23
     Top = 352
     Width = 40
+    Alignment = taRightJustify
     TabOrder = 31
+    Text = '0'
   end
   object novLiquido: TEdit
     Left = 232
     Height = 23
     Top = 352
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 32
+    Text = '0'
   end
   object Label12: TLabel
     Left = 16
@@ -339,21 +405,27 @@ object SalarioForm: TSalarioForm
     Height = 23
     Top = 384
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 33
+    Text = '0'
   end
   object dezDesconto: TEdit
     Left = 176
     Height = 23
     Top = 384
     Width = 40
+    Alignment = taRightJustify
     TabOrder = 34
+    Text = '0'
   end
   object dezLiquido: TEdit
     Left = 232
     Height = 23
     Top = 384
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 35
+    Text = '0'
   end
   object Label13: TLabel
     Left = 88
@@ -392,21 +464,27 @@ object SalarioForm: TSalarioForm
     Height = 23
     Top = 472
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 36
+    Text = '0'
   end
   object totalDesconto: TEdit
     Left = 176
     Height = 23
     Top = 472
     Width = 40
+    Alignment = taRightJustify
     TabOrder = 37
+    Text = '0'
   end
   object totalLiquido: TEdit
     Left = 232
     Height = 23
     Top = 472
     Width = 72
+    Alignment = taRightJustify
     TabOrder = 38
+    Text = '0'
   end
   object calcular: TButton
     Left = 232
