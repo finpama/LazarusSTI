@@ -436,11 +436,11 @@ object SalarioForm: TSalarioForm
     ParentColor = False
   end
   object Label14: TLabel
-    Left = 168
+    Left = 160
     Height = 15
     Top = 8
-    Width = 53
-    Caption = 'Desconto:'
+    Width = 74
+    Caption = 'Desconto (%):'
     ParentColor = False
   end
   object Label15: TLabel
