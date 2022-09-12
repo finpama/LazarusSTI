@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <Compiler Value="C:\lazarus\fpc\3.2.2\bin\i386-win32\fpc.exe" Date="1420790967"/>
-  <Params Value=" -MObjFPC -Scghi -O1 -gw2 -godwarfsets -gl -WG -l -vewnhibq -FiC:\Users\Professor\Documents\LazarusSTI\Salario\lib\i386-win32 -FuC:\lazarus\lcl\units\i386-win32\win32 -FuC:\lazarus\lcl\units\i386-win32 -FuC:\lazarus\components\freetype\lib\i386-win32 -FuC:\lazarus\components\lazutils\lib\i386-win32 -FuC:\lazarus\packager\units\i386-win32 -FuC:\Users\Professor\Documents\LazarusSTI\Salario\ -FUC:\Users\Professor\Documents\LazarusSTI\Salario\lib\i386-win32\ -FEC:\Users\Professor\Documents\LazarusSTI\Salario\ -oC:\Users\Professor\Documents\LazarusSTI\Salario\pSalario.exe -dLCL -dLCLwin32 pSalario.lpr"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -gw2 -godwarfsets -gl -WG -l -vewnhibq -FiC:\zFinal\LazarusSTI\Salario\lib\i386-win32 -FuC:\lazarus\lcl\units\i386-win32\win32 -FuC:\lazarus\lcl\units\i386-win32 -FuC:\lazarus\components\freetype\lib\i386-win32 -FuC:\lazarus\components\lazutils\lib\i386-win32 -FuC:\lazarus\packager\units\i386-win32 -FuC:\zFinal\LazarusSTI\Salario\ -FUC:\zFinal\LazarusSTI\Salario\lib\i386-win32\ -FEC:\zFinal\LazarusSTI\Salario\ -oC:\zFinal\LazarusSTI\Salario\pSalario.exe -dLCL -dLCLwin32 pSalario.lpr"/>
 </CONFIG>

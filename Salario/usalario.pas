@@ -147,16 +147,13 @@ begin
    liquidoMes[12] := dezLiquido;  
    liquidoTotal := 0;
 
-   i := 1;
-   while i<12 do
+   for i:=1 to 12 do
    begin
        liquidoMes[i].Text := FloatToStr(calcLiquido(StrToFloat(brutoMes[i].Text), StrToFloat(descontoMes[i].Text)));
 
        brutoTotal := brutoTotal + StrToFloat(brutoMes[i].Text);
        descontoTotal := descontoTotal + StrToFloat(descontoMes[i].Text);
        liquidoTotal := liquidoTotal + StrToFloat(liquidoMes[i].Text);
-
-       i := i+1;
    end;
 
    totalBruto.Text := FloatToStr(brutoTotal);
