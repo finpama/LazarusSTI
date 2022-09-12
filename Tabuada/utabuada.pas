@@ -18,9 +18,9 @@ type
     Input: TEdit;
     Label1: TLabel;
     Label2: TLabel;
-    Memo: TMemo;
-    procedure btnGerarClick(Sender: TObject);
+    Memo: TMemo;     
     procedure FormCreate(Sender: TObject);
+    procedure btnGerarClick(Sender: TObject);
   private
 
   public
@@ -34,7 +34,13 @@ implementation
 
 {$R *.lfm}
 
-{ TTabuadaForm }
+{ TTabuadaForm } 
+
+procedure TTabuadaForm.FormCreate(Sender: TObject);
+begin
+  Memo.Lines.Clear;
+end;
+
 
 procedure TTabuadaForm.btnGerarClick(Sender: TObject);
 var
@@ -44,8 +50,14 @@ var
 begin
   Memo.Lines.Clear;
 
+  if (Input.Text='') or (InputStart.Text='') or (InputEnd.Text='')  then
+  begin
+     ShowMessage('Preencha todos os campos.');
+     Input.SetFocus;
+     Exit;
+  end;
+       
   num := StrToFloat(Input.Text);
-
   iStart := StrToInt(InputStart.Text);
   iEnd := StrToInt(InputEnd.Text);
 
@@ -55,13 +67,9 @@ begin
     Memo.Lines.Add(FloatToStr(num) + ' x ' + FloatToStr(i) + ' = ' + FloatToStr(res));
   end;
 
-end;
+  Input.SetFocus;
 
-procedure TTabuadaForm.FormCreate(Sender: TObject);
-begin
-  Memo.Lines.Clear;
 end;
-
 
 end.
 

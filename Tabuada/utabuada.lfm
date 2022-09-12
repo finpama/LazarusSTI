@@ -35,12 +35,13 @@ object TabuadaForm: TTabuadaForm
     Height = 224
     Top = 136
     Width = 199
-    Alignment = taCenter
     Lines.Strings = (
       'Memo'
     )
+    ReadOnly = True
     ScrollBars = ssAutoVertical
-    TabOrder = 1
+    TabOrder = 4
+    TabStop = False
   end
   object btnGerar: TButton
     Left = 168
@@ -56,14 +57,14 @@ object TabuadaForm: TTabuadaForm
     Font.Style = [fsBold]
     OnClick = btnGerarClick
     ParentFont = False
-    TabOrder = 2
+    TabOrder = 3
   end
   object InputStart: TEdit
     Left = 80
     Height = 23
     Top = 104
     Width = 96
-    TabOrder = 3
+    TabOrder = 1
     Text = '0'
   end
   object InputEnd: TEdit
@@ -71,7 +72,7 @@ object TabuadaForm: TTabuadaForm
     Height = 23
     Top = 104
     Width = 96
-    TabOrder = 4
+    TabOrder = 2
     Text = '10'
   end
   object Label2: TLabel
