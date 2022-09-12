@@ -1,0 +1,149 @@
+object RepeticaoForm: TRepeticaoForm
+  Left = 230
+  Height = 546
+  Top = 142
+  Width = 346
+  Caption = 'RepeticaoForm'
+  ClientHeight = 546
+  ClientWidth = 346
+  LCLVersion = '2.2.2.0'
+  object InputStart1: TEdit
+    Left = 16
+    Height = 23
+    Top = 8
+    Width = 64
+    TabOrder = 0
+  end
+  object InputEnd1: TEdit
+    Left = 93
+    Height = 23
+    Top = 8
+    Width = 58
+    TabOrder = 1
+  end
+  object Memo1: TMemo
+    Left = 16
+    Height = 78
+    Top = 40
+    Width = 136
+    ReadOnly = True
+    ScrollBars = ssAutoVertical
+    TabOrder = 4
+    TabStop = False
+  end
+  object Button1: TButton
+    Left = 93
+    Height = 22
+    Top = 128
+    Width = 56
+    Caption = 'Contar'
+    OnClick = Button1Click
+    TabOrder = 2
+  end
+  object Shape1: TShape
+    Left = 171
+    Height = 142
+    Top = 8
+    Width = 3
+    Brush.Color = clWindowFrame
+    Pen.Color = clNone
+  end
+  object Memo2: TMemo
+    Left = 192
+    Height = 78
+    Top = 40
+    Width = 136
+    ReadOnly = True
+    ScrollBars = ssAutoVertical
+    TabOrder = 3
+    TabStop = False
+  end
+  object Button2: TButton
+    Left = 256
+    Height = 22
+    Top = 128
+    Width = 72
+    Caption = 'Encontrar'
+    OnClick = Button2Click
+    TabOrder = 5
+  end
+  object Shape2: TShape
+    Left = 16
+    Height = 3
+    Top = 168
+    Width = 144
+    Brush.Color = clWindowFrame
+    Pen.Color = clNone
+  end
+  object Shape3: TShape
+    Left = 184
+    Height = 3
+    Top = 168
+    Width = 144
+    Brush.Color = clWindowFrame
+    Pen.Color = clNone
+  end
+  object forMemo3: TMemo
+    Left = 16
+    Height = 47
+    Top = 224
+    Width = 96
+    ReadOnly = True
+    ScrollBars = ssAutoVertical
+    TabOrder = 9
+    TabStop = False
+  end
+  object whileMemo3: TMemo
+    Left = 128
+    Height = 47
+    Top = 224
+    Width = 96
+    ReadOnly = True
+    ScrollBars = ssAutoVertical
+    TabOrder = 7
+    TabStop = False
+  end
+  object repeatMemo3: TMemo
+    Left = 240
+    Height = 47
+    Top = 224
+    Width = 96
+    ReadOnly = True
+    ScrollBars = ssAutoVertical
+    TabOrder = 6
+    TabStop = False
+  end
+  object Label1: TLabel
+    Left = 16
+    Height = 15
+    Top = 202
+    Width = 20
+    Caption = 'For:'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 128
+    Height = 15
+    Top = 202
+    Width = 30
+    Caption = 'While'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 240
+    Height = 15
+    Top = 202
+    Width = 42
+    Caption = 'Repeat: '
+    ParentColor = False
+  end
+  object Button3: TButton
+    Left = 280
+    Height = 22
+    Top = 280
+    Width = 56
+    Caption = 'Contar'
+    OnClick = Button3Click
+    TabOrder = 8
+  end
+end
