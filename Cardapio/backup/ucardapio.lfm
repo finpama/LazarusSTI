@@ -1,0 +1,19 @@
+object CardapioForm: TCardapioForm
+  Left = 230
+  Height = 545
+  Top = 144
+  Width = 353
+  Caption = 'CardapioForm'
+  ClientHeight = 545
+  ClientWidth = 353
+  LCLVersion = '2.2.2.0'
+  object TIMemo1: TTIMemo
+    Left = 64
+    Height = 90
+    Top = 64
+    Width = 150
+    Lines.Strings = (
+      'TIMemo1'
+    )
+  end
+end

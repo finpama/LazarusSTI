@@ -1,0 +1,82 @@
+object NotepadForm: TNotepadForm
+  Left = 234
+  Height = 548
+  Top = 148
+  Width = 357
+  Caption = 'NotepadDD'
+  ClientHeight = 528
+  ClientWidth = 357
+  Menu = MainMenu
+  LCLVersion = '2.2.2.0'
+  object Edit: TTIMemo
+    Left = 0
+    Height = 432
+    Top = 96
+    Width = 357
+    Align = alBottom
+  end
+  object MainMenu: TMainMenu
+    Left = 312
+    Top = 480
+    object Arquivo: TMenuItem
+      Caption = 'Arquivo'
+      object NovoBtn: TMenuItem
+        Caption = 'Novo'
+        OnClick = NovoBtnClick
+      end
+      object AbrirBtn: TMenuItem
+        Caption = 'Abrir'
+        OnClick = AbrirBtnClick
+      end
+      object SalvarBtn: TMenuItem
+        Caption = 'Salvar'
+        OnClick = SalvarBtnClick
+      end
+      object PrinterBtn: TMenuItem
+        Caption = 'Imprimir'
+        OnClick = PrinterBtnClick
+      end
+    end
+    object Editar: TMenuItem
+      Caption = 'Editar'
+      object LocalizarBtn: TMenuItem
+        Caption = 'Localizar'
+        OnClick = LocalizarBtnClick
+      end
+      object SubstituirBtn: TMenuItem
+        Caption = 'Substituir'
+      end
+    end
+    object Formatar: TMenuItem
+      Caption = 'Formatar'
+      object MenuItem3: TMenuItem
+        Caption = 'Fonte...'
+      end
+    end
+  end
+  object SaveDialog: TSaveDialog
+    Title = 'Salvar Arquivo'
+    DefaultExt = '.txt'
+    Filter = '''.txt'''
+    Left = 128
+    Top = 288
+  end
+  object NewDialog: TSaveDialog
+    InitialDir = 'C:\Users\Professor\Desktop\'
+    Left = 16
+    Top = 288
+  end
+  object OpenDialog: TOpenDialog
+    Left = 72
+    Top = 288
+  end
+  object PrintDialog: TPrintDialog
+    Left = 184
+    Top = 288
+  end
+  object FindDialog: TFindDialog
+    OnFind = FindDialogFind
+    Left = 30
+    Top = 136
+  end
+end

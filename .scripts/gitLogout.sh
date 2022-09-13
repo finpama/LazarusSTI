@@ -9,7 +9,7 @@ git config --global --unset credential.helper
 echo 'Removed.'
 
 echo 'Removing credentials from windows...'
-cmd rmCredentials.bat
+cmdExec rmCredentials.bat
 echo 'Removed.'
 
 echo 'Press any key to exit.'

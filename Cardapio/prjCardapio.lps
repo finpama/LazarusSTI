@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="prjCardapio.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ucardapio.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="CardapioForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uCardapio"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="31" Y="22"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="2">
+      <Position>
+        <Filename Value="ucardapio.pas"/>
+        <Caret Line="18" Column="31"/>
+      </Position>
+      <Position>
+        <Filename Value="ucardapio.pas"/>
+        <Caret Line="22" Column="31"/>
+      </Position>
+      <Position>
+        <Filename Value="ucardapio.pas"/>
+        <Caret Line="21" Column="31"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
