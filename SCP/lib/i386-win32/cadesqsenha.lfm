@@ -1,0 +1,18 @@
+object CadEsqSenhaF: TCadEsqSenhaF
+  Left = 236
+  Height = 477
+  Top = 158
+  Width = 343
+  Caption = 'CadEsqSenhaF'
+  ClientHeight = 477
+  ClientWidth = 343
+  LCLVersion = '2.2.2.0'
+  object Label1: TLabel
+    Left = 123
+    Height = 15
+    Top = 99
+    Width = 116
+    Caption = 'TELA ESQUECI SENHA'
+    ParentColor = False
+  end
+end

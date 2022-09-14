@@ -1,7 +1,7 @@
 object NotepadForm: TNotepadForm
-  Left = 234
+  Left = 230
   Height = 548
-  Top = 148
+  Top = 142
   Width = 357
   Caption = 'NotepadDD'
   ClientHeight = 528
@@ -45,6 +45,7 @@ object NotepadForm: TNotepadForm
       end
       object SubstituirBtn: TMenuItem
         Caption = 'Substituir'
+        OnClick = SubstituirBtnClick
       end
     end
     object Formatar: TMenuItem
@@ -77,6 +78,11 @@ object NotepadForm: TNotepadForm
   object FindDialog: TFindDialog
     OnFind = FindDialogFind
     Left = 30
+    Top = 136
+  end
+  object ReplaceDialog: TReplaceDialog
+    Options = [frDown, frReplace, frReplaceAll, frHidePromptOnReplace]
+    Left = 96
     Top = 136
   end
 end

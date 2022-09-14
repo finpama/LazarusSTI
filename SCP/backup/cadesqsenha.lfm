@@ -1,0 +1,8 @@
+object CadEsqSenhaF: TCadEsqSenhaF
+  Left = 241
+  Height = 477
+  Top = 159
+  Width = 343
+  Caption = 'CadEsqSenhaF'
+  LCLVersion = '2.2.2.0'
+end

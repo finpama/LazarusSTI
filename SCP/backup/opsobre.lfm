@@ -1,0 +1,9 @@
+object OpSobreF: TOpSobreF
+  Left = 231
+  Height = 539
+  Top = 147
+  Width = 346
+  Caption = 'OpSobreF'
+  OnClose = FormClose
+  LCLVersion = '2.2.2.0'
+end

@@ -1,0 +1,100 @@
+object CadModeloF: TCadModeloF
+  Left = 236
+  Height = 534
+  Top = 134
+  Width = 540
+  Caption = 'CadModeloF'
+  ClientHeight = 534
+  ClientWidth = 540
+  LCLVersion = '2.2.2.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 50
+    Top = 484
+    Width = 540
+    Align = alBottom
+    ClientHeight = 50
+    ClientWidth = 540
+    TabOrder = 0
+    object Panel2: TPanel
+      Left = 448
+      Height = 48
+      Top = 1
+      Width = 91
+      Align = alRight
+      ClientHeight = 48
+      ClientWidth = 91
+      TabOrder = 0
+      object Button4: TButton
+        Left = 0
+        Height = 25
+        Top = 8
+        Width = 75
+        Caption = 'Sair'
+        TabOrder = 0
+      end
+    end
+    object Button1: TButton
+      Left = 17
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'Novo'
+      TabOrder = 1
+    end
+    object Button2: TButton
+      Left = 104
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'Editar'
+      TabOrder = 2
+    end
+    object Button3: TButton
+      Left = 192
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'Gravar'
+      TabOrder = 3
+    end
+    object Button5: TButton
+      Left = 280
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'Excluir'
+      OnClick = Button5Click
+      TabOrder = 4
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Height = 26
+    Top = 0
+    Width = 540
+    Align = alTop
+    ClientHeight = 26
+    ClientWidth = 540
+    TabOrder = 1
+    object DBNavigator1: TDBNavigator
+      Left = 298
+      Height = 24
+      Top = 1
+      Width = 241
+      Align = alRight
+      BevelOuter = bvNone
+      ChildSizing.EnlargeHorizontal = crsScaleChilds
+      ChildSizing.EnlargeVertical = crsScaleChilds
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 100
+      ClientHeight = 24
+      ClientWidth = 241
+      Options = []
+      TabOrder = 0
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+    end
+  end
+end
