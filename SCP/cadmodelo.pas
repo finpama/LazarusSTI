@@ -13,15 +13,16 @@ type
   { TCadModeloF }
 
   TCadModeloF = class(TForm)
-    Button1: TButton;
-    Button2: TButton;
-    Button3: TButton;
-    Button4: TButton;
-    Button5: TButton;
-    DBNavigator1: TDBNavigator;
-    Panel1: TPanel;
-    Panel2: TPanel;
-    Panel3: TPanel;
+    optionNovo: TButton;
+    optionEditar: TButton;
+    optionGravar: TButton;
+    optionSair: TButton;
+    optionExcluir: TButton;
+    navButtons: TDBNavigator;
+    options: TPanel;
+    optionRight: TPanel;
+    nav: TPanel;
+    procedure optionSairClick(Sender: TObject);
   private
 
   public
@@ -36,6 +37,11 @@ implementation
 {$R *.lfm}
 
 { TCadModeloF }
+
+procedure TCadModeloF.optionSairClick(Sender: TObject);
+begin
+  Close;
+end;
 
 end.
 

@@ -1,0 +1,96 @@
+inherited CadClientesF: TCadClientesF
+  Caption = 'Cadastros de Clientes'
+  inherited nav: TPanel
+    inherited navButtons: TDBNavigator
+      Hints.Strings = (      )
+    end
+  end
+  object inputIdCliente: TLabeledEdit[2]
+    Left = 72
+    Height = 23
+    Top = 96
+    Width = 40
+    EditLabel.Height = 15
+    EditLabel.Width = 40
+    EditLabel.Caption = 'Id'
+    EditLabel.ParentColor = False
+    TabOrder = 2
+  end
+  object inputNomeFantasia: TLabeledEdit[3]
+    Left = 72
+    Height = 23
+    Top = 144
+    Width = 169
+    EditLabel.Height = 15
+    EditLabel.Width = 169
+    EditLabel.Caption = 'Nome Fantasia'
+    EditLabel.ParentColor = False
+    TabOrder = 3
+  end
+  object inputRazaoSocial: TLabeledEdit[4]
+    Left = 72
+    Height = 23
+    Top = 192
+    Width = 169
+    EditLabel.Height = 15
+    EditLabel.Width = 169
+    EditLabel.Caption = 'Razão Social'
+    EditLabel.ParentColor = False
+    TabOrder = 4
+  end
+  object inputTelefone: TLabeledEdit[5]
+    Left = 264
+    Height = 23
+    Top = 192
+    Width = 169
+    EditLabel.Height = 15
+    EditLabel.Width = 169
+    EditLabel.Caption = 'Telefone'
+    EditLabel.ParentColor = False
+    TabOrder = 5
+  end
+  object inputCpfCpnj: TLabeledEdit[6]
+    Left = 264
+    Height = 23
+    Top = 144
+    Width = 169
+    EditLabel.Height = 15
+    EditLabel.Width = 169
+    EditLabel.Caption = 'Cpf / Cpnj'
+    EditLabel.ParentColor = False
+    TabOrder = 6
+  end
+  object inputEmail: TLabeledEdit[7]
+    Left = 72
+    Height = 23
+    Top = 320
+    Width = 169
+    EditLabel.Height = 15
+    EditLabel.Width = 169
+    EditLabel.Caption = 'E-mail'
+    EditLabel.ParentColor = False
+    TabOrder = 7
+  end
+  object inputEndereco: TLabeledEdit[8]
+    Left = 264
+    Height = 23
+    Top = 240
+    Width = 169
+    EditLabel.Height = 15
+    EditLabel.Width = 169
+    EditLabel.Caption = 'Endereço'
+    EditLabel.ParentColor = False
+    TabOrder = 8
+  end
+  object inputEstado: TLabeledEdit[9]
+    Left = 72
+    Height = 23
+    Top = 240
+    Width = 169
+    EditLabel.Height = 15
+    EditLabel.Width = 169
+    EditLabel.Caption = 'Estado'
+    EditLabel.ParentColor = False
+    TabOrder = 9
+  end
+end

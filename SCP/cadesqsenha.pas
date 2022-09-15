@@ -13,7 +13,13 @@ type
 
   TCadEsqSenhaF = class(TForm)
     A: TBoundLabel;
-    Label1: TLabel;
+    btnEntrar: TButton;
+    btnCancelar: TButton;
+    inputEmail: TLabeledEdit;
+    inputNSenha: TLabeledEdit;
+    inputConfirNSenha: TLabeledEdit;
+    procedure btnCancelarClick(Sender: TObject);
+    procedure btnEntrarClick(Sender: TObject);
   private
 
   public
@@ -29,6 +35,15 @@ implementation
 
 { TCadEsqSenhaF }
 
+procedure TCadEsqSenhaF.btnCancelarClick(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TCadEsqSenhaF.btnEntrarClick(Sender: TObject);
+begin
+  Close;
+end;
 
 end.
 

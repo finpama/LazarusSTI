@@ -1,8 +1,61 @@
 object CadEsqSenhaF: TCadEsqSenhaF
-  Left = 241
+  Left = 236
   Height = 477
-  Top = 159
+  Top = 158
   Width = 343
   Caption = 'CadEsqSenhaF'
+  ClientHeight = 477
+  ClientWidth = 343
   LCLVersion = '2.2.2.0'
+  object inputEmail: TLabeledEdit
+    Left = 96
+    Height = 23
+    Top = 120
+    Width = 169
+    EditLabel.Height = 15
+    EditLabel.Width = 169
+    EditLabel.Caption = 'Email'
+    EditLabel.ParentColor = False
+    TabOrder = 0
+  end
+  object inputNSenha: TLabeledEdit
+    Left = 96
+    Height = 23
+    Top = 184
+    Width = 169
+    EditLabel.Height = 15
+    EditLabel.Width = 169
+    EditLabel.Caption = 'Nova Senha'
+    EditLabel.ParentColor = False
+    TabOrder = 1
+  end
+  object inputConfirNSenha: TLabeledEdit
+    Left = 96
+    Height = 23
+    Top = 232
+    Width = 169
+    EditLabel.Height = 15
+    EditLabel.Width = 169
+    EditLabel.Caption = 'Confirmar Nova Senha'
+    EditLabel.ParentColor = False
+    TabOrder = 2
+  end
+  object btnEntrar: TButton
+    Left = 96
+    Height = 32
+    Top = 280
+    Width = 81
+    Caption = 'Entrar'
+    OnClick = btnEntrarClick
+    TabOrder = 3
+  end
+  object btnCancelar: TButton
+    Left = 184
+    Height = 32
+    Top = 280
+    Width = 81
+    Caption = 'Cancelar'
+    OnClick = btnCancelarClick
+    TabOrder = 4
+  end
 end

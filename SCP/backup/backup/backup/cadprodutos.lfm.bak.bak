@@ -1,0 +1,67 @@
+inherited CadProdutosF: TCadProdutosF
+  Left = 233
+  Top = 148
+  Caption = 'Cadastros de Produtos'
+  inherited nav: TPanel
+    inherited DBNavigator1: TDBNavigator
+      Hints.Strings = (      )
+    end
+  end
+  object iptId: TLabeledEdit[2]
+    Left = 49
+    Height = 23
+    Top = 72
+    Width = 40
+    EditLabel.Height = 15
+    EditLabel.Width = 40
+    EditLabel.Caption = 'Id'
+    EditLabel.ParentColor = False
+    TabOrder = 2
+  end
+  object iptNomeFantasia: TLabeledEdit[3]
+    Left = 49
+    Height = 23
+    Top = 120
+    Width = 201
+    EditLabel.Height = 15
+    EditLabel.Width = 201
+    EditLabel.Caption = 'Descrição Simples'
+    EditLabel.ParentColor = False
+    TabOrder = 3
+  end
+  object LabeledEdit3: TLabeledEdit[4]
+    Left = 281
+    Height = 23
+    Top = 120
+    Width = 200
+    EditLabel.Height = 15
+    EditLabel.Width = 200
+    EditLabel.Caption = 'Valor de Venda'
+    EditLabel.ParentColor = False
+    TabOrder = 4
+  end
+  object ComboBox1: TComboBox[5]
+    Left = 281
+    Height = 23
+    Top = 178
+    Width = 200
+    ItemHeight = 15
+    TabOrder = 5
+    Text = 'Tipo do Produto'
+  end
+  object Memo1: TMemo[6]
+    Left = 49
+    Height = 171
+    Top = 178
+    Width = 202
+    TabOrder = 6
+  end
+  object Label1: TLabel[7]
+    Left = 50
+    Height = 15
+    Top = 160
+    Width = 106
+    Caption = 'Descrição Completa'
+    ParentColor = False
+  end
+end

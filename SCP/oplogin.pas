@@ -49,7 +49,7 @@ begin
   Close;
 end;
 
-//botão entrar
+//Botão entrar
 procedure TOpLoginF.Button1Click(Sender: TObject);
 begin
   MenuPrincipalF := TMenuPrincipalF.Create(Self);

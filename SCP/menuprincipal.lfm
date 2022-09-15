@@ -1,19 +1,40 @@
 object MenuPrincipalF: TMenuPrincipalF
-  Left = 230
+  Left = 228
   Height = 545
-  Top = 138
+  Top = 145
   Width = 352
   Caption = 'MenuPrincipalF'
+  Color = clWhite
   Menu = MainMenu1
+  OnClose = FormClose
   LCLVersion = '2.2.2.0'
   WindowState = wsMaximized
   object MainMenu1: TMainMenu
     Left = 32
     Top = 80
-    object MenuItem1: TMenuItem
+    object menuCadastros: TMenuItem
       Caption = 'Cadastros'
+      object menuCadUsuarios: TMenuItem
+        Caption = 'Cad. Usuários'
+      end
+      object menuCadClientes: TMenuItem
+        Caption = 'Cad. Clientes'
+        OnClick = menuCadClientesClick
+      end
+      object menuCadVendedores: TMenuItem
+        Caption = 'Cad. Vendedores'
+        OnClick = menuCadVendedoresClick
+      end
+      object menuCadFornecedor: TMenuItem
+        Caption = 'Cad. Fornecedor'
+        OnClick = menuCadFornecedorClick
+      end
+      object menuCadProdutos: TMenuItem
+        Caption = 'Cad. Produtos'
+        OnClick = menuCadProdutosClick
+      end
     end
-    object MenuItem2: TMenuItem
+    object menuManutencao: TMenuItem
       Caption = 'Manutenção'
     end
     object menuSobre: TMenuItem

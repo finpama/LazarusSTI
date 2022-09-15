@@ -10,7 +10,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="58" Y="23"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="25"/>
       </Unit>
       <Unit>
         <Filename Value="cadmodelo.pas"/>
@@ -20,21 +20,20 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="CadModelo"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="16"/>
-        <CursorPos X="31" Y="22"/>
-        <ComponentState Value="1"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="9"/>
+        <CursorPos X="34" Y="17"/>
+        <UsageCount Value="25"/>
       </Unit>
       <Unit>
         <Filename Value="oplogin.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="OpLoginF"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="OpLogin"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="36"/>
-        <CursorPos X="8" Y="56"/>
-        <UsageCount Value="20"/>
+        <CursorPos X="12" Y="4"/>
+        <UsageCount Value="25"/>
       </Unit>
       <Unit>
         <Filename Value="cadesqsenha.pas"/>
@@ -44,30 +43,20 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="CadEsqSenha"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="4"/>
-        <CursorPos X="33" Y="24"/>
-        <ComponentState Value="1"/>
-        <UsageCount Value="20"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="3971"/>
-        <CursorPos Y="3991"/>
-        <UsageCount Value="10"/>
+        <TopLine Value="24"/>
+        <CursorPos X="12" Y="34"/>
+        <UsageCount Value="25"/>
       </Unit>
       <Unit>
         <Filename Value="menuprincipal.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="MenuPrincipalF"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MenuPrincipal"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="25"/>
-        <CursorPos X="20" Y="46"/>
-        <UsageCount Value="20"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="23" Y="14"/>
+        <UsageCount Value="25"/>
       </Unit>
       <Unit>
         <Filename Value="opsobre.pas"/>
@@ -78,64 +67,255 @@
         <UnitName Value="OpSobre"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="12"/>
-        <CursorPos X="23" Y="23"/>
-        <UsageCount Value="20"/>
+        <CursorPos X="22" Y="18"/>
+        <UsageCount Value="25"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadclientes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="CadClientesF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="CadClientes"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="12"/>
+        <CursorPos X="38" Y="24"/>
+        <UsageCount Value="24"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadvendedores.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="CadVendedoresF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="CadVendedores"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="13"/>
+        <CursorPos X="17" Y="31"/>
+        <UsageCount Value="23"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadfornecedor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="CadFornecedorF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="CadFornecedor"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="35" Y="6"/>
+        <UsageCount Value="23"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadprodutos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="CadProdutosF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="CadProdutos"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="27" Y="11"/>
+        <UsageCount Value="23"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadusuarios.pas"/>
+        <ComponentName Value="CadUsuariosF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="CadUsuarios"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="67" Y="8"/>
+        <UsageCount Value="24"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3977"/>
+        <CursorPos Y="3991"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadprodutos.lfm"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="6"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="menuprincipal.lfm"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="18" Y="7"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadmodelo.lfm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="67"/>
+        <CursorPos X="30" Y="74"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadclientes.lfm"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="25" Y="4"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="backup\cadusuarios.lfm"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="25" Y="6"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="backup\cadclientes.lfm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4"/>
+        <CursorPos X="25" Y="9"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="backup\cadfornecedor.lfm"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="25" Y="6"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="lib\i386-win32\cadfornecedor.lfm"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="25" Y="6"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="lib\i386-win32\cadprodutos.lfm"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="25" Y="6"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="lib\i386-win32\cadusuarios.lfm"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="25" Y="6"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="lib\i386-win32\cadvendedores.lfm"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="25" Y="4"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadfornecedor.lfm"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="6"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadvendedores.lfm"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="18" Y="6"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="backup\cadprodutos.lfm"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="6"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="backup\cadvendedores.lfm"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="25" Y="4"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="lib\i386-win32\cadclientes.lfm"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="25" Y="4"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="backup\backup\cadclientes.lfm.bak"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="25" Y="4"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="backup\backup\cadfornecedor.lfm.bak"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="25" Y="6"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="backup\backup\cadprodutos.lfm.bak"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="25" Y="6"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="backup\backup\cadusuarios.lfm.bak"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="29" Y="5"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="backup\backup\cadvendedores.lfm.bak"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="4"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="lib\i386-win32\backup\cadfornecedor.lfm.bak"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="6"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="lib\i386-win32\backup\cadprodutos.lfm.bak"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="25" Y="6"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="lib\i386-win32\backup\cadusuarios.lfm.bak"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="6"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="lib\i386-win32\backup\cadvendedores.lfm.bak"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="41" Y="4"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="12">
-      <Position>
-        <Filename Value="menuprincipal.pas"/>
-        <Caret Line="20" Column="21"/>
-      </Position>
-      <Position>
-        <Filename Value="menuprincipal.pas"/>
-        <Caret Line="9" Column="3"/>
-      </Position>
-      <Position>
-        <Filename Value="menuprincipal.pas"/>
-        <Caret Line="8" Column="56"/>
-      </Position>
-      <Position>
-        <Filename Value="menuprincipal.pas"/>
-        <Caret Line="13" Column="9"/>
-      </Position>
-      <Position>
-        <Filename Value="menuprincipal.pas"/>
-        <Caret Line="17" Column="9"/>
-      </Position>
-      <Position>
-        <Filename Value="menuprincipal.pas"/>
-        <Caret Line="18" Column="9"/>
-      </Position>
-      <Position>
-        <Filename Value="menuprincipal.pas"/>
-        <Caret Line="19" Column="9"/>
-      </Position>
-      <Position>
-        <Filename Value="menuprincipal.pas"/>
-        <Caret Line="20" Column="9"/>
-      </Position>
-      <Position>
-        <Filename Value="menuprincipal.pas"/>
-        <Caret Line="22" Column="9"/>
-      </Position>
-      <Position>
-        <Filename Value="menuprincipal.pas"/>
-        <Caret Line="38" Column="14" TopLine="17"/>
-      </Position>
-      <Position>
-        <Filename Value="menuprincipal.pas"/>
-        <Caret Line="39" Column="25" TopLine="17"/>
-      </Position>
-      <Position>
-        <Filename Value="menuprincipal.pas"/>
-        <Caret Line="26" Column="27" TopLine="5"/>
-      </Position>
-      <Position>
-        <Filename Value="menuprincipal.pas"/>
-        <Caret Line="19" Column="47" TopLine="17"/>
-      </Position>
-    </JumpHistory>
+    <General>
+      <ActiveWindowIndexAtStart Value="-1"/>
+    </General>
+    <JumpHistory HistoryIndex="-1"/>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>

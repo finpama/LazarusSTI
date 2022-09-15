@@ -1,0 +1,120 @@
+inherited CadUsuariosF: TCadUsuariosF
+  Left = 230
+  Top = 142
+  Caption = 'Cadastrar Usuário'
+  inherited Panel3: TPanel
+    inherited DBNavigator1: TDBNavigator
+      Hints.Strings = (      )
+    end
+  end
+  object iptId: TLabeledEdit[2]
+    Left = 40
+    Height = 23
+    Top = 64
+    Width = 40
+    EditLabel.Height = 15
+    EditLabel.Width = 40
+    EditLabel.Caption = 'Id'
+    EditLabel.ParentColor = False
+    TabOrder = 2
+  end
+  object iptNomeFantasia: TLabeledEdit[3]
+    Left = 40
+    Height = 23
+    Top = 112
+    Width = 169
+    EditLabel.Height = 15
+    EditLabel.Width = 169
+    EditLabel.Caption = 'Nome'
+    EditLabel.ParentColor = False
+    TabOrder = 3
+  end
+  object LabeledEdit3: TLabeledEdit[4]
+    Left = 40
+    Height = 23
+    Top = 160
+    Width = 169
+    EditLabel.Height = 15
+    EditLabel.Width = 169
+    EditLabel.Caption = 'Razão Social'
+    EditLabel.ParentColor = False
+    TabOrder = 4
+  end
+  object LabeledEdit4: TLabeledEdit[5]
+    Left = 232
+    Height = 23
+    Top = 160
+    Width = 169
+    EditLabel.Height = 15
+    EditLabel.Width = 169
+    EditLabel.Caption = 'Telefone'
+    EditLabel.ParentColor = False
+    TabOrder = 5
+  end
+  object LabeledEdit5: TLabeledEdit[6]
+    Left = 40
+    Height = 23
+    Top = 384
+    Width = 169
+    EditLabel.Height = 15
+    EditLabel.Width = 169
+    EditLabel.Caption = 'Senha'
+    EditLabel.ParentColor = False
+    TabOrder = 6
+  end
+  object LabeledEdit6: TLabeledEdit[7]
+    Left = 40
+    Height = 23
+    Top = 336
+    Width = 169
+    EditLabel.Height = 15
+    EditLabel.Width = 169
+    EditLabel.Caption = 'Nome De Usuário'
+    EditLabel.ParentColor = False
+    TabOrder = 7
+  end
+  object iptCpfCpnj: TLabeledEdit[8]
+    Left = 232
+    Height = 23
+    Top = 112
+    Width = 169
+    EditLabel.Height = 15
+    EditLabel.Width = 169
+    EditLabel.Caption = 'Cpf / Cpnj'
+    EditLabel.ParentColor = False
+    TabOrder = 8
+  end
+  object LabeledEdit8: TLabeledEdit[9]
+    Left = 40
+    Height = 23
+    Top = 288
+    Width = 169
+    EditLabel.Height = 15
+    EditLabel.Width = 169
+    EditLabel.Caption = 'E-mail'
+    EditLabel.ParentColor = False
+    TabOrder = 9
+  end
+  object LabeledEdit9: TLabeledEdit[10]
+    Left = 232
+    Height = 23
+    Top = 208
+    Width = 169
+    EditLabel.Height = 15
+    EditLabel.Width = 169
+    EditLabel.Caption = 'Endereço'
+    EditLabel.ParentColor = False
+    TabOrder = 10
+  end
+  object LabeledEdit10: TLabeledEdit[11]
+    Left = 40
+    Height = 23
+    Top = 208
+    Width = 169
+    EditLabel.Height = 15
+    EditLabel.Width = 169
+    EditLabel.Caption = 'Estado'
+    EditLabel.ParentColor = False
+    TabOrder = 11
+  end
+end
