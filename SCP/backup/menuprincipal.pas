@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus,
   OpSobre, CadClientes, CadVendedores, CadFornecedor,
-  CadProdutos;
+  CadProdutos, CadUsuarios;
 
 type
 

@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus,
   OpSobre, CadClientes, CadVendedores, CadFornecedor,
-  CadProdutos;
+  CadProdutos, CadUsuarios;
 
 type
 
@@ -28,9 +28,9 @@ type
     procedure menuCadClientesClick(Sender: TObject);
     procedure menuCadFornecedorClick(Sender: TObject);
     procedure menuCadProdutosClick(Sender: TObject);
-    //procedure menuCadUsuariosClick(Sender: TObject);
+    procedure menuCadUsuariosClick(Sender: TObject);
     procedure menuCadVendedoresClick(Sender: TObject);
-    //procedure menuManutencaoClick(Sender: TObject);
+    procedure menuManutencaoClick(Sender: TObject);
     procedure menuSairClick(Sender: TObject);
     procedure menuSobreClick(Sender: TObject);
   private
@@ -53,11 +53,11 @@ begin
   Application.Terminate;
 end;
 
-//procedure TMenuPrincipalF.menuManutencaoClick(Sender: TObject);
-//begin
-//  CadUsuariosF := TCadUsuariosF.Create(Self);
-//  CadUsuariosF.Show;
-//end;
+procedure TMenuPrincipalF.menuManutencaoClick(Sender: TObject);
+begin
+  CadUsuariosF := TCadUsuariosF.Create(Self);
+  CadUsuariosF.Show;
+end;
 
 procedure TMenuPrincipalF.FormClose(Sender: TObject);
 begin
@@ -82,11 +82,11 @@ begin
   CadProdutosF.Show;
 end;
 
-//procedure TMenuPrincipalF.menuCadUsuariosClick(Sender: TObject);
-//begin
-//  CadUsuariosF := TCadUsuariosF.Create(Self);
-//  CadUsuariosF.Show;
-//end;
+procedure TMenuPrincipalF.menuCadUsuariosClick(Sender: TObject);
+begin
+  CadUsuariosF := TCadUsuariosF.Create(Self);
+  CadUsuariosF.Show;
+end;
 
 procedure TMenuPrincipalF.menuCadVendedoresClick(Sender: TObject);
 begin

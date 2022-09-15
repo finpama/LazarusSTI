@@ -75,14 +75,6 @@
         <UnitName Value="OpSobre"/>
       </Unit>
       <Unit>
-        <Filename Value="cadusuarios.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="CadUsuariosF"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="CadUsuarios"/>
-      </Unit>
-      <Unit>
         <Filename Value="cadclientes.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="CadClientesF"/>

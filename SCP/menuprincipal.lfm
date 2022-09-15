@@ -16,6 +16,7 @@ object MenuPrincipalF: TMenuPrincipalF
       Caption = 'Cadastros'
       object menuCadUsuarios: TMenuItem
         Caption = 'Cad. Usuários'
+        OnClick = menuCadUsuariosClick
       end
       object menuCadClientes: TMenuItem
         Caption = 'Cad. Clientes'
