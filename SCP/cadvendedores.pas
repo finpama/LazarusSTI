@@ -12,15 +12,15 @@ type
   { TCadVendedoresF }
 
   TCadVendedoresF = class(TCadModeloF)
-    iptCpfCpnj: TLabeledEdit;
-    iptId: TLabeledEdit;
-    iptNomeFantasia: TLabeledEdit;
-    LabeledEdit10: TLabeledEdit;
-    LabeledEdit3: TLabeledEdit;
-    LabeledEdit4: TLabeledEdit;
-    LabeledEdit6: TLabeledEdit;
-    LabeledEdit8: TLabeledEdit;
-    LabeledEdit9: TLabeledEdit;
+    inputCpfCpnj: TLabeledEdit;
+    inputIdVendedores: TLabeledEdit;
+    inputNomeFantasia: TLabeledEdit;
+    inputEstado: TLabeledEdit;
+    inputRazaoSocial: TLabeledEdit;
+    inputTelefone: TLabeledEdit;
+    inputComissao: TLabeledEdit;
+    inputEmail: TLabeledEdit;
+    inputEndereco: TLabeledEdit;
   private
 
   public
@@ -33,6 +33,9 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TCadVendedoresF }
+
 
 end.
 

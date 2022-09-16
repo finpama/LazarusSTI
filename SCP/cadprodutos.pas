@@ -13,12 +13,12 @@ type
   { TCadProdutosF }
 
   TCadProdutosF = class(TCadModeloF)
-    ComboBox1: TComboBox;
-    iptId: TLabeledEdit;
-    iptNomeFantasia: TLabeledEdit;
+    comboxTipo: TComboBox;
+    inputIdProduto: TLabeledEdit;
+    inputDescSimples: TLabeledEdit;
     Label1: TLabel;
-    LabeledEdit3: TLabeledEdit;
-    Memo1: TMemo;
+    inputValor: TLabeledEdit;
+    inputDescCompleta: TMemo;
   private
 
   public

@@ -5,10 +5,22 @@ unit CadVendedores;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, CadModelo;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, CadModelo;
 
 type
+
+  { TCadVendedoresF }
+
   TCadVendedoresF = class(TCadModeloF)
+    iptCpfCpnj: TLabeledEdit;
+    iptId: TLabeledEdit;
+    iptNomeFantasia: TLabeledEdit;
+    LabeledEdit10: TLabeledEdit;
+    LabeledEdit3: TLabeledEdit;
+    LabeledEdit4: TLabeledEdit;
+    LabeledEdit6: TLabeledEdit;
+    LabeledEdit8: TLabeledEdit;
+    LabeledEdit9: TLabeledEdit;
   private
 
   public
@@ -21,6 +33,9 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TCadVendedoresF }
+
 
 end.
 

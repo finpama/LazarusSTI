@@ -7,7 +7,7 @@ inherited CadProdutosF: TCadProdutosF
       Hints.Strings = (      )
     end
   end
-  object iptId: TLabeledEdit[2]
+  object inputIdProduto: TLabeledEdit[2]
     Left = 49
     Height = 23
     Top = 72
@@ -18,7 +18,7 @@ inherited CadProdutosF: TCadProdutosF
     EditLabel.ParentColor = False
     TabOrder = 2
   end
-  object iptNomeFantasia: TLabeledEdit[3]
+  object inputDescSimples: TLabeledEdit[3]
     Left = 49
     Height = 23
     Top = 120
@@ -29,7 +29,7 @@ inherited CadProdutosF: TCadProdutosF
     EditLabel.ParentColor = False
     TabOrder = 3
   end
-  object LabeledEdit3: TLabeledEdit[4]
+  object inputValor: TLabeledEdit[4]
     Left = 281
     Height = 23
     Top = 120
@@ -40,7 +40,7 @@ inherited CadProdutosF: TCadProdutosF
     EditLabel.ParentColor = False
     TabOrder = 4
   end
-  object ComboBox1: TComboBox[5]
+  object comboxTipo: TComboBox[5]
     Left = 281
     Height = 23
     Top = 178
@@ -49,7 +49,7 @@ inherited CadProdutosF: TCadProdutosF
     TabOrder = 5
     Text = 'Tipo do Produto'
   end
-  object Memo1: TMemo[6]
+  object inputDescCompleta: TMemo[6]
     Left = 49
     Height = 171
     Top = 178

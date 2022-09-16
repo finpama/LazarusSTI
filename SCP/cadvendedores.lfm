@@ -5,10 +5,10 @@ inherited CadVendedoresF: TCadVendedoresF
       Hints.Strings = (      )
     end
   end
-  object iptId: TLabeledEdit[2]
-    Left = 40
+  object inputIdVendedores: TLabeledEdit[2]
+    Left = 56
     Height = 23
-    Top = 80
+    Top = 104
     Width = 40
     EditLabel.Height = 15
     EditLabel.Width = 40
@@ -16,10 +16,10 @@ inherited CadVendedoresF: TCadVendedoresF
     EditLabel.ParentColor = False
     TabOrder = 2
   end
-  object iptNomeFantasia: TLabeledEdit[3]
-    Left = 40
+  object inputNomeFantasia: TLabeledEdit[3]
+    Left = 56
     Height = 23
-    Top = 128
+    Top = 160
     Width = 169
     EditLabel.Height = 15
     EditLabel.Width = 169
@@ -27,10 +27,10 @@ inherited CadVendedoresF: TCadVendedoresF
     EditLabel.ParentColor = False
     TabOrder = 3
   end
-  object LabeledEdit3: TLabeledEdit[4]
-    Left = 40
+  object inputRazaoSocial: TLabeledEdit[4]
+    Left = 56
     Height = 23
-    Top = 176
+    Top = 208
     Width = 169
     EditLabel.Height = 15
     EditLabel.Width = 169
@@ -38,10 +38,10 @@ inherited CadVendedoresF: TCadVendedoresF
     EditLabel.ParentColor = False
     TabOrder = 4
   end
-  object LabeledEdit4: TLabeledEdit[5]
-    Left = 232
+  object inputTelefone: TLabeledEdit[5]
+    Left = 248
     Height = 23
-    Top = 176
+    Top = 208
     Width = 169
     EditLabel.Height = 15
     EditLabel.Width = 169
@@ -49,10 +49,10 @@ inherited CadVendedoresF: TCadVendedoresF
     EditLabel.ParentColor = False
     TabOrder = 5
   end
-  object LabeledEdit6: TLabeledEdit[6]
-    Left = 232
+  object inputComissao: TLabeledEdit[6]
+    Left = 248
     Height = 23
-    Top = 304
+    Top = 336
     Width = 169
     EditLabel.Height = 15
     EditLabel.Width = 169
@@ -60,10 +60,10 @@ inherited CadVendedoresF: TCadVendedoresF
     EditLabel.ParentColor = False
     TabOrder = 6
   end
-  object iptCpfCpnj: TLabeledEdit[7]
-    Left = 232
+  object inputCpfCpnj: TLabeledEdit[7]
+    Left = 248
     Height = 23
-    Top = 128
+    Top = 160
     Width = 169
     EditLabel.Height = 15
     EditLabel.Width = 169
@@ -71,10 +71,10 @@ inherited CadVendedoresF: TCadVendedoresF
     EditLabel.ParentColor = False
     TabOrder = 7
   end
-  object LabeledEdit8: TLabeledEdit[8]
-    Left = 40
+  object inputEmail: TLabeledEdit[8]
+    Left = 56
     Height = 23
-    Top = 304
+    Top = 336
     Width = 169
     EditLabel.Height = 15
     EditLabel.Width = 169
@@ -82,10 +82,10 @@ inherited CadVendedoresF: TCadVendedoresF
     EditLabel.ParentColor = False
     TabOrder = 8
   end
-  object LabeledEdit9: TLabeledEdit[9]
-    Left = 232
+  object inputEndereco: TLabeledEdit[9]
+    Left = 248
     Height = 23
-    Top = 224
+    Top = 256
     Width = 169
     EditLabel.Height = 15
     EditLabel.Width = 169
@@ -93,10 +93,10 @@ inherited CadVendedoresF: TCadVendedoresF
     EditLabel.ParentColor = False
     TabOrder = 9
   end
-  object LabeledEdit10: TLabeledEdit[10]
-    Left = 40
+  object inputEstado: TLabeledEdit[10]
+    Left = 56
     Height = 23
-    Top = 224
+    Top = 256
     Width = 169
     EditLabel.Height = 15
     EditLabel.Width = 169

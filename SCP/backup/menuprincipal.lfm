@@ -3,7 +3,7 @@ object MenuPrincipalF: TMenuPrincipalF
   Height = 545
   Top = 145
   Width = 352
-  Caption = 'MenuPrincipalF'
+  Caption = 'SCP - Menu Principal'
   Color = clWhite
   Menu = MainMenu1
   OnClose = FormClose
@@ -16,6 +16,7 @@ object MenuPrincipalF: TMenuPrincipalF
       Caption = 'Cadastros'
       object menuCadUsuarios: TMenuItem
         Caption = 'Cad. Usuários'
+        OnClick = menuCadUsuariosClick
       end
       object menuCadClientes: TMenuItem
         Caption = 'Cad. Clientes'

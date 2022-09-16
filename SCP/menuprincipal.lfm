@@ -3,15 +3,15 @@ object MenuPrincipalF: TMenuPrincipalF
   Height = 545
   Top = 145
   Width = 352
-  Caption = 'MenuPrincipalF'
+  Caption = 'SCP - Menu Principal'
   Color = clWhite
   Menu = MainMenu1
   OnClose = FormClose
   LCLVersion = '2.2.2.0'
   WindowState = wsMaximized
   object MainMenu1: TMainMenu
-    Left = 32
-    Top = 80
+    Left = 240
+    Top = 40
     object menuCadastros: TMenuItem
       Caption = 'Cadastros'
       object menuCadUsuarios: TMenuItem
