@@ -1,0 +1,7 @@
+inherited cadProdutosF: TcadProdutosF
+  Caption = 'Produtos'
+  inherited PageControl1: TPageControl
+    ActivePage = PageCadastro
+    TabIndex = 1
+  end
+end

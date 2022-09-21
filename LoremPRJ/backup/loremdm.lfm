@@ -1,0 +1,44 @@
+object LoremDMF: TLoremDMF
+  OldCreateOrder = False
+  Height = 295
+  HorizontalOffset = 231
+  VerticalOffset = 149
+  Width = 353
+  object qryCategoria_Produto: TZQuery
+    UpdateObject = zupdCategoria_Produto
+    SQL.Strings = (
+      'SELECT * FROM CATEGORIA_PRODUTO'
+    )
+    Params = <>
+    DataSource = DataSource1
+    Left = 288
+    Top = 80
+  end
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    Connected = True
+    HostName = 'localhost'
+    Port = 5432
+    Database = 'postgres'
+    User = 'postgres'
+    Password = 'adm123'
+    Protocol = 'postgresql'
+    Left = 288
+    Top = 16
+  end
+  object DataSource1: TDataSource
+    DataSet = qryCategoria_Produto
+    Left = 288
+    Top = 160
+  end
+  object zupdCategoria_Produto: TZUpdateSQL
+    UseSequenceFieldForRefreshSQL = False
+    Left = 56
+    Top = 40
+  end
+end

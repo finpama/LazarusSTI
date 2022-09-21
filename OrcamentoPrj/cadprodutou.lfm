@@ -1,0 +1,14 @@
+inherited cadProdutosF: TcadProdutosF
+  Caption = 'Produtos'
+  inherited PageControl1: TPageControl
+    inherited PagePesquisa: TTabSheet
+      inherited DBGrid: TDBGrid
+        DataSource = dsProdutos
+      end
+    end
+  end
+  object dsProdutos: TDataSource[1]
+    Left = 288
+    Top = 62
+  end
+end

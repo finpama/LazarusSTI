@@ -1,0 +1,58 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Height = 297
+  HorizontalOffset = 231
+  VerticalOffset = 142
+  Width = 350
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    Connected = True
+    HostName = 'localhost'
+    Port = 5432
+    Database = 'postgres'
+    User = 'postgres'
+    Password = 'adm123'
+    Protocol = 'postgresql'
+    Left = 288
+    Top = 8
+  end
+  object zqryCategoria_Produtos: TZQuery
+    Connection = ZConnection1
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM CATEGORIA_PRODUTO'
+    )
+    Params = <>
+    Left = 288
+    Top = 64
+    object zqryCategoria_Produtoscategoriaprodutoid: TLongintField
+      FieldKind = fkData
+      FieldName = 'categoriaprodutoid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object zqryCategoria_Produtosds_categoria_produto: TStringField
+      FieldKind = fkData
+      FieldName = 'ds_categoria_produto'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = zqryCategoria_Produtos
+    Left = 288
+    Top = 128
+  end
+end

@@ -1,0 +1,20 @@
+object LoremF: TLoremF
+  Left = 228
+  Height = 549
+  Top = 142
+  Width = 358
+  Caption = 'LoremF'
+  ClientHeight = 549
+  ClientWidth = 358
+  LCLVersion = '2.2.2.0'
+  object DBGrid1: TDBGrid
+    Left = 48
+    Height = 100
+    Top = 96
+    Width = 200
+    Color = clWindow
+    Columns = <>
+    DataSource = LoremDMF.DataSource1
+    TabOrder = 0
+  end
+end

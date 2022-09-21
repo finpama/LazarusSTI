@@ -1,0 +1,32 @@
+object TesteF: TTesteF
+  Left = 232
+  Height = 544
+  Top = 143
+  Width = 351
+  Caption = 'TesteF'
+  ClientHeight = 544
+  ClientWidth = 351
+  LCLVersion = '2.2.2.0'
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 456
+    Top = 88
+    Width = 351
+    Align = alBottom
+    Color = clWindow
+    Columns = <>
+    DataSource = DataModule1.DataSource1
+    TabOrder = 0
+  end
+  object DBEdit1: TDBEdit
+    Left = 112
+    Height = 23
+    Top = 40
+    Width = 80
+    DataField = 'ds_categoria_produto'
+    DataSource = DataModule1.DataSource1
+    MaxLength = 50
+    TabOrder = 1
+    OnChange = DBEdit1Change
+  end
+end

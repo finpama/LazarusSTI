@@ -1,0 +1,3 @@
+inherited cadProdutosF: TcadProdutosF
+  Caption = 'Produtos'
+end
