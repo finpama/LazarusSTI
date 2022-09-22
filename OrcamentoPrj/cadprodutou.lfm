@@ -8,7 +8,8 @@ inherited cadProdutosF: TcadProdutosF
     end
   end
   object dsProdutos: TDataSource[1]
-    Left = 288
-    Top = 62
+    DataSet = DataModuleF.qryProdutos
+    Left = 296
+    Top = 128
   end
 end

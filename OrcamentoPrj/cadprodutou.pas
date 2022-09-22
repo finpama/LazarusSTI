@@ -26,5 +26,8 @@ implementation
 
 {$R *.lfm}
 
+{ TcadProdutosF }
+
+
 end.
 

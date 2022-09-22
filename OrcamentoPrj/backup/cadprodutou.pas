@@ -5,10 +5,15 @@ unit cadprodutou;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, cadModelU;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, cadModelU, DB;
 
 type
+
+  { TcadProdutosF }
+
   TcadProdutosF = class(TcadModelF)
+    dsProdutos: TDataSource;
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
   private
 
   public
@@ -21,6 +26,9 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TcadProdutosF }
+
 
 end.
 

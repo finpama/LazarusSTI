@@ -1,0 +1,16 @@
+inherited cadCategoriaProdF: TcadCategoriaProdF
+  Caption = 'Categorias dos Produtos'
+  inherited PageControl1: TPageControl
+    inherited PagePesquisa: TTabSheet
+      inherited DBGrid: TDBGrid
+        DataSource = dsCategoriaProd
+      end
+    end
+  end
+  object dsCategoriaProd: TDataSource[1]
+    DataSet = DataModuleF.qryCategoriaProd
+    OnDataChange = dsCategoriaProdDataChange
+    Left = 264
+    Top = 152
+  end
+end
