@@ -14,9 +14,9 @@ object cadModelF: TcadModelF
     Height = 542
     Top = 0
     Width = 354
-    ActivePage = PagePesquisa
+    ActivePage = PageCadastro
     Align = alClient
-    TabIndex = 0
+    TabIndex = 1
     TabOrder = 0
     object PagePesquisa: TTabSheet
       Caption = 'Pesquisa'

@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus,
-  cadprodutou, cadCategoriaProd;
+  cadprodutou, cadCategoriaProdU, cadOrcamentosU, cadClientesU;
 
 type
 
@@ -15,10 +15,17 @@ type
   TMenuPrincipalF = class(TForm)
     MainMenu: TMainMenu;
     menuCategoriaProd: TMenuItem;
+    menuCadastros: TMenuItem;
+    menuCadClientes: TMenuItem;
+    menuCadProdutos: TMenuItem;
+    menuCadCategoriasProd: TMenuItem;
+    menuCadOrcamentos: TMenuItem;
     menuOrcamentos: TMenuItem;
     menuProdutos: TMenuItem;
-    procedure menuCategoriaProdClick(Sender: TObject);
-    procedure menuProdutosClick(Sender: TObject);
+    procedure menuCadCategoriasProdClick(Sender: TObject);
+    procedure menuCadClientesClick(Sender: TObject);
+    procedure menuCadOrcamentosClick(Sender: TObject);
+    procedure menuCadProdutosClick(Sender: TObject);
   private
 
   public
@@ -34,16 +41,28 @@ implementation
 
 { TMenuPrincipalF }
 
-procedure TMenuPrincipalF.menuProdutosClick(Sender: TObject);
+procedure TMenuPrincipalF.menuCadProdutosClick(Sender: TObject);
 begin
   cadProdutosF := TcadProdutosF.Create(Self);
   cadprodutosF.Show;
 end;
 
-procedure TMenuPrincipalF.menuCategoriaProdClick(Sender: TObject);
+procedure TMenuPrincipalF.menuCadOrcamentosClick(Sender: TObject);
+begin
+  cadOrcamentosF := TcadOrcamentosF.Create(Self);
+  cadOrcamentosF.Show;
+end;
+
+procedure TMenuPrincipalF.menuCadCategoriasProdClick(Sender: TObject);
 begin
   cadCategoriaProdF := TcadCategoriaProdF.Create(Self);
   cadCategoriaProdF.Show;
+end;
+
+procedure TMenuPrincipalF.menuCadClientesClick(Sender: TObject);
+begin
+  cadClientesF := TcadClientesF.Create(Self);
+  cadClientesF.Show;
 end;
 
 end.

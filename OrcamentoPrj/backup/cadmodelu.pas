@@ -59,7 +59,6 @@ end;
 procedure TcadModelF.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
   CloseAction := caFree;
-  ShowMessage('executou');
 end;
 
 procedure TcadModelF.FormShow(Sender: TObject);

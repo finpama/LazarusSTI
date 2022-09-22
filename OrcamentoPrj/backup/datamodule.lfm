@@ -106,6 +106,7 @@ object DataModuleF: TDataModuleF
   object qryCategoriaProd: TZQuery
     Connection = ZConnection
     UpdateObject = updCategoriaProd
+    Active = True
     SQL.Strings = (
       'SELECT * FROM CATEGORIA_PRODUTO'
     )
@@ -136,5 +137,121 @@ object DataModuleF: TDataModuleF
     UseSequenceFieldForRefreshSQL = False
     Left = 160
     Top = 64
+  end
+  object qryOrcamentos: TZQuery
+    Connection = ZConnection
+    UpdateObject = updOrcamentos
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM ORCAMENTO'
+    )
+    Params = <>
+    Left = 56
+    Top = 112
+    object qryOrcamentosorcamentoid: TLongintField
+      FieldKind = fkData
+      FieldName = 'orcamentoid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryOrcamentosclienteid: TLongintField
+      FieldKind = fkData
+      FieldName = 'clienteid'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryOrcamentosdt_orcamento: TDateTimeField
+      FieldKind = fkData
+      FieldName = 'dt_orcamento'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryOrcamentosdt_validade_orcamento: TDateTimeField
+      FieldKind = fkData
+      FieldName = 'dt_validade_orcamento'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryOrcamentosvl_total_orcamento: TFloatField
+      FieldKind = fkData
+      FieldName = 'vl_total_orcamento'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Precision = 983042
+    end
+  end
+  object updOrcamentos: TZUpdateSQL
+    UseSequenceFieldForRefreshSQL = False
+    Left = 160
+    Top = 112
+  end
+  object qryClientes: TZQuery
+    Connection = ZConnection
+    UpdateObject = updClientes
+    SQL.Strings = (
+      'SELECT * FROM CLIENTE'
+    )
+    Params = <>
+    Left = 56
+    Top = 160
+    object qryClientesclienteid: TLongintField
+      FieldKind = fkData
+      FieldName = 'clienteid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryClientestipo_cliente: TStringField
+      FieldKind = fkData
+      FieldName = 'tipo_cliente'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 1
+    end
+    object qryClientescpf_cnpj_cliente: TStringField
+      FieldKind = fkData
+      FieldName = 'cpf_cnpj_cliente'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 18
+    end
+    object qryClientesnome_cliente: TStringField
+      FieldKind = fkData
+      FieldName = 'nome_cliente'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 100
+    end
+  end
+  object updClientes: TZUpdateSQL
+    UseSequenceFieldForRefreshSQL = False
+    Left = 160
+    Top = 160
   end
 end

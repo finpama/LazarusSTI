@@ -13,7 +13,6 @@ type
 
   TcadProdutosF = class(TcadModelF)
     dsProdutos: TDataSource;
-    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
   private
 
   public

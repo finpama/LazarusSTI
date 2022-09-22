@@ -1,0 +1,16 @@
+inherited cadClientesF: TcadClientesF
+  Caption = 'Clientes'
+  inherited PageControl1: TPageControl
+    ActivePage = PagePesquisa
+    TabIndex = 0
+    inherited PagePesquisa: TTabSheet
+      inherited DBGrid: TDBGrid
+        DataSource = dsClientes
+      end
+    end
+  end
+  object dsClientes: TDataSource[1]
+    Left = 272
+    Top = 424
+  end
+end

@@ -5,10 +5,14 @@ unit cadCategoriaProdU;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, cadModelU;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, cadModelU, DB;
 
 type
+
+  { TcadCategoriaProdF }
+
   TcadCategoriaProdF = class(TcadModelF)
+    dsCategoriaProd: TDataSource;
   private
 
   public
