@@ -1,0 +1,146 @@
+object cadModelF: TcadModelF
+  Left = 230
+  Height = 542
+  Top = 143
+  Width = 354
+  Caption = 'cadModelF'
+  ClientHeight = 542
+  ClientWidth = 354
+  LCLVersion = '2.2.2.0'
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 542
+    Top = 0
+    Width = 354
+    ActivePage = PagePesquisa
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 0
+    object PagePesquisa: TTabSheet
+      Caption = 'Pesquisa'
+      ClientHeight = 514
+      ClientWidth = 346
+      object DBGrid: TDBGrid
+        Left = 0
+        Height = 334
+        Top = 140
+        Width = 346
+        Align = alBottom
+        Color = clWindow
+        Columns = <>
+        Scrollbars = ssNone
+        TabOrder = 0
+      end
+      object Panel1: TPanel
+        Left = 0
+        Height = 40
+        Top = 474
+        Width = 346
+        Align = alBottom
+        BevelOuter = bvNone
+        ClientHeight = 40
+        ClientWidth = 346
+        TabOrder = 1
+        object DBG_Novo: TButton
+          Left = 8
+          Height = 25
+          Top = 8
+          Width = 75
+          Caption = 'Novo'
+          OnClick = DBG_NovoClick
+          TabOrder = 0
+        end
+        object Panel2: TPanel
+          Left = 250
+          Height = 40
+          Top = 0
+          Width = 96
+          Align = alRight
+          BevelOuter = bvNone
+          ClientHeight = 40
+          ClientWidth = 96
+          TabOrder = 1
+          object DBG_Fechar: TButton
+            Left = 14
+            Height = 25
+            Top = 8
+            Width = 75
+            Caption = 'Fechar'
+            TabOrder = 0
+          end
+        end
+      end
+      object DBG_Codigo: TLabeledEdit
+        Left = 32
+        Height = 23
+        Top = 48
+        Width = 80
+        EditLabel.Height = 15
+        EditLabel.Width = 80
+        EditLabel.Caption = 'Código:'
+        EditLabel.ParentColor = False
+        TabOrder = 2
+      end
+      object DBG_Buscar: TButton
+        Left = 120
+        Height = 25
+        Top = 48
+        Width = 75
+        Caption = 'Buscar'
+        TabOrder = 3
+      end
+    end
+    object PageCadastro: TTabSheet
+      Caption = 'Cadastro'
+      ClientHeight = 514
+      ClientWidth = 346
+      object Panel3: TPanel
+        Left = 0
+        Height = 42
+        Top = 472
+        Width = 346
+        Align = alBottom
+        BevelOuter = bvNone
+        ClientHeight = 42
+        ClientWidth = 346
+        TabOrder = 0
+        object Panel4: TPanel
+          Left = 240
+          Height = 42
+          Top = 0
+          Width = 106
+          Align = alRight
+          BevelOuter = bvNone
+          ClientHeight = 42
+          ClientWidth = 106
+          TabOrder = 0
+          object Button3: TButton
+            Left = 24
+            Height = 25
+            Top = 8
+            Width = 75
+            Caption = 'Cancelar'
+            OnClick = Button3Click
+            TabOrder = 0
+          end
+        end
+        object Button1: TButton
+          Left = 8
+          Height = 25
+          Top = 8
+          Width = 75
+          Caption = 'Gravar'
+          TabOrder = 1
+        end
+        object Button2: TButton
+          Left = 96
+          Height = 25
+          Top = 8
+          Width = 75
+          Caption = 'Excluir'
+          TabOrder = 2
+        end
+      end
+    end
+  end
+end

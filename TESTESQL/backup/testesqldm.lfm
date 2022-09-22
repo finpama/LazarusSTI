@@ -1,0 +1,33 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Height = 297
+  HorizontalOffset = 231
+  VerticalOffset = 142
+  Width = 350
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    Connected = True
+    HostName = 'localhost'
+    Port = 5432
+    Database = 'postgres'
+    User = 'postgres'
+    Password = 'adm123'
+    Protocol = 'postgresql'
+    Left = 288
+    Top = 8
+  end
+  object zqryCategoria_Produtos: TZQuery
+    Connection = ZConnection1
+    SQL.Strings = (
+      'SELECT * FROM CATEGORIA_PRODUTO'
+    )
+    Params = <>
+    Left = 288
+    Top = 96
+  end
+end
