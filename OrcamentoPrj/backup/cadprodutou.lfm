@@ -1,7 +1,15 @@
 inherited cadProdutosF: TcadProdutosF
   Caption = 'Produtos'
   inherited PageControl1: TPageControl
-    ActivePage = PageCadastro
-    TabIndex = 1
+    inherited PagePesquisa: TTabSheet
+      inherited DBGrid: TDBGrid
+        DataSource = dsProdutos
+      end
+    end
+  end
+  object dsProdutos: TDataSource[1]
+    DataSet = DataModuleF.qryProdutos
+    Left = 296
+    Top = 128
   end
 end
