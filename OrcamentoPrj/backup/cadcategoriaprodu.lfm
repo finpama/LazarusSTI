@@ -1,17 +1,3 @@
 inherited cadCategoriaProdF: TcadCategoriaProdF
   Caption = 'Categorias dos Produtos'
-  inherited PageControl1: TPageControl
-    ActivePage = PagePesquisa
-    TabIndex = 0
-    inherited PagePesquisa: TTabSheet
-      inherited DBGrid: TDBGrid
-        DataSource = dsCategoriaProd
-      end
-    end
-  end
-  object dsCategoriaProd: TDataSource[1]
-    DataSet = DataModuleF.qryCategoriaProd
-    Left = 272
-    Top = 144
-  end
 end

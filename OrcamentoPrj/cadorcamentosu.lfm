@@ -2,17 +2,13 @@ inherited cadOrcamentosF: TcadOrcamentosF
   Top = 146
   Caption = 'Orçamentos'
   inherited PageControl1: TPageControl
-    ActivePage = PagePesquisa
-    TabIndex = 0
     inherited PagePesquisa: TTabSheet
       inherited DBGrid: TDBGrid
-        DataSource = dsOrcamentos
+        DataSource = dsCadModel
       end
     end
   end
-  object dsOrcamentos: TDataSource[1]
+  inherited dsCadModel: TDataSource
     DataSet = DataModuleF.qryOrcamentos
-    Left = 272
-    Top = 416
   end
 end

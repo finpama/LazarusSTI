@@ -29,14 +29,5 @@ object MenuPrincipalF: TMenuPrincipalF
         OnClick = menuCadOrcamentosClick
       end
     end
-    object menuProdutos: TMenuItem
-      Caption = 'Produtos'
-    end
-    object menuCategoriaProd: TMenuItem
-      Caption = 'Categorias de Produtos'
-    end
-    object menuOrcamentos: TMenuItem
-      Caption = 'Orçamentos'
-    end
   end
 end

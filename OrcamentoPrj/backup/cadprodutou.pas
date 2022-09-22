@@ -12,7 +12,6 @@ type
   { TcadProdutosF }
 
   TcadProdutosF = class(TcadModelF)
-    dsProdutos: TDataSource;
   private
 
   public

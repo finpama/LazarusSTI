@@ -5,14 +5,13 @@ unit cadOrcamentosU;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, cadModelU, DB;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, cadModelU;
 
 type
 
   { TcadOrcamentosF }
 
   TcadOrcamentosF = class(TcadModelF)
-    dsOrcamentos: TDataSource;
   private
 
   public

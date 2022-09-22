@@ -1,17 +1,53 @@
 inherited cadClientesF: TcadClientesF
   Caption = 'Clientes'
   inherited PageControl1: TPageControl
-    ActivePage = PagePesquisa
-    TabIndex = 0
     inherited PagePesquisa: TTabSheet
       inherited DBGrid: TDBGrid
-        DataSource = dsClientes
+        DataSource = dsCadModel
+      end
+      inherited Panel1: TPanel
+        inherited DBG_Novo: TButton
+          OnClick = DBG_NovoClick
+        end
+      end
+    end
+    inherited PageCadastro: TTabSheet
+      object inputNome: TLabeledEdit[1]
+        Left = 40
+        Height = 23
+        Top = 72
+        Width = 264
+        EditLabel.Height = 15
+        EditLabel.Width = 264
+        EditLabel.Caption = 'Nome Do Cliente:'
+        EditLabel.ParentColor = False
+        TabOrder = 1
+      end
+      object InputCpfCpnj: TLabeledEdit[2]
+        Left = 40
+        Height = 23
+        Top = 120
+        Width = 168
+        EditLabel.Height = 15
+        EditLabel.Width = 168
+        EditLabel.Caption = 'Cpf / Cpnj:'
+        EditLabel.ParentColor = False
+        TabOrder = 2
+      end
+      object inputTipoCliente: TLabeledEdit[3]
+        Left = 224
+        Height = 23
+        Top = 120
+        Width = 80
+        EditLabel.Height = 15
+        EditLabel.Width = 80
+        EditLabel.Caption = 'Tipo de Cliente'
+        EditLabel.ParentColor = False
+        TabOrder = 3
       end
     end
   end
-  object dsClientes: TDataSource[1]
+  inherited dsCadModel: TDataSource
     DataSet = DataModuleF.qryClientes
-    Left = 272
-    Top = 424
   end
 end

@@ -12,7 +12,6 @@ type
   { TcadOrcamentosF }
 
   TcadOrcamentosF = class(TcadModelF)
-    dsOrcamentos: TDataSource;
   private
 
   public

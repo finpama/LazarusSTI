@@ -12,7 +12,7 @@ inherited cadOrcamentosF: TcadOrcamentosF
   end
   object dsOrcamentos: TDataSource[1]
     DataSet = DataModuleF.qryOrcamentos
-    Left = 256
-    Top = 152
+    Left = 272
+    Top = 416
   end
 end
