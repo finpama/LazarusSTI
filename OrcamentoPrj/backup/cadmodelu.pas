@@ -5,7 +5,7 @@ unit cadModelU;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus, DBGrids,
+  Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, Menus, DBGrids,
   ExtCtrls, StdCtrls, ActnList, ComCtrls;
 
 type
@@ -16,6 +16,7 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
+    dsCadModel: TDataSource;
     DBG_Buscar: TButton;
     DBG_Codigo: TLabeledEdit;
     DBG_Fechar: TButton;
@@ -54,12 +55,17 @@ implementation
 procedure TcadModelF.DBG_NovoClick(Sender: TObject);
 begin
   PageControl1.ActivePage := PageCadastro;
+
+  //dsCadModelo.DataSet.Insert;
+  dsCadModel.DataSet.Insert;
+
+  //dbDesc.SetFocus;
+  DBGrid.SetFocus;
 end;
 
 procedure TcadModelF.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
   CloseAction := caFree;
-  ShowMessage('executou');
 end;
 
 procedure TcadModelF.FormShow(Sender: TObject);

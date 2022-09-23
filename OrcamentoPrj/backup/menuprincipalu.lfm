@@ -10,13 +10,30 @@ object MenuPrincipalF: TMenuPrincipalF
   object MainMenu: TMainMenu
     Left = 312
     Top = 40
+    object menuCadastros: TMenuItem
+      Caption = 'Cadastros'
+      object menuCadClientes: TMenuItem
+        Caption = 'Clientes'
+        OnClick = menuCadClientesClick
+      end
+      object menuCadProdutos: TMenuItem
+        Caption = 'Produtos'
+        OnClick = menuCadProdutosClick
+      end
+      object menuCadCategoriasProd: TMenuItem
+        Caption = 'Categorias De Produtos'
+        OnClick = menuCadCategoriasProdClick
+      end
+      object menuCadOrcamentos: TMenuItem
+        Caption = 'Orçamentos'
+        OnClick = menuCadOrcamentosClick
+      end
+    end
     object menuProdutos: TMenuItem
       Caption = 'Produtos'
-      OnClick = menuProdutosClick
     end
     object menuCategoriaProd: TMenuItem
       Caption = 'Categorias de Produtos'
-      OnClick = menuCategoriaProdClick
     end
     object menuOrcamentos: TMenuItem
       Caption = 'Orçamentos'

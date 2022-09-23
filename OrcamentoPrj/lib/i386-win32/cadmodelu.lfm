@@ -158,4 +158,8 @@ object cadModelF: TcadModelF
       end
     end
   end
+  object dsCadModel: TDataSource
+    Left = 280
+    Top = 424
+  end
 end
