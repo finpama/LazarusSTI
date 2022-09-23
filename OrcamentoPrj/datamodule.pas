@@ -39,6 +39,8 @@ type
     ZConnection: TZConnection;
     qryProdutos: TZQuery;
     updProdutos: TZUpdateSQL;
+    qryGenerica: TZQuery;
+    function getSequence(const pNomeSequence: String): String;
   private
 
   public
@@ -53,6 +55,20 @@ implementation
 {$R *.lfm}
 
 { TDataModuleF }
+
+function DataModule.getSequence(const pNomeSequence: String): String;
+begin
+     Result := '';
+ try
+     qryGenerica.close;
+     qryGenerica.SQL.Clear;
+     qryGenerica.SQL.Add('SELECT NEXTVAL(' + QuotedStr(pNomeSequence) + ') AS CODIGO');
+     qryGenerica.Open;
+     Result := qryGenerica.FieldByName('CODIGO').AsString;
+ finally
+   qryGenerica.Close;
+ end;
+end;
 
 end.
 

@@ -14,14 +14,11 @@ type
 
   TMenuPrincipalF = class(TForm)
     MainMenu: TMainMenu;
-    menuCategoriaProd: TMenuItem;
     menuCadastros: TMenuItem;
     menuCadClientes: TMenuItem;
     menuCadProdutos: TMenuItem;
     menuCadCategoriasProd: TMenuItem;
     menuCadOrcamentos: TMenuItem;
-    menuOrcamentos: TMenuItem;
-    menuProdutos: TMenuItem;
     procedure menuCadCategoriasProdClick(Sender: TObject);
     procedure menuCadClientesClick(Sender: TObject);
     procedure menuCadOrcamentosClick(Sender: TObject);

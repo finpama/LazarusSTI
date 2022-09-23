@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, Menus, DBGrids,
-  ExtCtrls, StdCtrls, ActnList, ComCtrls;
+  ExtCtrls, StdCtrls, ActnList, ComCtrls, DBCtrls;
 
 type
 
@@ -16,6 +16,7 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
+    DBNavigator1: TDBNavigator;
     dsCadModel: TDataSource;
     DBG_Buscar: TButton;
     DBG_Codigo: TLabeledEdit;
@@ -30,6 +31,7 @@ type
     PagePesquisa: TTabSheet;
     PageCadastro: TTabSheet;
     Panel5: TPanel;
+    Panel6: TPanel;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
@@ -54,13 +56,11 @@ implementation
 
 procedure TcadModelF.DBG_NovoClick(Sender: TObject);
 begin
-  PageControl1.ActivePage := PageCadastro;
+  PageControl1.ActivePage := PageCadastro;  
 
-  //dsCadModelo.DataSet.Insert;
+  DBG_Novo.Enabled := False;
+
   dsCadModel.DataSet.Insert;
-
-  //dbDesc.SetFocus;
-  DBGrid.SetFocus;
 end;
 
 procedure TcadModelF.FormClose(Sender: TObject; var CloseAction: TCloseAction);
@@ -75,12 +75,17 @@ end;
 
 procedure TcadModelF.Button3Click(Sender: TObject);
 begin
-  PageControl1.ActivePage := PagePesquisa;
+  PageControl1.ActivePage := PagePesquisa; 
+
+  DBG_Novo.Enabled := True;
 end;
 
 procedure TcadModelF.Button1Click(Sender: TObject);
 begin
-  PageControl1.ActivePage := PagePesquisa;
+  PageControl1.ActivePage := PagePesquisa;   
+  DBG_Novo.Enabled := True;
+
+
 end;
 
 procedure TcadModelF.Button2Click(Sender: TObject);

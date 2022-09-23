@@ -203,7 +203,6 @@ object DataModuleF: TDataModuleF
   object qryClientes: TZQuery
     Connection = ZConnection
     UpdateObject = updClientes
-    Active = True
     SQL.Strings = (
       'SELECT * FROM CLIENTE'
     )
@@ -251,8 +250,80 @@ object DataModuleF: TDataModuleF
     end
   end
   object updClientes: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM CLIENTE'
+      'WHERE'
+      '  CLIENTE.clienteid = :OLD_clienteid AND'
+      '  CLIENTE.tipo_cliente = :OLD_tipo_cliente AND'
+      '  CLIENTE.cpf_cnpj_cliente = :OLD_cpf_cnpj_cliente AND'
+      '  CLIENTE.nome_cliente = :OLD_nome_cliente'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO CLIENTE'
+      '  (clienteid, tipo_cliente, cpf_cnpj_cliente, nome_cliente)'
+      'VALUES'
+      '  (:clienteid, :tipo_cliente, :cpf_cnpj_cliente, :nome_cliente)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE CLIENTE SET'
+      '  clienteid = :clienteid,'
+      '  tipo_cliente = :tipo_cliente,'
+      '  cpf_cnpj_cliente = :cpf_cnpj_cliente,'
+      '  nome_cliente = :nome_cliente'
+      'WHERE'
+      '  CLIENTE.clienteid = :OLD_clienteid AND'
+      '  CLIENTE.tipo_cliente = :OLD_tipo_cliente AND'
+      '  CLIENTE.cpf_cnpj_cliente = :OLD_cpf_cnpj_cliente AND'
+      '  CLIENTE.nome_cliente = :OLD_nome_cliente'
+    )
     UseSequenceFieldForRefreshSQL = False
     Left = 160
     Top = 160
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'clienteid'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'tipo_cliente'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'cpf_cnpj_cliente'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'nome_cliente'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_clienteid'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_tipo_cliente'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_cpf_cnpj_cliente'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_nome_cliente'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryGenerica: TZQuery
+    Params = <>
+    Left = 288
+    Top = 112
   end
 end

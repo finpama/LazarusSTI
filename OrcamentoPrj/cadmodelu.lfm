@@ -14,9 +14,9 @@ object cadModelF: TcadModelF
     Height = 542
     Top = 0
     Width = 354
-    ActivePage = PagePesquisa
+    ActivePage = PageCadastro
     Align = alClient
-    TabIndex = 0
+    TabIndex = 1
     TabOrder = 0
     object PagePesquisa: TTabSheet
       Caption = 'Pesquisa'
@@ -154,6 +154,36 @@ object cadModelF: TcadModelF
           Caption = 'Excluir'
           OnClick = Button2Click
           TabOrder = 2
+        end
+      end
+      object Panel6: TPanel
+        Left = 0
+        Height = 24
+        Top = 0
+        Width = 346
+        Align = alTop
+        ClientHeight = 24
+        ClientWidth = 346
+        TabOrder = 1
+        object DBNavigator1: TDBNavigator
+          Left = 104
+          Height = 22
+          Top = 1
+          Width = 241
+          Align = alRight
+          BevelOuter = bvNone
+          ChildSizing.EnlargeHorizontal = crsScaleChilds
+          ChildSizing.EnlargeVertical = crsScaleChilds
+          ChildSizing.ShrinkHorizontal = crsScaleChilds
+          ChildSizing.ShrinkVertical = crsScaleChilds
+          ChildSizing.Layout = cclLeftToRightThenTopToBottom
+          ChildSizing.ControlsPerLine = 100
+          ClientHeight = 22
+          ClientWidth = 241
+          DataSource = dsCadModel
+          Options = []
+          TabOrder = 0
+          VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbRefresh]
         end
       end
     end
