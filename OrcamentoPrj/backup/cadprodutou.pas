@@ -5,9 +5,12 @@ unit cadprodutou;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, cadModelU;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, cadModelU, DB;
 
 type
+
+  { TcadProdutosF }
+
   TcadProdutosF = class(TcadModelF)
   private
 
@@ -21,6 +24,9 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TcadProdutosF }
+
 
 end.
 

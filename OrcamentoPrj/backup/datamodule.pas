@@ -5,13 +5,40 @@ unit DataModule;
 interface
 
 uses
-  Classes, SysUtils, ZConnection;
+  Classes, SysUtils, DB, ZConnection, ZDataset, ZSqlUpdate;
 
 type
 
   { TDataModuleF }
 
   TDataModuleF = class(TDataModule)
+    qryCategoriaProd: TZQuery;
+    qryClientesclienteid: TLongintField;
+    qryClientescpf_cnpj_cliente: TStringField;
+    qryClientesnome_cliente: TStringField;
+    qryClientestipo_cliente: TStringField;
+    qryOrcamentos: TZQuery;
+    qryCategoriaProdcategoriaprodutoid: TLongintField;
+    qryCategoriaProdds_categoria_produto: TStringField;
+    qryClientes: TZQuery;
+    qryOrcamentosclienteid: TLongintField;
+    qryOrcamentosdt_orcamento: TDateTimeField;
+    qryOrcamentosdt_validade_orcamento: TDateTimeField;
+    qryOrcamentosorcamentoid: TLongintField;
+    qryOrcamentosvl_total_orcamento: TFloatField;
+    qryProdutoscategoriaprodutoid: TLongintField;
+    qryProdutosds_produto: TStringField;
+    qryProdutosdt_cadastro_produto: TDateTimeField;
+    qryProdutosobs_produto: TStringField;
+    qryProdutosprodutoid: TLongintField;
+    qryProdutosstatus_produto: TStringField;
+    qryProdutosvl_venda_produto: TFloatField;
+    updCategoriaProd: TZUpdateSQL;
+    updOrcamentos: TZUpdateSQL;
+    updClientes: TZUpdateSQL;
+    ZConnection: TZConnection;
+    qryProdutos: TZQuery;
+    updProdutos: TZUpdateSQL;
   private
 
   public
@@ -24,6 +51,8 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TDataModuleF }
 
 end.
 

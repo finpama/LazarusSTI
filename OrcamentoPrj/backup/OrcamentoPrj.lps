@@ -12,7 +12,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="26"/>
       </Unit>
       <Unit>
         <Filename Value="cadmodelu.pas"/>
@@ -21,31 +21,58 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="cadModelU"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="33"/>
-        <CursorPos X="37" Y="39"/>
-        <UsageCount Value="20"/>
-      </Unit>
-      <Unit>
-        <Filename Value="cadprodutou.pas"/>
-        <ComponentName Value="cadProdutoF"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="cadProdutoU"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="15" Y="6"/>
-        <UsageCount Value="20"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="49"/>
+        <CursorPos X="33" Y="60"/>
+        <UsageCount Value="26"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="datamodule.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="DataModuleF"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="DataModule"/>
-        <CursorPos X="17" Y="9"/>
-        <UsageCount Value="20"/>
+        <CursorPos X="10" Y="6"/>
+        <UsageCount Value="26"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadprodutou.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadProdutosF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="67" Y="8"/>
+        <UsageCount Value="26"/>
+      </Unit>
+      <Unit>
+        <Filename Value="menuprincipalu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MenuPrincipalF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="MenuPrincipalU"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="17"/>
+        <CursorPos X="28" Y="44"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadcategoriaprodu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadCategoriaProdF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadCategoriaProdU"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="67" Y="8"/>
+        <UsageCount Value="23"/>
       </Unit>
       <Unit>
         <Filename Value="backup\cadprodutou.pas"/>
@@ -61,35 +88,169 @@
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
-        <Filename Value="cadprodutou.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="cadProdutosF"/>
+        <Filename Value="cadcategoriaprod.pas"/>
+        <ComponentName Value="cadCategoriaProdF"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadCategoriaProd"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="9"/>
+        <CursorPos X="28" Y="5"/>
+        <UsageCount Value="21"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadorcamentosu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadOrcamentosF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadOrcamentosU"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="67" Y="8"/>
+        <UsageCount Value="23"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadclientesu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadClientesF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadClientesU"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
-        <CursorPos X="35" Y="17"/>
-        <UsageCount Value="20"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="20"/>
+        <CursorPos X="22" Y="39"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="cadmodelu.lfm"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="3">
+    <JumpHistory HistoryIndex="29">
       <Position>
-        <Filename Value="datamodule.pas"/>
-        <Caret Line="13" Column="31"/>
+        <Filename Value="menuprincipalu.pas"/>
+        <Caret Line="27" Column="25" TopLine="21"/>
+      </Position>
+      <Position>
+        <Filename Value="menuprincipalu.pas"/>
+        <Caret Line="28" Column="25" TopLine="22"/>
+      </Position>
+      <Position>
+        <Filename Value="menuprincipalu.pas"/>
+        <Caret Line="29" Column="25" TopLine="23"/>
+      </Position>
+      <Position>
+        <Filename Value="menuprincipalu.pas"/>
+        <Caret Line="30" Column="25" TopLine="24"/>
+      </Position>
+      <Position>
+        <Filename Value="menuprincipalu.pas"/>
+        <Caret Line="31" Column="25" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="menuprincipalu.pas"/>
+        <Caret Line="45" Column="17" TopLine="28"/>
+      </Position>
+      <Position>
+        <Filename Value="menuprincipalu.pas"/>
+        <Caret Line="60" Column="22" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="menuprincipalu.pas"/>
+        <Caret Line="42" Column="8" TopLine="33"/>
+      </Position>
+      <Position>
+        <Filename Value="menuprincipalu.pas"/>
+        <Caret Line="58" Column="37" TopLine="40"/>
+      </Position>
+      <Position>
+        <Filename Value="menuprincipalu.pas"/>
+        <Caret Line="65" Column="3" TopLine="44"/>
+      </Position>
+      <Position>
+        <Filename Value="menuprincipalu.pas"/>
+        <Caret Line="52" Column="3" TopLine="44"/>
       </Position>
       <Position>
         <Filename Value="datamodule.pas"/>
-        <Caret Line="8" Column="20"/>
+        <Caret Line="22" Column="39" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="datamodule.pas"/>
-        <Caret Line="14" Column="37"/>
+        <Caret Line="26" Column="39" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="datamodule.pas"/>
-        <Caret Line="15" Column="33"/>
+        <Caret Line="25" Column="39" TopLine="16"/>
+      </Position>
+      <Position>
+        <Filename Value="datamodule.pas"/>
+        <Caret Line="24" Column="39" TopLine="16"/>
+      </Position>
+      <Position>
+        <Filename Value="datamodule.pas"/>
+        <Caret Line="23" Column="39" TopLine="16"/>
+      </Position>
+      <Position>
+        <Filename Value="menuprincipalu.pas"/>
+        <Caret Line="65" Column="21" TopLine="44"/>
+      </Position>
+      <Position>
+        <Filename Value="menuprincipalu.pas"/>
+        <Caret Line="64" Column="21" TopLine="43"/>
+      </Position>
+      <Position>
+        <Filename Value="menuprincipalu.pas"/>
+        <Caret Line="63" Column="21" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="menuprincipalu.pas"/>
+        <Caret Line="62" Column="21" TopLine="41"/>
+      </Position>
+      <Position>
+        <Filename Value="cadmodelu.pas"/>
+        <Caret Line="3" Column="22"/>
+      </Position>
+      <Position>
+        <Filename Value="cadmodelu.pas"/>
+        <Caret Line="56" Column="43" TopLine="48"/>
+      </Position>
+      <Position>
+        <Filename Value="cadmodelu.pas"/>
+        <Caret Line="56" Column="43" TopLine="48"/>
+      </Position>
+      <Position>
+        <Filename Value="cadmodelu.pas"/>
+        <Caret Line="62" Column="26" TopLine="49"/>
+      </Position>
+      <Position>
+        <Filename Value="cadmodelu.pas"/>
+        <Caret Line="63" Column="20" TopLine="49"/>
+      </Position>
+      <Position>
+        <Filename Value="menuprincipalu.pas"/>
+        <Caret Line="42" Column="22" TopLine="32"/>
+      </Position>
+      <Position>
+        <Filename Value="cadclientesu.pas"/>
+        <Caret Line="20" Column="40" TopLine="6"/>
+      </Position>
+      <Position>
+        <Filename Value="cadclientesu.pas"/>
+        <Caret Line="36" Column="13" TopLine="17"/>
+      </Position>
+      <Position>
+        <Filename Value="cadclientesu.pas"/>
+        <Caret Line="37" Column="13" TopLine="18"/>
+      </Position>
+      <Position>
+        <Filename Value="cadclientesu.pas"/>
+        <Caret Line="38" Column="13" TopLine="19"/>
       </Position>
     </JumpHistory>
     <RunParams>

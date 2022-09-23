@@ -1,0 +1,33 @@
+object MenuPrincipalF: TMenuPrincipalF
+  Left = 229
+  Height = 544
+  Top = 144
+  Width = 359
+  Caption = 'Menu Principal'
+  Color = clWhite
+  Menu = MainMenu
+  LCLVersion = '2.2.2.0'
+  object MainMenu: TMainMenu
+    Left = 312
+    Top = 40
+    object menuCadastros: TMenuItem
+      Caption = 'Cadastros'
+      object menuCadClientes: TMenuItem
+        Caption = 'Clientes'
+        OnClick = menuCadClientesClick
+      end
+      object menuCadProdutos: TMenuItem
+        Caption = 'Produtos'
+        OnClick = menuCadProdutosClick
+      end
+      object menuCadCategoriasProd: TMenuItem
+        Caption = 'Categorias De Produtos'
+        OnClick = menuCadCategoriasProdClick
+      end
+      object menuCadOrcamentos: TMenuItem
+        Caption = 'Orçamentos'
+        OnClick = menuCadOrcamentosClick
+      end
+    end
+  end
+end

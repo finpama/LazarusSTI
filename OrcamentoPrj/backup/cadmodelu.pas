@@ -13,20 +13,30 @@ type
   { TcadModelF }
 
   TcadModelF = class(TForm)
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    dsCadModel: TDataSource;
+    DBG_Buscar: TButton;
+    DBG_Codigo: TLabeledEdit;
     DBG_Fechar: TButton;
     DBG_Novo: TButton;
-    DBG_Buscar: TButton;
     DBGrid: TDBGrid;
-    DBG_Codigo: TLabeledEdit;
     PageControl1: TPageControl;
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
     Panel4: TPanel;
-    Pesquisa: TTabSheet;
-    Cadastro: TTabSheet;
+    PagePesquisa: TTabSheet;
+    PageCadastro: TTabSheet;
+    Panel5: TPanel;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure DBG_FecharClick(Sender: TObject);
     procedure DBG_NovoClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
+    procedure FormShow(Sender: TObject);
   private
 
   public
@@ -44,12 +54,43 @@ implementation
 
 procedure TcadModelF.DBG_NovoClick(Sender: TObject);
 begin
-  PageControl1.ActivePage := Cadastro;
+  PageControl1.ActivePage := PageCadastro;
+
+  //dsCadModelo.DataSet.Insert;
+  dsCadModel.DataSet.Insert;
+
+  //dbDesc.SetFocus;
+  DBGrid.SetFocus;
+end;
+
+procedure TcadModelF.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+  CloseAction := caFree;
+end;
+
+procedure TcadModelF.FormShow(Sender: TObject);
+begin
+  PageControl1.ActivePage := PagePesquisa;
 end;
 
 procedure TcadModelF.Button3Click(Sender: TObject);
 begin
-  PageControl1.ActivePage := Pesquisa;
+  PageControl1.ActivePage := PagePesquisa;
+end;
+
+procedure TcadModelF.Button1Click(Sender: TObject);
+begin
+  PageControl1.ActivePage := PagePesquisa;
+end;
+
+procedure TcadModelF.Button2Click(Sender: TObject);
+begin
+  PageControl1.ActivePage := PagePesquisa;
+end;
+
+procedure TcadModelF.DBG_FecharClick(Sender: TObject);
+begin
+  Close;
 end;
 
 end.
