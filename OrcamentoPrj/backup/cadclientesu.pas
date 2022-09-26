@@ -6,13 +6,14 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, DBCtrls,
-  StdCtrls, cadModelU, DataModule, DB;
+  StdCtrls, Menus, cadModelU, DataModule, DB;
 
 type
 
   { TcadClientesF }
 
   TcadClientesF = class(TcadModelF)
+    Button4: TButton;
     inputTipoCliente: TDBEdit;
     InputCpfCpnj: TDBEdit;
     inputNome: TDBEdit;
@@ -22,7 +23,11 @@ type
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure DBGridDblClick(Sender: TObject);
+    procedure DBG_BuscarClick(Sender: TObject);
     procedure DBG_NovoClick(Sender: TObject);
+    procedure DBNavigator1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure PageControl1Change(Sender: TObject);
   private
@@ -47,10 +52,27 @@ begin
   inputNome.SetFocus;
 end;
 
+procedure TcadClientesF.DBNavigator1Click(Sender: TObject);
+begin
+
+  ShowMessage('teste');
+
+  DataModuleF.qryClientestipo_cliente.AsString:= 'a';
+  DataModuleF.qryClientescpf_cnpj_cliente.AsString:= 'a';
+  DataModuleF.qryClientesnome_cliente.AsString:= 'a';
+  DataModuleF.qryClientes.post;
+  DataModuleF.qryClientes.Delete;
+
+
+  inputNome.ReadOnly := True;
+  InputCpfCpnj.ReadOnly := True;
+  inputTipoCliente.ReadOnly := True;
+end;
+
 procedure TcadClientesF.FormCreate(Sender: TObject);
 begin
   DataModuleF.qryClientes.Close;
-  DataModuleF.qryClientes.SQL.Text := 'SELECT * FROM CLIENTE';    
+  DataModuleF.qryClientes.SQL.Text := 'SELECT * FROM CLIENTE ORDER BY CLIENTEID';
   DataModuleF.qryClientes.Open;
 end;
 
@@ -61,6 +83,11 @@ begin
   if PageControl1.ActivePage = PageCadastro then
   begin
     DataModuleF.qryClientes.Insert;
+  end;
+
+  if PageControl1.ActivePage = PagePesquisa then
+  begin
+    DataModuleF.qryClientes.Cancel;
   end;
 
 end;
@@ -75,17 +102,19 @@ begin
     DataModuleF.qryClientes.ApplyUpdates;
     DBG_Novo.Enabled := True;
   end;
+
+
 end;
 
 procedure TcadClientesF.Button2Click(Sender: TObject);
 var
-  result: TModalResult;
+  dlgResult: TModalResult;
 begin
   inherited;
 
-  result := MessageDlg('Você tem certeza que deseja excluir o registro?', mtConfirmation, [mbYes, mbNo], 0);
+  dlgResult := MessageDlg('Você tem certeza que deseja excluir o registro?', mtConfirmation, [mbYes, mbNo], 0);
 
-  if result = 6 then
+  if dlgResult = 6 then
   begin
     dsCadModel.DataSet.Delete;
 
@@ -100,5 +129,37 @@ begin
 
   DataModuleF.qryClientes.Cancel;
 end;
+
+procedure TcadClientesF.Button4Click(Sender: TObject);
+begin
+  DataModuleF.qryClientes.Edit;
+end;
+
+procedure TcadClientesF.DBGridDblClick(Sender: TObject);
+begin
+  PageControl1.ActivePage := PageCadastro;
+  DataModuleF.qryClientes.Edit;
+end;
+
+procedure TcadClientesF.DBG_BuscarClick(Sender: TObject);
+var
+  AuxWhere : String;
+begin
+  //Esta procedure irá executar a pesquisa dos Clientes
+  if DBG_Codigo.Text = '' then
+    AuxWhere := '1 = 1'
+  else
+    AuxWhere := 'CLIENTEID = '+DBG_Codigo.Text;
+
+  DataModuleF.qryClientes.Close;
+  DataModuleF.qryClientes.SQL.Text :=
+            'SELECT * '+
+            'FROM CLIENTE '+
+            'WHERE '+AuxWhere+' '+
+            'ORDER BY CLIENTEID';
+  DataModuleF.qryClientes.Open;
+end;
+
+
 
 end.

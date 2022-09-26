@@ -41,6 +41,7 @@ type
     updProdutos: TZUpdateSQL;
     qryGenerica: TZQuery;
     function getSequence(const pNomeSequence: String): String;
+    procedure qryClientesAfterInsert(DataSet: TDataSet);
   private
 
   public
@@ -56,7 +57,7 @@ implementation
 
 { TDataModuleF }
 
-function TDataModule.getSequence(const pNomeSequence: String): String;
+function TDataModuleF.getSequence(const pNomeSequence: String): String;
 begin
      Result := '';
  try
@@ -66,9 +67,16 @@ begin
      qryGenerica.Open;
      Result := qryGenerica.FieldByName('CODIGO').AsString;
  finally
-   qryGenerica.Close;
+     qryGenerica.Close;
  end;
 end;
+
+procedure TDataModuleF.qryClientesAfterInsert(DataSet: TDataSet);
+begin
+  qryClientesclienteid.AsInteger := getSequence('cliente_clienteid');
+end;
+
+
 
 end.
 

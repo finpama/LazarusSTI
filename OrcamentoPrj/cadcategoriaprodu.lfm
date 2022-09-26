@@ -5,6 +5,50 @@ inherited cadCategoriaProdF: TcadCategoriaProdF
       inherited DBGrid: TDBGrid
         DataSource = dsCadModel
       end
+      inherited Panel1: TPanel
+        inherited DBG_Novo: TButton
+          OnClick = DBG_NovoClick
+        end
+      end
+      inherited Panel5: TPanel
+        inherited DBG_Buscar: TButton
+          OnClick = DBG_BuscarClick
+        end
+      end
+    end
+    inherited PageCadastro: TTabSheet
+      inherited Panel3: TPanel
+        inherited Button1: TButton
+          OnClick = Button1Click
+        end
+        inherited Button2: TButton
+          OnClick = Button2Click
+        end
+        object Button4: TButton[3]
+          Left = 184
+          Height = 25
+          Top = 8
+          Width = 75
+          Caption = 'Editar'
+          OnClick = Button4Click
+          TabOrder = 3
+        end
+      end
+      inherited Panel6: TPanel
+        inherited DBNavigator1: TDBNavigator
+          Hints.Strings = (          )
+        end
+      end
+      object inputDsCategoria: TDBEdit[2]
+        Left = 40
+        Height = 23
+        Top = 64
+        Width = 264
+        DataField = 'ds_categoria_produto'
+        DataSource = dsCadModel
+        MaxLength = 50
+        TabOrder = 2
+      end
     end
   end
   inherited dsCadModel: TDataSource

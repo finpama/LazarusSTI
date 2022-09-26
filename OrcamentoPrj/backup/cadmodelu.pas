@@ -84,8 +84,6 @@ procedure TcadModelF.Button1Click(Sender: TObject);
 begin
   PageControl1.ActivePage := PagePesquisa;   
   DBG_Novo.Enabled := True;
-
-
 end;
 
 procedure TcadModelF.Button2Click(Sender: TObject);

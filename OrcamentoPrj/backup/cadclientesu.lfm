@@ -4,14 +4,22 @@ inherited cadClientesF: TcadClientesF
   Caption = 'Clientes'
   OnCreate = FormCreate
   inherited PageControl1: TPageControl
+    ActivePage = PagePesquisa
+    TabIndex = 0
     OnChange = PageControl1Change
     inherited PagePesquisa: TTabSheet
       inherited DBGrid: TDBGrid
         DataSource = dsCadModel
+        OnDblClick = DBGridDblClick
       end
       inherited Panel1: TPanel
         inherited DBG_Novo: TButton
           OnClick = DBG_NovoClick
+        end
+      end
+      inherited Panel5: TPanel
+        inherited DBG_Buscar: TButton
+          OnClick = DBG_BuscarClick
         end
       end
     end
@@ -29,11 +37,21 @@ inherited cadClientesF: TcadClientesF
         inherited Button2: TButton
           OnClick = Button2Click
         end
+        object Button4: TButton[3]
+          Left = 184
+          Height = 25
+          Top = 8
+          Width = 75
+          Caption = 'Editar'
+          OnClick = Button4Click
+          TabOrder = 3
+        end
       end
       inherited Panel6: TPanel
         TabOrder = 4
         inherited DBNavigator1: TDBNavigator
           Hints.Strings = (          )
+          OnClick = DBNavigator1Click
         end
       end
       object inputNome: TDBEdit[2]

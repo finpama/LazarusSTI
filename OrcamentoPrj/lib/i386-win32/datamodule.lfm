@@ -203,6 +203,7 @@ object DataModuleF: TDataModuleF
   object qryClientes: TZQuery
     Connection = ZConnection
     UpdateObject = updClientes
+    AfterInsert = qryClientesAfterInsert
     SQL.Strings = (
       'SELECT * FROM CLIENTE'
     )
@@ -320,5 +321,11 @@ object DataModuleF: TDataModuleF
         Name = 'OLD_nome_cliente'
         ParamType = ptUnknown
       end>
+  end
+  object qryGenerica: TZQuery
+    Connection = ZConnection
+    Params = <>
+    Left = 280
+    Top = 112
   end
 end
