@@ -1,8 +1,8 @@
 object DataModuleF: TDataModuleF
   OldCreateOrder = False
   Height = 239
-  HorizontalOffset = 234
-  VerticalOffset = 412
+  HorizontalOffset = 213
+  VerticalOffset = 293
   Width = 343
   object ZConnection: TZConnection
     ControlsCodePage = cCP_UTF8
@@ -23,7 +23,6 @@ object DataModuleF: TDataModuleF
   object qryProdutos: TZQuery
     Connection = ZConnection
     UpdateObject = updProdutos
-    Active = True
     SQL.Strings = (
       'SELECT * FROM PRODUTO'
     )
@@ -106,7 +105,7 @@ object DataModuleF: TDataModuleF
   object qryCategoriaProd: TZQuery
     Connection = ZConnection
     UpdateObject = updCategoriaProd
-    Active = True
+    AfterInsert = qryCategoriaProdAfterInsert
     SQL.Strings = (
       'SELECT * FROM CATEGORIA_PRODUTO'
     )

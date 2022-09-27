@@ -1,13 +1,12 @@
 inherited cadClientesF: TcadClientesF
-  Left = 233
-  Top = 141
+  Left = 232
+  Top = 144
   Caption = 'Clientes'
   OnCreate = FormCreate
   inherited PageControl1: TPageControl
     OnChange = PageControl1Change
     inherited PagePesquisa: TTabSheet
       inherited DBGrid: TDBGrid
-        DataSource = dsCadModel
         OnDblClick = DBGridDblClick
       end
       inherited Panel1: TPanel
@@ -49,8 +48,6 @@ inherited cadClientesF: TcadClientesF
         TabOrder = 4
         inherited DBNavigator1: TDBNavigator
           Hints.Strings = (          )
-          OnClick = DBNavigator1Click
-          OnMouseDown = DBNavigator1MouseDown
         end
       end
       object inputNome: TDBEdit[2]

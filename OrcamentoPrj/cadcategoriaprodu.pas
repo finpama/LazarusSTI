@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, DBCtrls, StdCtrls,
-  cadModelU, DataModule;
+  cadModelU, DataModule, DB;
 
 type
 
@@ -14,10 +14,15 @@ type
 
   TcadCategoriaProdF = class(TcadModelF)
     Button4: TButton;
+    DBEdit1: TDBEdit;
     inputDsCategoria: TDBEdit;
+    Label1: TLabel;
+    Label2: TLabel;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
+    procedure DBGridDblClick(Sender: TObject);
     procedure DBG_BuscarClick(Sender: TObject);
     procedure DBG_NovoClick(Sender: TObject);
   private
@@ -57,12 +62,12 @@ procedure TcadCategoriaProdF.Button1Click(Sender: TObject);
 begin
   inherited;
 
-  //if DataModuleF.qryCategoriaProd.State in [dsEdit, dsInsert] then
-  //begin
-  //  DataModuleF.qryCategoriaProd.Post;
-  //  DataModuleF.qryCategoriaProd.ApplyUpdates;
-  //  DBG_Novo.Enabled := True;
-  //end;
+  if DataModuleF.qryCategoriaProd.State in [dsEdit, dsInsert] then
+  begin
+    DataModuleF.qryCategoriaProd.Post;
+    DataModuleF.qryCategoriaProd.ApplyUpdates;
+    DBG_Novo.Enabled := True;
+  end;
 end;
 
 procedure TcadCategoriaProdF.Button2Click(Sender: TObject);
@@ -77,9 +82,22 @@ begin
   end;
 end;
 
+procedure TcadCategoriaProdF.Button3Click(Sender: TObject);
+begin
+  inherited;
+
+  DataModuleF.qryCategoriaProd.Cancel;
+end;
+
 procedure TcadCategoriaProdF.Button4Click(Sender: TObject);
 begin
+  DataModuleF.qryCategoriaProd.Edit;
+end;
 
+procedure TcadCategoriaProdF.DBGridDblClick(Sender: TObject);
+begin
+  PageControl1.ActivePage := PageCadastro;
+  DataModuleF.qryCategoriaProd.Edit;
 end;
 
 procedure TcadCategoriaProdF.DBG_NovoClick(Sender: TObject);

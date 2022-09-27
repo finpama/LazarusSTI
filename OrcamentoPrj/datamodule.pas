@@ -40,11 +40,12 @@ type
     qryProdutos: TZQuery;
     updProdutos: TZUpdateSQL;
     qryGenerica: TZQuery;
-    function getSequence(const pNomeSequence: String): String;
-    procedure qryClientesAfterInsert(DataSet: TDataSet);
+    procedure qryCategoriaProdAfterInsert();
+    procedure qryClientesAfterInsert();
   private
 
-  public
+  public         
+    function getSequence(const pNomeSequence: String): String;
 
   end;
 
@@ -71,11 +72,15 @@ begin
  end;
 end;
 
-procedure TDataModuleF.qryClientesAfterInsert(DataSet: TDataSet);
+procedure TDataModuleF.qryCategoriaProdAfterInsert();
+begin
+  qryCategoriaProdcategoriaprodutoid.AsInteger := StrToInt(getSequence('categoria_produto_categoriaprodutoid_seq'));
+end;
+
+procedure TDataModuleF.qryClientesAfterInsert();
 begin
   qryClientesclienteid.AsInteger := StrToInt(getSequence('cliente_clienteid'));
 end;
-
 
 
 end.

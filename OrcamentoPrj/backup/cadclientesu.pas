@@ -27,7 +27,6 @@ type
     procedure DBGridDblClick(Sender: TObject);
     procedure DBG_BuscarClick(Sender: TObject);
     procedure DBG_NovoClick(Sender: TObject);
-    procedure DBNavigator1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure PageControl1Change(Sender: TObject);
   private
@@ -50,23 +49,6 @@ begin
   inherited;
 
   inputNome.SetFocus;
-end;
-
-procedure TcadClientesF.DBNavigator1Click(Sender: TObject);
-begin
-
-  ShowMessage('teste');
-
-  DataModuleF.qryClientestipo_cliente.AsString:= 'a';
-  DataModuleF.qryClientescpf_cnpj_cliente.AsString:= 'a';
-  DataModuleF.qryClientesnome_cliente.AsString:= 'a';
-  DataModuleF.qryClientes.post;
-  DataModuleF.qryClientes.Delete;
-
-
-  inputNome.ReadOnly := True;
-  InputCpfCpnj.ReadOnly := True;
-  inputTipoCliente.ReadOnly := True;
 end;
 
 procedure TcadClientesF.FormCreate(Sender: TObject);
@@ -149,13 +131,13 @@ begin
   if DBG_Codigo.Text = '' then
     AuxWhere := '1 = 1'
   else
-    AuxWhere := 'CLIENTEID = '+DBG_Codigo.Text;
+    AuxWhere := 'CLIENTEID = ' + DBG_Codigo.Text;
 
   DataModuleF.qryClientes.Close;
   DataModuleF.qryClientes.SQL.Text :=
             'SELECT * '+
             'FROM CLIENTE '+
-            'WHERE '+AuxWhere+' '+
+            'WHERE ' + AuxWhere + ' ' +
             'ORDER BY CLIENTEID';
   DataModuleF.qryClientes.Open;
 end;
