@@ -1,7 +1,7 @@
 #!/bin/bash
 
-processColor = "\033[1;35m"
-questionColor = "\033[0;34m"
+processColor="\033[1;35m"
+questionColor="\033[0;34m"
 
 echo -e $processColor 'Unlogging...'
 
