@@ -45,6 +45,7 @@
         <ComponentName Value="cadProdutosF"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <TopLine Value="87"/>
         <CursorPos X="43" Y="102"/>
@@ -95,12 +96,12 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="cadClientesU"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <TopLine Value="121"/>
         <CursorPos X="42" Y="138"/>
         <UsageCount Value="40"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="backup\cadprodutou.pas"/>
@@ -162,12 +163,16 @@
         <CursorPos X="38" Y="5114"/>
         <UsageCount Value="10"/>
       </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\zPackages\ZeosLib\src\plain\ZPlainLoader.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="239"/>
+        <CursorPos Y="250"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="datamodule.pas"/>
-        <Caret Line="43" Column="17" TopLine="32"/>
-      </Position>
       <Position>
         <Filename Value="datamodule.pas"/>
         <Caret Line="61" Column="26" TopLine="49"/>
@@ -283,6 +288,10 @@
       <Position>
         <Filename Value="cadprodutou.pas"/>
         <Caret Line="102" Column="33" TopLine="84"/>
+      </Position>
+      <Position>
+        <Filename Value="cadclientesu.pas"/>
+        <Caret Line="138" Column="42" TopLine="121"/>
       </Position>
     </JumpHistory>
     <RunParams>

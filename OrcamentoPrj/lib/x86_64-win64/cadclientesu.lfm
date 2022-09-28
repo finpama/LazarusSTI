@@ -1,0 +1,112 @@
+inherited cadClientesF: TcadClientesF
+  Left = 232
+  Top = 144
+  Caption = 'Clientes'
+  OnCreate = FormCreate
+  inherited PageControl1: TPageControl
+    OnChange = PageControl1Change
+    inherited PagePesquisa: TTabSheet
+      inherited DBGrid: TDBGrid
+        OnDblClick = DBGridDblClick
+      end
+      inherited Panel1: TPanel
+        inherited DBG_Novo: TButton
+          OnClick = DBG_NovoClick
+        end
+      end
+      inherited Panel5: TPanel
+        inherited DBG_Buscar: TButton
+          OnClick = DBG_BuscarClick
+        end
+      end
+    end
+    inherited PageCadastro: TTabSheet
+      ParentShowHint = False
+      inherited Panel3: TPanel
+        inherited Panel4: TPanel
+          inherited Button3: TButton
+            OnClick = Button3Click
+          end
+        end
+        inherited Button1: TButton
+          OnClick = Button1Click
+        end
+        inherited Button2: TButton
+          OnClick = Button2Click
+        end
+        object Button4: TButton[3]
+          Left = 184
+          Height = 25
+          Top = 8
+          Width = 75
+          Caption = 'Editar'
+          OnClick = Button4Click
+          TabOrder = 3
+        end
+      end
+      inherited Panel6: TPanel
+        TabOrder = 4
+        inherited DBNavigator1: TDBNavigator
+          Hints.Strings = (          )
+        end
+      end
+      object inputNome: TDBEdit[2]
+        Left = 40
+        Height = 23
+        Top = 72
+        Width = 264
+        DataField = 'nome_cliente'
+        DataSource = dsCadModel
+        MaxLength = 0
+        TabOrder = 1
+      end
+      object InputCpfCpnj: TDBEdit[3]
+        Left = 40
+        Height = 23
+        Top = 128
+        Width = 168
+        DataField = 'cpf_cnpj_cliente'
+        DataSource = dsCadModel
+        MaxLength = 0
+        TabOrder = 2
+      end
+      object inputTipoCliente: TDBEdit[4]
+        Left = 224
+        Height = 23
+        Top = 128
+        Width = 80
+        DataField = 'tipo_cliente'
+        DataSource = dsCadModel
+        MaxLength = 0
+        TabOrder = 3
+      end
+      object Label1: TLabel[5]
+        Left = 40
+        Height = 15
+        Top = 56
+        Width = 76
+        Caption = 'Nome Cliente:'
+        ParentColor = False
+      end
+      object Label2: TLabel[6]
+        Left = 40
+        Height = 15
+        Top = 112
+        Width = 67
+        Caption = 'Cpf ou Cpnj:'
+        ParentColor = False
+      end
+      object Label3: TLabel[7]
+        Left = 224
+        Height = 15
+        Top = 112
+        Width = 82
+        Caption = 'Tipo de Cliente:'
+        ParentColor = False
+      end
+    end
+  end
+  inherited dsCadModel: TDataSource
+    DataSet = DataModuleF.qryClientes
+  end
+end
