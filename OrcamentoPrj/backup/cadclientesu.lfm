@@ -1,8 +1,10 @@
 inherited cadClientesF: TcadClientesF
-  Left = 230
-  Top = 144
+  Left = 232
+  Top = 150
   Caption = 'Clientes'
   inherited PageControl1: TPageControl
+    ActivePage = PageCadastro
+    TabIndex = 1
     OnChange = PageControl1Change
     inherited PagePesquisa: TTabSheet
       inherited DBGrid: TDBGrid
@@ -20,6 +22,7 @@ inherited cadClientesF: TcadClientesF
       end
     end
     inherited PageCadastro: TTabSheet
+      Caption = 'Cadastro'
       ParentShowHint = False
       inherited Panel3: TPanel
         inherited Panel4: TPanel
@@ -106,6 +109,21 @@ inherited cadClientesF: TcadClientesF
         Width = 16
         Caption = 'Id: '
         ParentColor = False
+      end
+      object Title2: TLabel[9]
+        Left = 85
+        Height = 21
+        Top = 32
+        Width = 55
+        Caption = 'Cliente:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Segoe UI Semibold'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
       end
     end
   end

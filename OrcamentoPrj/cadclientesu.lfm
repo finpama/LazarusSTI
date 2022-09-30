@@ -1,6 +1,6 @@
 inherited cadClientesF: TcadClientesF
-  Left = 230
-  Top = 144
+  Left = 232
+  Top = 150
   Caption = 'Clientes'
   inherited PageControl1: TPageControl
     OnChange = PageControl1Change
@@ -34,7 +34,7 @@ inherited cadClientesF: TcadClientesF
           OnClick = Button2Click
         end
       end
-      object inputNome: TDBEdit[1]
+      object inputNome: TDBEdit[2]
         Left = 40
         Height = 23
         Top = 104
@@ -44,7 +44,7 @@ inherited cadClientesF: TcadClientesF
         MaxLength = 100
         TabOrder = 1
       end
-      object InputCpfCpnj: TDBEdit[2]
+      object InputCpfCpnj: TDBEdit[3]
         Left = 40
         Height = 23
         Top = 160
@@ -54,7 +54,7 @@ inherited cadClientesF: TcadClientesF
         MaxLength = 18
         TabOrder = 2
       end
-      object inputTipoCliente: TDBEdit[3]
+      object inputTipoCliente: TDBEdit[4]
         Left = 224
         Height = 23
         Top = 160
@@ -64,7 +64,7 @@ inherited cadClientesF: TcadClientesF
         MaxLength = 1
         TabOrder = 3
       end
-      object Label1: TLabel[4]
+      object Label1: TLabel[5]
         Left = 40
         Height = 15
         Top = 88
@@ -72,7 +72,7 @@ inherited cadClientesF: TcadClientesF
         Caption = 'Nome Cliente:'
         ParentColor = False
       end
-      object Label2: TLabel[5]
+      object Label2: TLabel[6]
         Left = 40
         Height = 15
         Top = 144
@@ -80,7 +80,7 @@ inherited cadClientesF: TcadClientesF
         Caption = 'Cpf ou Cpnj:'
         ParentColor = False
       end
-      object Label3: TLabel[6]
+      object Label3: TLabel[7]
         Left = 224
         Height = 15
         Top = 144
@@ -88,7 +88,7 @@ inherited cadClientesF: TcadClientesF
         Caption = 'Tipo de Cliente:'
         ParentColor = False
       end
-      object DBEdit1: TDBEdit[7]
+      object DBEdit1: TDBEdit[8]
         Left = 248
         Height = 23
         Top = 104
@@ -99,13 +99,28 @@ inherited cadClientesF: TcadClientesF
         MaxLength = 0
         TabOrder = 4
       end
-      object Label4: TLabel[8]
+      object Label4: TLabel[9]
         Left = 248
         Height = 15
         Top = 88
         Width = 16
         Caption = 'Id: '
         ParentColor = False
+      end
+      object Title2: TLabel[10]
+        Left = 85
+        Height = 21
+        Top = 32
+        Width = 55
+        Caption = 'Cliente:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Segoe UI Semibold'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
       end
     end
   end
