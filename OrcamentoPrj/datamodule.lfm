@@ -2,8 +2,8 @@ object DataModuleF: TDataModuleF
   OnCreate = DataModuleCreate
   OldCreateOrder = False
   Height = 239
-  HorizontalOffset = 253
-  VerticalOffset = 318
+  HorizontalOffset = 231
+  VerticalOffset = 355
   Width = 343
   object ZConnection: TZConnection
     ControlsCodePage = cCP_UTF8
@@ -16,7 +16,7 @@ object DataModuleF: TDataModuleF
     HostName = 'localhost'
     Port = 5432
     User = 'postgres'
-    Password = 'admsenha010.'
+    Password = 'adm123'
     Protocol = 'postgresql'
     LibraryLocation = 'C:\Program Files (x86)\PostgreSQL\10\pgAdmin 4\bin\libpq.dll'
     Left = 280

@@ -71,10 +71,11 @@ begin
 
   if (DBG_Codigo.Text = '') then
     AuxWhere := '1 = 1'
-  else if iCode = 0 then
-    AuxWhere := '1 != 1'
+  else if (iCode = 0) then
+    AuxWhere := 'CLIENTEID = ' + DBG_Codigo.Text
   else
-    AuxWhere := 'CLIENTEID = ' + DBG_Codigo.Text;
+    AuxWhere := '1 != 1';
+
 
   with DataModuleF.qryClientes do
   begin

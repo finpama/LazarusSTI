@@ -63,18 +63,19 @@ end;
 procedure TcadClientesF.DBG_BuscarClick();
 var
   s: String;
-  iValue, iCode: Integer;   
+  iCode: Integer;
   AuxWhere: String;
 begin
   s := DBG_Codigo.Text;
-  Val(s, iValue, iCode);
+  Val(s, 'i', iCode);
 
   if (DBG_Codigo.Text = '') then
     AuxWhere := '1 = 1'
-  else if iCode = 0 then
-    AuxWhere := '1 != 1'
+  else if (iCode = 0) then
+    AuxWhere := 'CLIENTEID = ' + DBG_Codigo.Text
   else
-    AuxWhere := 'CLIENTEID = ' + DBG_Codigo.Text;
+    AuxWhere := '1 != 1';
+
 
   with DataModuleF.qryClientes do
   begin

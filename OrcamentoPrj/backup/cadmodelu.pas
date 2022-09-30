@@ -95,7 +95,7 @@ end;
 
 procedure TcadModelF.PageControl1Change(Sender: TObject);
 begin
-  if (not dsCadModel.DataSet.State in [dsEdit, dsInsert]) and (PageControl1.ActivePage = PageCadastro) then
+  if (not (dsCadModel.DataSet.State in [dsEdit, dsInsert])) and (PageControl1.ActivePage = PageCadastro) then
   begin
     dsCadModel.DataSet.Insert;
   end;
