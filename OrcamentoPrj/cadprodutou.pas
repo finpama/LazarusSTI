@@ -13,7 +13,6 @@ type
   { TcadProdutosF }
 
   TcadProdutosF = class(TcadModelF)
-    Button4: TButton;
     DBEdit1: TDBEdit;
     DBEdit2: TDBEdit;
     DBEdit3: TDBEdit;

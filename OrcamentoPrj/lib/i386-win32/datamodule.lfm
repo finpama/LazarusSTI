@@ -1,8 +1,9 @@
 object DataModuleF: TDataModuleF
+  OnCreate = DataModuleCreate
   OldCreateOrder = False
   Height = 239
-  HorizontalOffset = 213
-  VerticalOffset = 293
+  HorizontalOffset = 253
+  VerticalOffset = 318
   Width = 343
   object ZConnection: TZConnection
     ControlsCodePage = cCP_UTF8
@@ -15,14 +16,16 @@ object DataModuleF: TDataModuleF
     HostName = 'localhost'
     Port = 5432
     User = 'postgres'
-    Password = 'adm123'
+    Password = 'admsenha010.'
     Protocol = 'postgresql'
-    Left = 304
-    Top = 8
+    LibraryLocation = 'C:\Program Files (x86)\PostgreSQL\10\pgAdmin 4\bin\libpq.dll'
+    Left = 280
+    Top = 16
   end
   object qryProdutos: TZQuery
     Connection = ZConnection
     UpdateObject = updProdutos
+    Active = True
     SQL.Strings = (
       'SELECT * FROM PRODUTO'
     )
@@ -106,6 +109,7 @@ object DataModuleF: TDataModuleF
     Connection = ZConnection
     UpdateObject = updCategoriaProd
     AfterInsert = qryCategoriaProdAfterInsert
+    Active = True
     SQL.Strings = (
       'SELECT * FROM CATEGORIA_PRODUTO'
     )
@@ -203,8 +207,11 @@ object DataModuleF: TDataModuleF
     Connection = ZConnection
     UpdateObject = updClientes
     AfterInsert = qryClientesAfterInsert
+    Active = True
     SQL.Strings = (
-      'SELECT * FROM CLIENTE'
+      'SELECT *'
+      'FROM CLIENTE'
+      'ORDER BY CLIENTEID'
     )
     Params = <>
     Left = 56
@@ -325,6 +332,6 @@ object DataModuleF: TDataModuleF
     Connection = ZConnection
     Params = <>
     Left = 280
-    Top = 112
+    Top = 64
   end
 end

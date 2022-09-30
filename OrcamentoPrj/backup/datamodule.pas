@@ -40,6 +40,7 @@ type
     qryProdutos: TZQuery;
     updProdutos: TZUpdateSQL;
     qryGenerica: TZQuery;
+    procedure DataModuleCreate(Sender: TObject);
     procedure qryCategoriaProdAfterInsert();
     procedure qryClientesAfterInsert();
   private
@@ -75,6 +76,11 @@ end;
 procedure TDataModuleF.qryCategoriaProdAfterInsert();
 begin
   qryCategoriaProdcategoriaprodutoid.AsInteger := StrToInt(getSequence('categoria_produto_categoriaprodutoid_seq'));
+end;
+
+procedure TDataModuleF.DataModuleCreate(Sender: TObject);
+begin
+
 end;
 
 procedure TDataModuleF.qryClientesAfterInsert();

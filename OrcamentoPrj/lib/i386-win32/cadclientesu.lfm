@@ -1,8 +1,7 @@
 inherited cadClientesF: TcadClientesF
-  Left = 232
+  Left = 230
   Top = 144
   Caption = 'Clientes'
-  OnCreate = FormCreate
   inherited PageControl1: TPageControl
     OnChange = PageControl1Change
     inherited PagePesquisa: TTabSheet
@@ -34,74 +33,78 @@ inherited cadClientesF: TcadClientesF
         inherited Button2: TButton
           OnClick = Button2Click
         end
-        object Button4: TButton[3]
-          Left = 184
-          Height = 25
-          Top = 8
-          Width = 75
-          Caption = 'Editar'
-          OnClick = Button4Click
-          TabOrder = 3
-        end
       end
-      inherited Panel6: TPanel
-        TabOrder = 4
-        inherited DBNavigator1: TDBNavigator
-          Hints.Strings = (          )
-        end
-      end
-      object inputNome: TDBEdit[2]
+      object inputNome: TDBEdit[1]
         Left = 40
         Height = 23
-        Top = 72
-        Width = 264
+        Top = 104
+        Width = 192
         DataField = 'nome_cliente'
         DataSource = dsCadModel
-        MaxLength = 0
+        MaxLength = 100
         TabOrder = 1
       end
-      object InputCpfCpnj: TDBEdit[3]
+      object InputCpfCpnj: TDBEdit[2]
         Left = 40
         Height = 23
-        Top = 128
+        Top = 160
         Width = 168
         DataField = 'cpf_cnpj_cliente'
         DataSource = dsCadModel
-        MaxLength = 0
+        MaxLength = 18
         TabOrder = 2
       end
-      object inputTipoCliente: TDBEdit[4]
+      object inputTipoCliente: TDBEdit[3]
         Left = 224
         Height = 23
-        Top = 128
+        Top = 160
         Width = 80
         DataField = 'tipo_cliente'
         DataSource = dsCadModel
-        MaxLength = 0
+        MaxLength = 1
         TabOrder = 3
       end
-      object Label1: TLabel[5]
+      object Label1: TLabel[4]
         Left = 40
         Height = 15
-        Top = 56
+        Top = 88
         Width = 76
         Caption = 'Nome Cliente:'
         ParentColor = False
       end
-      object Label2: TLabel[6]
+      object Label2: TLabel[5]
         Left = 40
         Height = 15
-        Top = 112
+        Top = 144
         Width = 67
         Caption = 'Cpf ou Cpnj:'
         ParentColor = False
       end
-      object Label3: TLabel[7]
+      object Label3: TLabel[6]
         Left = 224
         Height = 15
-        Top = 112
+        Top = 144
         Width = 82
         Caption = 'Tipo de Cliente:'
+        ParentColor = False
+      end
+      object DBEdit1: TDBEdit[7]
+        Left = 248
+        Height = 23
+        Top = 104
+        Width = 56
+        DataField = 'clienteid'
+        DataSource = dsCadModel
+        Alignment = taRightJustify
+        MaxLength = 0
+        TabOrder = 4
+      end
+      object Label4: TLabel[8]
+        Left = 248
+        Height = 15
+        Top = 88
+        Width = 16
+        Caption = 'Id: '
         ParentColor = False
       end
     end

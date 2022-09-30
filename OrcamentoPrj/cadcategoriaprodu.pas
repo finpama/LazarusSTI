@@ -13,7 +13,6 @@ type
   { TcadCategoriaProdF }
 
   TcadCategoriaProdF = class(TcadModelF)
-    Button4: TButton;
     DBEdit1: TDBEdit;
     inputDsCategoria: TDBEdit;
     Label1: TLabel;

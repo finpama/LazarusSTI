@@ -13,21 +13,21 @@ type
   { TcadClientesF }
 
   TcadClientesF = class(TcadModelF)
-    Button4: TButton;
+    DBEdit1: TDBEdit;
     inputTipoCliente: TDBEdit;
     InputCpfCpnj: TDBEdit;
     inputNome: TDBEdit;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
+    Label4: TLabel;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure DBGridDblClick(Sender: TObject);
-    procedure DBG_BuscarClick(Sender: TObject);
+    procedure DBG_BuscarClick();
     procedure DBG_NovoClick(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
     procedure PageControl1Change(Sender: TObject);
   private
 
@@ -49,13 +49,6 @@ begin
   inherited;
 
   inputNome.SetFocus;
-end;
-
-procedure TcadClientesF.FormCreate(Sender: TObject);
-begin
-  DataModuleF.qryClientes.Close;
-  DataModuleF.qryClientes.SQL.Text := 'SELECT * FROM CLIENTE ORDER BY CLIENTEID';
-  DataModuleF.qryClientes.Open;
 end;
 
 procedure TcadClientesF.PageControl1Change(Sender: TObject);
@@ -119,29 +112,31 @@ end;
 
 procedure TcadClientesF.DBGridDblClick(Sender: TObject);
 begin
-  PageControl1.ActivePage := PageCadastro;
   DataModuleF.qryClientes.Edit;
 end;
 
-procedure TcadClientesF.DBG_BuscarClick(Sender: TObject);
+procedure TcadClientesF.DBG_BuscarClick();
 var
-  AuxWhere : String;
+  s: String;
+  iValue, iCode: Integer;   
+  AuxWhere: String;
 begin
-  //Esta procedure irá executar a pesquisa dos Clientes
-  if DBG_Codigo.Text = '' then
+  s := DBG_Codigo.Text;
+  Val(s, iValue, iCode);
+  if iCode = 0 then
+    if (DBG_Codigo.Text = '') or (TryStringToInt()) then
     AuxWhere := '1 = 1'
   else
     AuxWhere := 'CLIENTEID = ' + DBG_Codigo.Text;
 
-  DataModuleF.qryClientes.Close;
-  DataModuleF.qryClientes.SQL.Text :=
-            'SELECT * '+
-            'FROM CLIENTE '+
-            'WHERE ' + AuxWhere + ' ' +
-            'ORDER BY CLIENTEID';
-  DataModuleF.qryClientes.Open;
+  with DataModuleF.qryClientes do
+  begin
+    Close;
+    SQL.Text := 'SELECT * FROM CLIENTE ' +
+                'WHERE '+ AuxWhere + ' ' +
+                'ORDER BY CLIENTEID ';
+    Open;
+  end;
 end;
-
-
 
 end.

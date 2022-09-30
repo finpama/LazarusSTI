@@ -5,8 +5,10 @@ unit MenuPrincipalU;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus,
-  cadprodutou, cadCategoriaProdU, cadOrcamentosU, cadClientesU;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus
+  //,cadprodutou, cadCategoriaProdU, cadOrcamentosU
+  , cadClientesU
+  ;
 
 type
 
@@ -40,20 +42,20 @@ implementation
 
 procedure TMenuPrincipalF.menuCadProdutosClick(Sender: TObject);
 begin
-  cadProdutosF := TcadProdutosF.Create(Self);
-  cadprodutosF.Show;
+  //cadProdutosF := TcadProdutosF.Create(Self);
+  //cadprodutosF.Show;
 end;
 
 procedure TMenuPrincipalF.menuCadOrcamentosClick(Sender: TObject);
 begin
-  cadOrcamentosF := TcadOrcamentosF.Create(Self);
-  cadOrcamentosF.Show;
+  //cadOrcamentosF := TcadOrcamentosF.Create(Self);
+  //cadOrcamentosF.Show;
 end;
 
 procedure TMenuPrincipalF.menuCadCategoriasProdClick(Sender: TObject);
 begin
-  cadCategoriaProdF := TcadCategoriaProdF.Create(Self);
-  cadCategoriaProdF.Show;
+  //cadCategoriaProdF := TcadCategoriaProdF.Create(Self);
+  //cadCategoriaProdF.Show;
 end;
 
 procedure TMenuPrincipalF.menuCadClientesClick(Sender: TObject);

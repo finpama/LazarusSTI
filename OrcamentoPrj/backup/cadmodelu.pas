@@ -16,7 +16,7 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
-    DBNavigator1: TDBNavigator;
+    Button4: TButton;
     dsCadModel: TDataSource;
     DBG_Buscar: TButton;
     DBG_Codigo: TLabeledEdit;
@@ -31,7 +31,7 @@ type
     PagePesquisa: TTabSheet;
     PageCadastro: TTabSheet;
     Panel5: TPanel;
-    Panel6: TPanel;
+    Title: TLabel;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
@@ -56,8 +56,7 @@ implementation
 
 procedure TcadModelF.DBG_NovoClick(Sender: TObject);
 begin
-  PageControl1.ActivePage := PageCadastro;  
-
+  PageControl1.ActivePage := PageCadastro;
   DBG_Novo.Enabled := False;
 
   dsCadModel.DataSet.Insert;

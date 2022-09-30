@@ -8,15 +8,15 @@ object cadModelF: TcadModelF
   ClientWidth = 354
   OnClose = FormClose
   OnShow = FormShow
-  LCLVersion = '2.2.2.0'
+  LCLVersion = '2.2.4.0'
   object PageControl1: TPageControl
     Left = 0
     Height = 542
     Top = 0
     Width = 354
-    ActivePage = PageCadastro
+    ActivePage = PagePesquisa
     Align = alClient
-    TabIndex = 1
+    TabIndex = 0
     TabOrder = 0
     object PagePesquisa: TTabSheet
       Caption = 'Pesquisa'
@@ -63,7 +63,7 @@ object cadModelF: TcadModelF
           ClientWidth = 96
           TabOrder = 1
           object DBG_Fechar: TButton
-            Left = 14
+            Left = 8
             Height = 25
             Top = 8
             Width = 75
@@ -156,36 +156,30 @@ object cadModelF: TcadModelF
           OnClick = Button2Click
           TabOrder = 2
         end
-      end
-      object Panel6: TPanel
-        Left = 0
-        Height = 24
-        Top = 0
-        Width = 346
-        Align = alTop
-        ClientHeight = 24
-        ClientWidth = 346
-        TabOrder = 1
-        object DBNavigator1: TDBNavigator
-          Left = 104
-          Height = 22
-          Top = 1
-          Width = 241
-          Align = alRight
-          BevelOuter = bvNone
-          ChildSizing.EnlargeHorizontal = crsScaleChilds
-          ChildSizing.EnlargeVertical = crsScaleChilds
-          ChildSizing.ShrinkHorizontal = crsScaleChilds
-          ChildSizing.ShrinkVertical = crsScaleChilds
-          ChildSizing.Layout = cclLeftToRightThenTopToBottom
-          ChildSizing.ControlsPerLine = 100
-          ClientHeight = 22
-          ClientWidth = 241
-          DataSource = dsCadModel
-          Options = []
-          TabOrder = 0
-          VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbRefresh]
+        object Button4: TButton
+          Left = 184
+          Height = 25
+          Top = 8
+          Width = 75
+          Caption = 'Editar'
+          OnClick = Button2Click
+          TabOrder = 3
         end
+      end
+      object Title: TLabel
+        Left = 38
+        Height = 21
+        Top = 32
+        Width = 99
+        Caption = 'Novo Cliente:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Segoe UI Semibold'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
       end
     end
   end
