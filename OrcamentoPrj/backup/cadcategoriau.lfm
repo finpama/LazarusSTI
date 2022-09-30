@@ -52,14 +52,6 @@ inherited cadCategoriaF: TcadCategoriaF
         MaxLength = 0
         TabOrder = 2
       end
-      object DBG_Hint: TLabel[5]
-        Left = 248
-        Height = 15
-        Top = 96
-        Width = 13
-        Caption = 'Id:'
-        ParentColor = False
-      end
       object Label2: TLabel[6]
         Left = 38
         Height = 15

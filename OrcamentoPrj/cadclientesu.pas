@@ -13,8 +13,8 @@ type
   { TcadClientesF }
 
   TcadClientesF = class(TcadModelF)
+    DBComboBox1: TDBComboBox;
     inputId: TDBEdit;
-    inputTipoCliente: TDBEdit;
     InputCpfCpnj: TDBEdit;
     inputNome: TDBEdit;
     labelNome: TLabel;

@@ -10,8 +10,8 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, cadModelU, DataModule, zcomponent, MenuPrincipalU, 
-cadClientesU, cadCategoriaU;
+  Forms, datetimectrls, cadModelU, DataModule, zcomponent, MenuPrincipalU, 
+cadClientesU, cadCategoriaU, cadProdutoU;
 
 {$R *.res}
 

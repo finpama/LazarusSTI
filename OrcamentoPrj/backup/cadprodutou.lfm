@@ -1,181 +1,196 @@
-inherited cadProdutosF: TcadProdutosF
-  Left = 229
-  Top = 141
+inherited cadProdutoF: TcadProdutoF
+  Left = 231
+  Height = 550
+  Top = 143
+  Width = 350
   Caption = 'Produtos'
+  ClientHeight = 550
+  ClientWidth = 350
   inherited PageControl1: TPageControl
+    Height = 550
+    Width = 350
+    ActivePage = PageCadastro
+    TabIndex = 1
     inherited PagePesquisa: TTabSheet
+      ClientHeight = 522
+      ClientWidth = 342
+      inherited DBGrid: TDBGrid
+        Height = 386
+        Width = 342
+        Columns = <        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Id'
+            Width = 30
+            FieldName = 'produtoid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Produto'
+            Width = 150
+            FieldName = 'ds_produto'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Id Categoria'
+            Width = 75
+            FieldName = 'categoriaprodutoid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Obs Produto'
+            Width = 150
+            FieldName = 'obs_produto'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Valor'
+            Width = 70
+            FieldName = 'vl_venda_produto'
+            DisplayFormat = '###,##0.00'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Data de Cadastro'
+            Width = 100
+            FieldName = 'dt_cadastro_produto'
+            DisplayFormat = 'dd/mm/yyyy'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Status'
+            Width = 40
+            FieldName = 'status_produto'
+          end>
+      end
       inherited Panel1: TPanel
-        inherited DBG_Novo: TButton
-          OnClick = DBG_NovoClick
+        Top = 482
+        Width = 342
+        ClientWidth = 342
+        inherited Panel2: TPanel
+          Left = 246
         end
       end
       inherited Panel5: TPanel
-        inherited DBG_Buscar: TButton
-          OnClick = DBG_BuscarClick
-        end
+        Width = 342
+        ClientWidth = 342
       end
     end
     inherited PageCadastro: TTabSheet
+      ClientHeight = 522
+      ClientWidth = 342
       inherited Panel3: TPanel
+        Top = 480
+        Width = 342
+        ClientWidth = 342
         inherited Panel4: TPanel
-          inherited Button3: TButton
-            OnClick = Button3Click
-          end
-        end
-        inherited Button2: TButton
-          OnClick = Button2Click
-        end
-        object Button4: TButton[3]
-          Left = 184
-          Height = 25
-          Top = 8
-          Width = 75
-          Caption = 'Editar'
-          OnClick = Button4Click
-          TabOrder = 3
+          Left = 236
         end
       end
-      inherited Panel6: TPanel
-        inherited DBNavigator1: TDBNavigator
-          Hints.Strings = (          )
-        end
-      end
-      object DBEdit1: TDBEdit[2]
-        Left = 32
-        Height = 23
-        Top = 80
+      object Title2: TLabel[2]
+        Left = 85
+        Height = 21
+        Top = 32
         Width = 64
-        DataField = 'produtoid'
-        DataSource = dsCadModel
-        Alignment = taRightJustify
+        Caption = 'Produto:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Segoe UI Semibold'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object DBEdit1: TDBEdit[3]
+        Left = 40
+        Height = 23
+        Top = 72
+        Width = 80
+        MaxLength = 0
+        TabOrder = 1
+      end
+      object DBEdit2: TDBEdit[4]
+        Left = 144
+        Height = 23
+        Top = 72
+        Width = 80
         MaxLength = 0
         TabOrder = 2
-        OnChange = DBEdit1Change
       end
-      object DBEdit2: TDBEdit[3]
-        Left = 280
+      object DBEdit3: TDBEdit[5]
+        Left = 40
         Height = 23
-        Top = 80
-        Width = 32
-        DataField = 'categoriaprodutoid'
-        DataSource = dsCadModel
-        Alignment = taRightJustify
+        Top = 112
+        Width = 80
         MaxLength = 0
         TabOrder = 3
       end
-      object DBEdit3: TDBEdit[4]
-        Left = 32
-        Height = 23
-        Top = 136
-        Width = 184
-        DataField = 'ds_produto'
-        DataSource = dsCadModel
-        MaxLength = 0
+      object DBMemo1: TDBMemo[6]
+        Left = 48
+        Height = 90
+        Top = 152
+        Width = 150
         TabOrder = 4
       end
-      object DBMemo1: TDBMemo[5]
-        Left = 32
-        Height = 96
-        Top = 184
-        Width = 280
-        DataField = 'obs_produto'
-        DataSource = dsCadModel
+      object DBEdit4: TDBEdit[7]
+        Left = 176
+        Height = 23
+        Top = 112
+        Width = 80
+        MaxLength = 0
         TabOrder = 5
       end
-      object DBEdit4: TDBEdit[6]
-        Left = 224
+      object DBDateTimePicker1: TDBDateTimePicker[8]
+        Left = 208
         Height = 23
-        Top = 136
-        Width = 90
-        DataField = 'vl_venda_produto'
-        DataSource = dsCadModel
-        Alignment = taRightJustify
-        MaxLength = 0
+        Top = 168
+        Width = 83
+        ReadOnly = False
+        CenturyFrom = 1941
+        MaxDate = 2958465
+        MinDate = -53780
         TabOrder = 6
+        TrailingSeparator = False
+        TextForNullDate = 'NULL'
+        LeadingZeros = True
+        Kind = dtkDate
+        TimeFormat = tf24
+        TimeDisplay = tdHMS
+        DateMode = dmComboBox
+        UseDefaultSeparators = True
+        HideDateTimeParts = []
+        MonthNames = 'Long'
       end
-      object DBEdit5: TDBEdit[7]
-        Left = 32
+      object DBComboBox1: TDBComboBox[9]
+        Left = 56
         Height = 23
-        Top = 328
-        Width = 120
+        Top = 280
+        Width = 100
         DataField = 'status_produto'
         DataSource = dsCadModel
+        ItemHeight = 15
         MaxLength = 0
         TabOrder = 7
       end
-      object DBEdit6: TDBEdit[8]
-        Left = 200
+      object DBLookupComboBox1: TDBLookupComboBox[10]
+        Left = 168
         Height = 23
-        Top = 328
-        Width = 112
-        DataField = 'dt_cadastro_produto'
+        Top = 280
+        Width = 100
+        DataField = 'status_produto'
         DataSource = dsCadModel
-        MaxLength = 0
+        ListFieldIndex = 0
+        LookupCache = False
         TabOrder = 8
-      end
-      object Label1: TLabel[9]
-        Left = 32
-        Height = 15
-        Top = 312
-        Width = 38
-        Caption = 'Status: '
-        ParentColor = False
-      end
-      object Label2: TLabel[10]
-        Left = 200
-        Height = 15
-        Top = 312
-        Width = 93
-        Caption = 'Data de Cadastro:'
-        ParentColor = False
-      end
-      object Label3: TLabel[11]
-        Left = 32
-        Height = 15
-        Top = 168
-        Width = 128
-        Caption = 'Observação do Produto:'
-        ParentColor = False
-      end
-      object Label4: TLabel[12]
-        Left = 32
-        Height = 15
-        Top = 120
-        Width = 99
-        Caption = 'Nome do Produto:'
-        ParentColor = False
-      end
-      object Label5: TLabel[13]
-        Left = 224
-        Height = 15
-        Top = 120
-        Width = 80
-        Caption = 'Valor de Venda:'
-        ParentColor = False
-      end
-      object Label6: TLabel[14]
-        Left = 32
-        Height = 15
-        Top = 64
-        Width = 13
-        Caption = 'Id:'
-        ParentColor = False
-      end
-      object Label7: TLabel[15]
-        Left = 120
-        Height = 15
-        Top = 64
-        Width = 138
-        Caption = 'Categoria do Produto / Id:'
-        ParentColor = False
-      end
-      object inputCategoria: TEdit[16]
-        Left = 120
-        Height = 23
-        Top = 80
-        Width = 152
-        ReadOnly = True
-        TabOrder = 9
       end
     end
   end

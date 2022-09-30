@@ -8,6 +8,33 @@ inherited cadClientesF: TcadClientesF
     OnChange = PageControl1Change
     inherited PagePesquisa: TTabSheet
       inherited DBGrid: TDBGrid
+        Columns = <        
+          item
+            MinSize = 0
+            MaxSize = 100
+            PickList.Strings = (            )
+            Title.Caption = 'Id'
+            Width = 30
+            FieldName = 'clienteid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Nome Cliente'
+            Width = 200
+            FieldName = 'nome_cliente'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Cpf / Cpnj'
+            Width = 95
+            FieldName = 'cpf_cnpj_cliente'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Tipo'
+            Width = 27
+            FieldName = 'tipo_cliente'
+          end>
         OnDblClick = DBGridDblClick
       end
       inherited Panel1: TPanel

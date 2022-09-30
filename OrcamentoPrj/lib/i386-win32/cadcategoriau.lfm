@@ -2,9 +2,21 @@ inherited cadCategoriaF: TcadCategoriaF
   Left = 233
   Caption = 'Categorias de Produtos'
   inherited PageControl1: TPageControl
-    ActivePage = PageCadastro
-    TabIndex = 1
     inherited PagePesquisa: TTabSheet
+      inherited DBGrid: TDBGrid
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Id'
+            Width = 30
+            FieldName = 'categoriaprodutoid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Nome Categoria'
+            FieldName = 'ds_categoria_produto'
+          end>
+      end
       inherited Panel1: TPanel
         inherited DBG_Novo: TButton
           OnClick = DBG_NovoClick
@@ -54,15 +66,7 @@ inherited cadCategoriaF: TcadCategoriaF
         MaxLength = 0
         TabOrder = 2
       end
-      object DBG_Hint: TLabel[5]
-        Left = 248
-        Height = 15
-        Top = 96
-        Width = 13
-        Caption = 'Id:'
-        ParentColor = False
-      end
-      object Label2: TLabel[6]
+      object Label2: TLabel[5]
         Left = 38
         Height = 15
         Top = 96
