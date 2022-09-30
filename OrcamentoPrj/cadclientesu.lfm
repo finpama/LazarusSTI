@@ -64,7 +64,7 @@ inherited cadClientesF: TcadClientesF
         MaxLength = 1
         TabOrder = 3
       end
-      object Label1: TLabel[5]
+      object labelNome: TLabel[5]
         Left = 40
         Height = 15
         Top = 88
@@ -72,7 +72,7 @@ inherited cadClientesF: TcadClientesF
         Caption = 'Nome Cliente:'
         ParentColor = False
       end
-      object Label2: TLabel[6]
+      object labelCpfCpnj: TLabel[6]
         Left = 40
         Height = 15
         Top = 144
@@ -80,7 +80,7 @@ inherited cadClientesF: TcadClientesF
         Caption = 'Cpf ou Cpnj:'
         ParentColor = False
       end
-      object Label3: TLabel[7]
+      object labelTipoCliente: TLabel[7]
         Left = 224
         Height = 15
         Top = 144
@@ -88,18 +88,19 @@ inherited cadClientesF: TcadClientesF
         Caption = 'Tipo de Cliente:'
         ParentColor = False
       end
-      object DBEdit1: TDBEdit[8]
+      object inputId: TDBEdit[8]
         Left = 248
         Height = 23
         Top = 104
         Width = 56
         DataField = 'clienteid'
         DataSource = dsCadModel
+        ReadOnly = True
         Alignment = taRightJustify
         MaxLength = 0
         TabOrder = 4
       end
-      object Label4: TLabel[9]
+      object labelId: TLabel[9]
         Left = 248
         Height = 15
         Top = 88

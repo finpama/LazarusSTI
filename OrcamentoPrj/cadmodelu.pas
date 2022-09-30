@@ -22,6 +22,7 @@ type
     DBG_Fechar: TButton;
     DBG_Novo: TButton;
     DBGrid: TDBGrid;
+    DBG_Hint: TLabel;
     PageControl1: TPageControl;
     Panel1: TPanel;
     Panel2: TPanel;

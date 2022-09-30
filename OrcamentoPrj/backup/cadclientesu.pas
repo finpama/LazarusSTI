@@ -13,14 +13,14 @@ type
   { TcadClientesF }
 
   TcadClientesF = class(TcadModelF)
-    DBEdit1: TDBEdit;
+    inputId: TDBEdit;
     inputTipoCliente: TDBEdit;
     InputCpfCpnj: TDBEdit;
     inputNome: TDBEdit;
-    Label1: TLabel;
-    Label2: TLabel;
-    Label3: TLabel;
-    Label4: TLabel;
+    labelNome: TLabel;
+    labelCpfCpnj: TLabel;
+    labelTipoCliente: TLabel;
+    labelId: TLabel;
     Title2: TLabel;
     procedure Button1Click(Sender: TObject);
     procedure DBG_BuscarClick();
@@ -63,11 +63,11 @@ end;
 procedure TcadClientesF.DBG_BuscarClick();
 var
   s: String;
-  iCode: Integer;
+  iValue, iCode: Integer;   
   AuxWhere: String;
 begin
   s := DBG_Codigo.Text;
-  Val(s, 'i', iCode);
+  Val(s, iValue, iCode);
 
   if (DBG_Codigo.Text = '') then
     AuxWhere := '1 = 1'

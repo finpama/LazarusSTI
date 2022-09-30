@@ -57,35 +57,12 @@
         <UnitName Value="DataModule"/>
       </Unit>
       <Unit>
-        <Filename Value="cadprodutou.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="cadProdutosF"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-      </Unit>
-      <Unit>
         <Filename Value="menuprincipalu.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="MenuPrincipalF"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MenuPrincipalU"/>
-      </Unit>
-      <Unit>
-        <Filename Value="cadcategoriaprodu.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="cadCategoriaProdF"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="cadCategoriaProdU"/>
-      </Unit>
-      <Unit>
-        <Filename Value="cadorcamentosu.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="cadOrcamentosF"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="cadOrcamentosU"/>
       </Unit>
       <Unit>
         <Filename Value="cadclientesu.pas"/>
