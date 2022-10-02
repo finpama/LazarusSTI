@@ -38,10 +38,11 @@ type
     procedure DBGridDblClick(Sender: TObject);
     procedure DBG_FecharClick(Sender: TObject);
     procedure DBG_NovoClick(Sender: TObject);
+    procedure dsCadModelStateChange(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormShow(Sender: TObject);
     procedure PageControl1Change(Sender: TObject);
-    procedure modoCadastro(modo: String);
+    procedure cadMode(modo: String);
   private
 
   public
@@ -57,31 +58,29 @@ implementation
 
 { TcadModelF }
 
-procedure TcadModelF.modoCadastro(modo: String);
+procedure TcadModelF.cadMode(modo: String);
 begin
-  modo := UpperCase(modo);
-
-  if (modo = 'INSERT') then
-  begin
-    PageCadastro.Caption := 'Novo Cadastro';
-    Title.Caption := 'Novo';
-  end;
-
-  if (modo = 'EDIT') then
-  begin
-    PageCadastro.Caption := 'Editar Cadastro';
-    Title.Caption := 'Editar';
-  end;
+  PageCadastro.Caption := modo + ' Cadastro';
+  Title.Caption := Modo;
 end;
 
 procedure TcadModelF.DBG_NovoClick(Sender: TObject);
 begin
   dsCadModel.DataSet.Insert;
-  modoCadastro('Insert');
 
   PageControl1.ActivePage := PageCadastro;
   DBG_Novo.Enabled := False;
 
+end;
+
+procedure TcadModelF.dsCadModelStateChange(Sender: TObject);
+begin
+  case dsCadModel.DataSet.State of
+  dsInsert:
+    cadMode('Novo');
+  dsEdit:
+    cadMode('Editar');
+  end;
 end;
 
 procedure TcadModelF.FormClose(Sender: TObject; var CloseAction: TCloseAction);
@@ -107,15 +106,13 @@ procedure TcadModelF.Button3Click(Sender: TObject);
 begin
   PageControl1.ActivePage := PagePesquisa;
   DBG_Novo.Enabled := True;
-  modoCadastro('Insert');
 
   dsCadModel.DataSet.Cancel;
 end;
 
 procedure TcadModelF.DBGridDblClick(Sender: TObject);
 begin
-  dsCadModel.DataSet.Edit;   
-  modoCadastro('Edit');
+  dsCadModel.DataSet.Edit;
 
   PageControl1.ActivePage := PageCadastro;
 end;
@@ -123,7 +120,6 @@ end;
 procedure TcadModelF.Button1Click(Sender: TObject);
 begin
   PageControl1.ActivePage := PagePesquisa;
-  modoCadastro('Insert');
   DBG_Novo.Enabled := True;
 end;
 

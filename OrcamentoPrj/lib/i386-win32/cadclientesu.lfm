@@ -83,17 +83,7 @@ inherited cadClientesF: TcadClientesF
         MaxLength = 18
         TabOrder = 2
       end
-      object inputTipoCliente: TDBEdit[4]
-        Left = 224
-        Height = 23
-        Top = 160
-        Width = 80
-        DataField = 'tipo_cliente'
-        DataSource = dsCadModel
-        MaxLength = 1
-        TabOrder = 3
-      end
-      object labelNome: TLabel[5]
+      object labelNome: TLabel[4]
         Left = 40
         Height = 15
         Top = 88
@@ -101,7 +91,7 @@ inherited cadClientesF: TcadClientesF
         Caption = 'Nome Cliente:'
         ParentColor = False
       end
-      object labelCpfCpnj: TLabel[6]
+      object labelCpfCpnj: TLabel[5]
         Left = 40
         Height = 15
         Top = 144
@@ -109,7 +99,7 @@ inherited cadClientesF: TcadClientesF
         Caption = 'Cpf ou Cpnj:'
         ParentColor = False
       end
-      object labelTipoCliente: TLabel[7]
+      object labelTipoCliente: TLabel[6]
         Left = 224
         Height = 15
         Top = 144
@@ -117,7 +107,7 @@ inherited cadClientesF: TcadClientesF
         Caption = 'Tipo de Cliente:'
         ParentColor = False
       end
-      object inputId: TDBEdit[8]
+      object inputId: TDBEdit[7]
         Left = 248
         Height = 23
         Top = 104
@@ -127,9 +117,9 @@ inherited cadClientesF: TcadClientesF
         ReadOnly = True
         Alignment = taRightJustify
         MaxLength = 0
-        TabOrder = 4
+        TabOrder = 3
       end
-      object labelId: TLabel[9]
+      object labelId: TLabel[8]
         Left = 248
         Height = 15
         Top = 88
@@ -137,7 +127,7 @@ inherited cadClientesF: TcadClientesF
         Caption = 'Id: '
         ParentColor = False
       end
-      object Title2: TLabel[10]
+      object Title2: TLabel[9]
         Left = 85
         Height = 21
         Top = 32
@@ -151,6 +141,21 @@ inherited cadClientesF: TcadClientesF
         Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
+      end
+      object DBComboBox1: TDBComboBox[10]
+        Left = 224
+        Height = 23
+        Top = 160
+        Width = 80
+        DataField = 'tipo_cliente'
+        DataSource = dsCadModel
+        ItemHeight = 15
+        Items.Strings = (
+          'F'
+          'J'
+        )
+        MaxLength = 0
+        TabOrder = 4
       end
     end
   end

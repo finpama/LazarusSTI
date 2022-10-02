@@ -13,13 +13,13 @@ type
 
   TDataModuleF = class(TDataModule)
     qryCategoriaProd: TZQuery;
+    qryCategoriaProdcategoriaprodutoid: TLongintField;
+    qryCategoriaProdds_categoria_produto: TStringField;
     qryClientesclienteid: TLongintField;
     qryClientescpf_cnpj_cliente: TStringField;
     qryClientesnome_cliente: TStringField;
     qryClientestipo_cliente: TStringField;
     qryOrcamentos: TZQuery;
-    qryCategoriaProdcategoriaprodutoid: TLongintField;
-    qryCategoriaProdds_categoria_produto: TStringField;
     qryClientes: TZQuery;
     qryOrcamentosclienteid: TLongintField;
     qryOrcamentosdt_orcamento: TDateTimeField;
@@ -33,16 +33,16 @@ type
     qryProdutosprodutoid: TLongintField;
     qryProdutosstatus_produto: TStringField;
     qryProdutosvl_venda_produto: TFloatField;
-    updCategoriaProd: TZUpdateSQL;
     updOrcamentos: TZUpdateSQL;
     updClientes: TZUpdateSQL;
     ZConnection: TZConnection;
     qryProdutos: TZQuery;
     updProdutos: TZUpdateSQL;
     qryGenerica: TZQuery;
-    procedure DataModuleCreate(Sender: TObject);
+    updCategoriaProd: TZUpdateSQL;
     procedure qryCategoriaProdAfterInsert();
     procedure qryClientesAfterInsert();
+    procedure qryProdutosAfterInsert();
   private
 
   public         
@@ -75,17 +75,17 @@ end;
 
 procedure TDataModuleF.qryCategoriaProdAfterInsert();
 begin
-  qryCategoriaProdcategoriaprodutoid.AsInteger := StrToInt(getSequence('categoria_produto_categoriaprodutoid_seq'));
-end;
-
-procedure TDataModuleF.DataModuleCreate(Sender: TObject);
-begin
-
+  qryCategoriaProdcategoriaprodutoid.AsString := getSequence('categoria_produto_categoriaprodutoid_seq');
 end;
 
 procedure TDataModuleF.qryClientesAfterInsert();
 begin
-  qryClientesclienteid.AsInteger := StrToInt(getSequence('cliente_clienteid'));
+  qryClientesclienteid.AsString := getSequence('cliente_clienteid');
+end;
+
+procedure TDataModuleF.qryProdutosAfterInsert();
+begin
+ qryProdutosprodutoid.AsString := getSequence('produto_produtoid');
 end;
 
 

@@ -13,8 +13,8 @@ type
   { TcadCategoriaF }
 
   TcadCategoriaF = class(TcadModelF)
-    inputId: TDBEdit;
     inputCategoria: TDBEdit;
+    inputId: TDBEdit;
     Label1: TLabel;
     Label2: TLabel;
     Title2: TLabel;

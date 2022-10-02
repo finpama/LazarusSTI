@@ -1,9 +1,8 @@
 object DataModuleF: TDataModuleF
-  OnCreate = DataModuleCreate
   OldCreateOrder = False
   Height = 239
-  HorizontalOffset = 246
-  VerticalOffset = 318
+  HorizontalOffset = 242
+  VerticalOffset = 426
   Width = 343
   object ZConnection: TZConnection
     ControlsCodePage = cCP_UTF8
@@ -16,7 +15,7 @@ object DataModuleF: TDataModuleF
     HostName = 'localhost'
     Port = 5432
     User = 'postgres'
-    Password = 'adm123'
+    Password = 'admsenha010.'
     Protocol = 'postgresql'
     LibraryLocation = 'C:\Program Files (x86)\PostgreSQL\10\pgAdmin 4\bin\libpq.dll'
     Left = 280
@@ -25,6 +24,7 @@ object DataModuleF: TDataModuleF
   object qryProdutos: TZQuery
     Connection = ZConnection
     UpdateObject = updProdutos
+    AfterInsert = qryProdutosAfterInsert
     Active = True
     SQL.Strings = (
       'SELECT * FROM PRODUTO'
@@ -78,6 +78,7 @@ object DataModuleF: TDataModuleF
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
+      DisplayFormat = '###,##0.00'
       Precision = 983042
     end
     object qryProdutosdt_cadastro_produto: TDateTimeField
@@ -88,6 +89,7 @@ object DataModuleF: TDataModuleF
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
+      DisplayFormat = 'dd/mm/yyyy'
     end
     object qryProdutosstatus_produto: TStringField
       FieldKind = fkData
@@ -101,9 +103,37 @@ object DataModuleF: TDataModuleF
     end
   end
   object updProdutos: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM PRODUTO'
+      'WHERE'
+      '  PRODUTO.produtoid = :OLD_produtoid'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO PRODUTO'
+      '  (produtoid)'
+      'VALUES'
+      '  (:produtoid)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE PRODUTO SET'
+      '  produtoid = :produtoid'
+      'WHERE'
+      '  PRODUTO.produtoid = :OLD_produtoid'
+    )
     UseSequenceFieldForRefreshSQL = False
     Left = 160
     Top = 16
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'produtoid'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_produtoid'
+        ParamType = ptUnknown
+      end>
   end
   object qryCategoriaProd: TZQuery
     Connection = ZConnection
@@ -111,7 +141,8 @@ object DataModuleF: TDataModuleF
     AfterInsert = qryCategoriaProdAfterInsert
     Active = True
     SQL.Strings = (
-      'SELECT * FROM CATEGORIA_PRODUTO'
+      'SELECT *'
+      'FROM CATEGORIA_PRODUTO'
     )
     Params = <>
     Left = 56
@@ -135,11 +166,6 @@ object DataModuleF: TDataModuleF
       Required = True
       Size = 50
     end
-  end
-  object updCategoriaProd: TZUpdateSQL
-    UseSequenceFieldForRefreshSQL = False
-    Left = 160
-    Top = 64
   end
   object qryOrcamentos: TZQuery
     Connection = ZConnection
@@ -199,9 +225,37 @@ object DataModuleF: TDataModuleF
     end
   end
   object updOrcamentos: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM ORCAMENTO'
+      'WHERE'
+      '  ORCAMENTO.orcamentoid = :OLD_orcamentoid'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO ORCAMENTO'
+      '  (orcamentoid)'
+      'VALUES'
+      '  (:orcamentoid)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE ORCAMENTO SET'
+      '  orcamentoid = :orcamentoid'
+      'WHERE'
+      '  ORCAMENTO.orcamentoid = :OLD_orcamentoid'
+    )
     UseSequenceFieldForRefreshSQL = False
     Left = 160
     Top = 112
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'orcamentoid'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_orcamentoid'
+        ParamType = ptUnknown
+      end>
   end
   object qryClientes: TZQuery
     Connection = ZConnection
@@ -333,5 +387,38 @@ object DataModuleF: TDataModuleF
     Params = <>
     Left = 280
     Top = 64
+  end
+  object updCategoriaProd: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM CATEGORIA_PRODUTO'
+      'WHERE'
+      '  CATEGORIA_PRODUTO.categoriaprodutoid = :OLD_categoriaprodutoid'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO CATEGORIA_PRODUTO'
+      '  (categoriaprodutoid)'
+      'VALUES'
+      '  (:categoriaprodutoid)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE CATEGORIA_PRODUTO SET'
+      '  categoriaprodutoid = :categoriaprodutoid'
+      'WHERE'
+      '  CATEGORIA_PRODUTO.categoriaprodutoid = :OLD_categoriaprodutoid'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    Left = 160
+    Top = 64
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'categoriaprodutoid'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_categoriaprodutoid'
+        ParamType = ptUnknown
+      end>
   end
 end

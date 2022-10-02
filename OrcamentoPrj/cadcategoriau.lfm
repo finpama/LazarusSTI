@@ -2,6 +2,8 @@ inherited cadCategoriaF: TcadCategoriaF
   Left = 233
   Caption = 'Categorias de Produtos'
   inherited PageControl1: TPageControl
+    ActivePage = PageCadastro
+    TabIndex = 1
     inherited PagePesquisa: TTabSheet
       inherited DBGrid: TDBGrid
         Columns = <        
@@ -54,25 +56,30 @@ inherited cadCategoriaF: TcadCategoriaF
         Height = 23
         Top = 112
         Width = 56
+        DataField = 'categoriaprodutoid'
+        DataSource = dsCadModel
         ReadOnly = True
+        Alignment = taRightJustify
         MaxLength = 0
         TabOrder = 1
       end
-      object inputCategoria: TDBEdit[4]
-        Left = 40
-        Height = 23
-        Top = 112
-        Width = 202
-        MaxLength = 0
-        TabOrder = 2
-      end
-      object Label2: TLabel[5]
+      object Label2: TLabel[4]
         Left = 38
         Height = 15
         Top = 96
         Width = 54
         Caption = 'Categoria:'
         ParentColor = False
+      end
+      object inputCategoria: TDBEdit[5]
+        Left = 38
+        Height = 23
+        Top = 112
+        Width = 202
+        DataField = 'ds_categoria_produto'
+        DataSource = dsCadModel
+        MaxLength = 50
+        TabOrder = 2
       end
     end
   end
