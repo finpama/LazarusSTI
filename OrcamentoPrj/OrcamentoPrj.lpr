@@ -11,7 +11,7 @@ uses
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms, datetimectrls, cadModelU, DataModule, zcomponent, MenuPrincipalU, 
-cadClientesU, cadCategoriaU, cadProdutoU;
+cadClientesU, cadCategoriaU, cadProdutoU, cadOrcamentoU, orc_modalClienteU;
 
 {$R *.res}
 

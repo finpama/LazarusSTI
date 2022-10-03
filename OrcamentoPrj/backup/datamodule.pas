@@ -19,6 +19,13 @@ type
     qryClientescpf_cnpj_cliente: TStringField;
     qryClientesnome_cliente: TStringField;
     qryClientestipo_cliente: TStringField;
+    qryItensOrcamentosorcamentoid: TLongintField;
+    qryItensOrcamentosorcamentoitemid: TLongintField;
+    qryItensOrcamentosprodutodesc: TStringField;
+    qryItensOrcamentosprodutoid: TLongintField;
+    qryItensOrcamentosqt_produto: TFloatField;
+    qryItensOrcamentosvl_total: TFloatField;
+    qryItensOrcamentosvl_unitario: TFloatField;
     qryOrcamentos: TZQuery;
     qryClientes: TZQuery;
     qryOrcamentosclienteid: TLongintField;
@@ -40,8 +47,11 @@ type
     updProdutos: TZUpdateSQL;
     qryGenerica: TZQuery;
     updCategoriaProd: TZUpdateSQL;
+    qryItensOrcamentos: TZQuery;
+    updItensOrcamentos: TZUpdateSQL;
     procedure qryCategoriaProdAfterInsert();
     procedure qryClientesAfterInsert();
+    procedure qryOrcamentosAfterInsert(DataSet: TDataSet);
     procedure qryProdutosAfterInsert();
   private
 
@@ -81,6 +91,11 @@ end;
 procedure TDataModuleF.qryClientesAfterInsert();
 begin
   qryClientesclienteid.AsString := getSequence('cliente_clienteid');
+end;
+
+procedure TDataModuleF.qryOrcamentosAfterInsert(DataSet: TDataSet);
+begin
+  qryOrcamentosorcamentoid.AsString := getSequence('orcamento_orcamentoid_seq');
 end;
 
 procedure TDataModuleF.qryProdutosAfterInsert();

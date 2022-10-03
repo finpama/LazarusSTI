@@ -12,7 +12,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="91"/>
+        <UsageCount Value="96"/>
       </Unit>
       <Unit>
         <Filename Value="cadmodelu.pas"/>
@@ -21,9 +21,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="cadModelU"/>
-        <TopLine Value="119"/>
+        <TopLine Value="113"/>
         <CursorPos X="3" Y="122"/>
-        <UsageCount Value="91"/>
+        <UsageCount Value="96"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -33,11 +33,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="DataModule"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="47"/>
-        <CursorPos X="5" Y="61"/>
-        <UsageCount Value="91"/>
+        <CursorPos X="16"/>
+        <UsageCount Value="96"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -49,9 +47,9 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MenuPrincipalU"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="34"/>
-        <CursorPos X="49" Y="46"/>
-        <UsageCount Value="89"/>
+        <TopLine Value="40"/>
+        <CursorPos X="21" Y="50"/>
+        <UsageCount Value="94"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -62,8 +60,9 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="cadClientesU"/>
         <EditorIndex Value="3"/>
-        <CursorPos X="32" Y="6"/>
-        <UsageCount Value="88"/>
+        <TopLine Value="60"/>
+        <CursorPos X="40" Y="63"/>
+        <UsageCount Value="93"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -74,9 +73,9 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="cadCategoriaU"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="43"/>
-        <CursorPos X="10" Y="48"/>
-        <UsageCount Value="58"/>
+        <TopLine Value="36"/>
+        <CursorPos X="45" Y="53"/>
+        <UsageCount Value="63"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -88,9 +87,9 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="cadProdutoU"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="89"/>
-        <CursorPos X="38" Y="97"/>
-        <UsageCount Value="56"/>
+        <TopLine Value="101"/>
+        <CursorPos X="16" Y="115"/>
+        <UsageCount Value="61"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -203,127 +202,155 @@
         <UsageCount Value="7"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
+      <Unit>
+        <Filename Value="cadorcamentou.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadOrcamentoF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadOrcamentoU"/>
+        <EditorIndex Value="6"/>
+        <CursorPos X="19"/>
+        <UsageCount Value="25"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="orc_modalclienteu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="orc_modalClienteF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="orc_modalClienteU"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="58"/>
+        <CursorPos X="16" Y="77"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
       <Position>
-        <Filename Value="cadprodutou.pas"/>
-        <Caret Line="59" Column="38" TopLine="39"/>
+        <Filename Value="cadorcamentou.pas"/>
+        <Caret Line="82" Column="14" TopLine="68"/>
       </Position>
       <Position>
-        <Filename Value="cadprodutou.pas"/>
-        <Caret Line="39" TopLine="39"/>
+        <Filename Value="cadorcamentou.pas"/>
+        <Caret Line="85" Column="35" TopLine="69"/>
       </Position>
       <Position>
-        <Filename Value="cadprodutou.pas"/>
-        <Caret Line="54" Column="29" TopLine="48"/>
+        <Filename Value="cadorcamentou.pas"/>
+        <Caret Line="10" Column="5"/>
       </Position>
       <Position>
-        <Filename Value="cadprodutou.pas"/>
-        <Caret Line="73" Column="29" TopLine="53"/>
+        <Filename Value="cadorcamentou.pas"/>
+        <Caret Line="11" Column="40"/>
       </Position>
       <Position>
-        <Filename Value="cadprodutou.pas"/>
-        <Caret Line="82" Column="24" TopLine="68"/>
+        <Filename Value="cadorcamentou.pas"/>
+        <Caret Line="10" Column="5"/>
       </Position>
       <Position>
-        <Filename Value="cadprodutou.pas"/>
-        <Caret Line="80" Column="42" TopLine="74"/>
+        <Filename Value="cadorcamentou.pas"/>
+        <Caret Line="22" Column="46"/>
       </Position>
       <Position>
-        <Filename Value="cadprodutou.pas"/>
-        <Caret Line="71" Column="3" TopLine="64"/>
+        <Filename Value="cadorcamentou.pas"/>
+        <Caret Line="11" Column="54"/>
       </Position>
       <Position>
-        <Filename Value="cadprodutou.pas"/>
-        <Caret Line="100" Column="3" TopLine="83"/>
-      </Position>
-      <Position>
-        <Filename Value="datamodule.pas"/>
-        <Caret Line="81" Column="51" TopLine="65"/>
+        <Filename Value="cadorcamentou.pas"/>
+        <Caret Line="26" Column="27" TopLine="75"/>
       </Position>
       <Position>
         <Filename Value="datamodule.pas"/>
-        <Caret Line="87" Column="68" TopLine="67"/>
-      </Position>
-      <Position>
-        <Filename Value="cadprodutou.pas"/>
-        <Caret Line="74" Column="33" TopLine="84"/>
-      </Position>
-      <Position>
-        <Filename Value="cadprodutou.pas"/>
-        <Caret Line="94" Column="35" TopLine="85"/>
-      </Position>
-      <Position>
-        <Filename Value="cadprodutou.pas"/>
-        <Caret Line="95" Column="35" TopLine="86"/>
+        <Caret Line="88" Column="50" TopLine="68"/>
       </Position>
       <Position>
         <Filename Value="datamodule.pas"/>
-        <Caret Line="72" Column="31" TopLine="68"/>
+        <Caret Line="89" Column="50" TopLine="69"/>
       </Position>
       <Position>
         <Filename Value="datamodule.pas"/>
-        <Caret Line="71" Column="31" TopLine="67"/>
+        <Caret Line="90" Column="50" TopLine="70"/>
+      </Position>
+      <Position>
+        <Filename Value="cadorcamentou.pas"/>
+        <Caret Line="52" Column="24" TopLine="49"/>
       </Position>
       <Position>
         <Filename Value="datamodule.pas"/>
-        <Caret Line="70" Column="31" TopLine="66"/>
+        <Caret Line="88" Column="17" TopLine="77"/>
       </Position>
       <Position>
-        <Filename Value="datamodule.pas"/>
-        <Caret Line="71" Column="31" TopLine="67"/>
+        <Filename Value="cadorcamentou.pas"/>
+        <Caret Line="87" Column="37" TopLine="76"/>
       </Position>
       <Position>
-        <Filename Value="datamodule.pas"/>
-        <Caret Line="70" Column="31" TopLine="66"/>
+        <Filename Value="cadorcamentou.pas"/>
+        <Caret Line="94" Column="35" TopLine="77"/>
       </Position>
       <Position>
-        <Filename Value="datamodule.pas"/>
-        <Caret Line="72" Column="31" TopLine="68"/>
+        <Filename Value="orc_modalclienteu.pas"/>
+        <Caret Line="15" Column="10"/>
       </Position>
       <Position>
-        <Filename Value="datamodule.pas"/>
-        <Caret Line="71" Column="31" TopLine="67"/>
+        <Filename Value="orc_modalclienteu.pas"/>
+        <Caret Line="19" Column="10"/>
       </Position>
       <Position>
-        <Filename Value="cadcategoriau.pas"/>
-        <Caret Line="60" Column="37" TopLine="48"/>
+        <Filename Value="orc_modalclienteu.pas"/>
+        <Caret Line="12" Column="35"/>
       </Position>
       <Position>
-        <Filename Value="cadcategoriau.pas"/>
-        <Caret Line="59" Column="37" TopLine="47"/>
+        <Filename Value="orc_modalclienteu.pas"/>
+        <Caret Line="7" Column="27"/>
       </Position>
       <Position>
-        <Filename Value="cadcategoriau.pas"/>
-        <Caret Line="60" Column="37" TopLine="48"/>
+        <Filename Value="orc_modalclienteu.pas"/>
+        <Caret Line="47" Column="53" TopLine="34"/>
       </Position>
       <Position>
-        <Filename Value="cadcategoriau.pas"/>
-        <Caret Line="59" Column="37" TopLine="47"/>
+        <Filename Value="cadorcamentou.pas"/>
+        <Caret Line="84" Column="31" TopLine="73"/>
       </Position>
       <Position>
-        <Filename Value="cadcategoriau.pas"/>
-        <Caret Line="48" Column="10" TopLine="43"/>
+        <Filename Value="cadorcamentou.pas"/>
+        <Caret Line="86" Column="7" TopLine="75"/>
       </Position>
       <Position>
-        <Filename Value="cadmodelu.pas"/>
-        <Caret Line="35" Column="15" TopLine="24"/>
+        <Filename Value="cadorcamentou.pas"/>
+        <Caret Line="99" Column="49" TopLine="80"/>
       </Position>
       <Position>
-        <Filename Value="cadmodelu.pas"/>
-        <Caret Line="122" Column="3" TopLine="119"/>
+        <Filename Value="orc_modalclienteu.pas"/>
+        <Caret Line="47" Column="55" TopLine="43"/>
       </Position>
       <Position>
-        <Filename Value="cadmodelu.pas"/>
-        <Caret Line="35" Column="15" TopLine="24"/>
+        <Filename Value="orc_modalclienteu.pas"/>
+        <Caret Line="68" Column="83" TopLine="49"/>
       </Position>
       <Position>
-        <Filename Value="datamodule.pas"/>
-        <Caret Line="70" Column="46" TopLine="13"/>
+        <Filename Value="orc_modalclienteu.pas"/>
+        <Caret Line="9" Column="38"/>
       </Position>
       <Position>
-        <Filename Value="datamodule.pas"/>
-        <Caret Line="69" Column="46" TopLine="46"/>
+        <Filename Value="orc_modalclienteu.pas"/>
+        <Caret Line="68" Column="11" TopLine="49"/>
+      </Position>
+      <Position>
+        <Filename Value="orc_modalclienteu.pas"/>
+        <Caret Line="18" Column="36"/>
+      </Position>
+      <Position>
+        <Filename Value="orc_modalclienteu.pas"/>
+        <Caret Line="68" Column="19" TopLine="49"/>
+      </Position>
+      <Position>
+        <Filename Value="orc_modalclienteu.pas"/>
+        <Caret Line="72" Column="23" TopLine="50"/>
       </Position>
     </JumpHistory>
     <RunParams>

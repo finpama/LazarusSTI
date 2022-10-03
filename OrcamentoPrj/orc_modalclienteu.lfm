@@ -1,0 +1,64 @@
+object orc_modalClienteF: Torc_modalClienteF
+  Left = 259
+  Height = 240
+  Top = 295
+  Width = 320
+  Caption = 'Escolha o Cliente...'
+  ClientHeight = 240
+  ClientWidth = 320
+  OnClose = FormClose
+  LCLVersion = '2.2.2.0'
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 176
+    Top = 64
+    Width = 320
+    Align = alBottom
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'clienteid'
+        FieldName = 'clienteid'
+      end    
+      item
+        Title.Caption = 'nome_cliente'
+        FieldName = 'nome_cliente'
+      end    
+      item
+        Title.Caption = 'cpf_cnpj_cliente'
+        FieldName = 'cpf_cnpj_cliente'
+      end    
+      item
+        Title.Caption = 'tipo_cliente'
+        FieldName = 'tipo_cliente'
+      end>
+    DataSource = dsOrc_Clientes
+    TabOrder = 0
+    OnDblClick = DBGrid1DblClick
+  end
+  object DBG_Codigo: TLabeledEdit
+    Left = 16
+    Height = 23
+    Top = 32
+    Width = 213
+    EditLabel.Height = 15
+    EditLabel.Width = 213
+    EditLabel.Caption = 'Código:'
+    EditLabel.ParentColor = False
+    TabOrder = 1
+  end
+  object DBG_Buscar: TButton
+    Left = 233
+    Height = 25
+    Top = 32
+    Width = 71
+    Caption = 'Buscar'
+    OnClick = DBG_BuscarClick
+    TabOrder = 2
+  end
+  object dsOrc_Clientes: TDataSource
+    DataSet = DataModuleF.qryClientes
+    Left = 240
+    Top = 160
+  end
+end

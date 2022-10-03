@@ -1,0 +1,313 @@
+inherited cadOrcamentoF: TcadOrcamentoF
+  Left = 229
+  Height = 549
+  Top = 142
+  Width = 356
+  Caption = 'Orçamentos'
+  ClientHeight = 549
+  ClientWidth = 356
+  inherited PageControl1: TPageControl
+    Height = 549
+    Width = 356
+    ActivePage = PageCadastro
+    TabIndex = 1
+    inherited PagePesquisa: TTabSheet
+      ClientHeight = 521
+      ClientWidth = 348
+      inherited DBGrid: TDBGrid
+        Height = 385
+        Width = 348
+        Columns = <        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Id'
+            Width = 30
+            FieldName = 'orcamentoid'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Data'
+            Width = 65
+            FieldName = 'dt_orcamento'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Cliente Id'
+            Width = 60
+            FieldName = 'clienteid'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Data de Validade'
+            Width = 95
+            FieldName = 'dt_validade_orcamento'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Total'
+            Width = 50
+            FieldName = 'vl_total_orcamento'
+          end>
+      end
+      inherited Panel1: TPanel
+        Top = 481
+        Width = 348
+        ClientWidth = 348
+        inherited DBG_Novo: TButton
+          OnClick = DBG_NovoClick
+        end
+        inherited Panel2: TPanel
+          Left = 252
+        end
+      end
+      inherited Panel5: TPanel
+        Width = 348
+        ClientWidth = 348
+        inherited DBG_Buscar: TButton
+          OnClick = DBG_BuscarClick
+        end
+      end
+    end
+    inherited PageCadastro: TTabSheet
+      ClientHeight = 521
+      ClientWidth = 348
+      inherited Panel3: TPanel
+        Top = 479
+        Width = 348
+        ClientWidth = 348
+        inherited Panel4: TPanel
+          Left = 242
+        end
+      end
+      object Title2: TLabel[2]
+        Left = 85
+        Height = 21
+        Top = 32
+        Width = 82
+        Caption = 'Orçamento'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Segoe UI Semibold'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object labelId: TLabel[3]
+        Left = 38
+        Height = 15
+        Top = 72
+        Width = 13
+        Caption = 'Id:'
+        ParentColor = False
+      end
+      object labelClienteId: TLabel[4]
+        Left = 221
+        Height = 15
+        Top = 120
+        Width = 53
+        Caption = 'Cliente Id:'
+        ParentColor = False
+      end
+      object labelData: TLabel[5]
+        Left = 221
+        Height = 15
+        Top = 72
+        Width = 27
+        Caption = 'Data:'
+        ParentColor = False
+      end
+      object labelDataValidade: TLabel[6]
+        Left = 38
+        Height = 15
+        Top = 168
+        Width = 90
+        Caption = 'Data de Validade:'
+        ParentColor = False
+      end
+      object labelTotal: TLabel[7]
+        Left = 224
+        Height = 15
+        Top = 168
+        Width = 28
+        Caption = 'Total:'
+        ParentColor = False
+      end
+      object inputId: TDBEdit[8]
+        Left = 38
+        Height = 23
+        Top = 88
+        Width = 50
+        DataField = 'orcamentoid'
+        DataSource = dsCadModel
+        ReadOnly = True
+        Alignment = taRightJustify
+        MaxLength = 0
+        TabOrder = 1
+      end
+      object inputClienteId: TDBEdit[9]
+        Left = 221
+        Height = 23
+        Top = 137
+        Width = 59
+        DataField = 'clienteid'
+        DataSource = dsCadModel
+        Alignment = taRightJustify
+        MaxLength = 0
+        TabOrder = 2
+      end
+      object inputTotal: TDBEdit[10]
+        Left = 224
+        Height = 23
+        Top = 184
+        Width = 80
+        DataField = 'vl_total_orcamento'
+        DataSource = dsCadModel
+        Alignment = taRightJustify
+        MaxLength = 0
+        TabOrder = 3
+      end
+      object inputCliente: TLabeledEdit[11]
+        Left = 38
+        Height = 23
+        Top = 137
+        Width = 178
+        EditLabel.Height = 15
+        EditLabel.Width = 178
+        EditLabel.Caption = 'Cliente:'
+        EditLabel.ParentColor = False
+        TabOrder = 4
+        Text = 'FAZER REQUEST DO CLIENTE PELO ID'
+      end
+      object inputDataValidade: TDBDateTimePicker[12]
+        Left = 38
+        Height = 23
+        Top = 184
+        Width = 83
+        DataField = 'dt_validade_orcamento'
+        DataSource = dsCadModel
+        ReadOnly = False
+        CenturyFrom = 1941
+        MaxDate = 2958465
+        MinDate = -53780
+        TabOrder = 5
+        TrailingSeparator = False
+        TextForNullDate = 'NULL'
+        LeadingZeros = True
+        Kind = dtkDate
+        TimeFormat = tf24
+        TimeDisplay = tdHMS
+        DateMode = dmComboBox
+        UseDefaultSeparators = True
+        HideDateTimeParts = []
+        MonthNames = 'Long'
+      end
+      object inputData: TDBDateTimePicker[13]
+        Left = 221
+        Height = 23
+        Top = 88
+        Width = 83
+        DataField = 'dt_orcamento'
+        DataSource = dsCadModel
+        ReadOnly = True
+        CenturyFrom = 1941
+        MaxDate = 2958465
+        MinDate = -53780
+        TabOrder = 6
+        TrailingSeparator = False
+        TextForNullDate = 'NULL'
+        LeadingZeros = True
+        Kind = dtkDate
+        TimeFormat = tf24
+        TimeDisplay = tdHMS
+        DateMode = dmComboBox
+        UseDefaultSeparators = True
+        HideDateTimeParts = []
+        MonthNames = 'Long'
+      end
+      object btnClientes: TButton[14]
+        Left = 280
+        Height = 25
+        Top = 136
+        Width = 24
+        Caption = '...'
+        OnClick = btnClientesClick
+        TabOrder = 7
+      end
+      object DBGrid1: TDBGrid[15]
+        Left = 38
+        Height = 196
+        Top = 280
+        Width = 266
+        Color = clWindow
+        Columns = <        
+          item
+            Title.Caption = 'orcamentoitemid'
+            FieldName = 'orcamentoitemid'
+          end        
+          item
+            Title.Caption = 'orcamentoid'
+            FieldName = 'orcamentoid'
+          end        
+          item
+            Title.Caption = 'produtoid'
+            FieldName = 'produtoid'
+          end        
+          item
+            Title.Caption = 'produtodesc'
+            FieldName = 'produtodesc'
+          end        
+          item
+            Title.Caption = 'qt_produto'
+            FieldName = 'qt_produto'
+          end        
+          item
+            Title.Caption = 'vl_unitario'
+            FieldName = 'vl_unitario'
+          end        
+          item
+            Title.Caption = 'vl_total'
+            FieldName = 'vl_total'
+          end>
+        DataSource = dsItensOrcamento
+        TabOrder = 8
+      end
+      object btnAdicionarItem: TButton[16]
+        Left = 104
+        Height = 25
+        Top = 248
+        Width = 99
+        Caption = 'Adicionar Item'
+        TabOrder = 9
+      end
+      object btnExcluirItem: TButton[17]
+        Left = 216
+        Height = 25
+        Top = 248
+        Width = 88
+        Caption = 'Excluir Item'
+        TabOrder = 10
+      end
+    end
+  end
+  inherited dsCadModel: TDataSource
+    DataSet = DataModuleF.qryOrcamentos
+    OnStateChange = dsCadModelStateChange
+    Left = 240
+  end
+  object dsItensOrcamento: TDataSource[2]
+    DataSet = DataModuleF.qryItensOrcamentos
+    Left = 80
+    Top = 424
+  end
+end

@@ -91,6 +91,22 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="cadProdutoU"/>
       </Unit>
+      <Unit>
+        <Filename Value="cadorcamentou.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadOrcamentoF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadOrcamentoU"/>
+      </Unit>
+      <Unit>
+        <Filename Value="orc_modalclienteu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="orc_modalClienteF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="orc_modalClienteU"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

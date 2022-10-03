@@ -1,14 +1,22 @@
 inherited cadCategoriaF: TcadCategoriaF
-  Left = 233
+  Left = 229
+  Height = 504
+  Top = 139
   Caption = 'Categorias de Produtos'
+  ClientHeight = 504
   inherited PageControl1: TPageControl
+    Height = 504
     ActivePage = PageCadastro
     TabIndex = 1
     inherited PagePesquisa: TTabSheet
+      ClientHeight = 476
       inherited DBGrid: TDBGrid
+        Height = 340
         Columns = <        
           item
+            Alignment = taCenter
             PickList.Strings = (            )
+            Title.Alignment = taCenter
             Title.Caption = 'Id'
             Width = 30
             FieldName = 'categoriaprodutoid'
@@ -20,6 +28,7 @@ inherited cadCategoriaF: TcadCategoriaF
           end>
       end
       inherited Panel1: TPanel
+        Top = 436
         inherited DBG_Novo: TButton
           OnClick = DBG_NovoClick
         end
@@ -31,7 +40,9 @@ inherited cadCategoriaF: TcadCategoriaF
       end
     end
     inherited PageCadastro: TTabSheet
+      ClientHeight = 476
       inherited Panel3: TPanel
+        Top = 434
         inherited Button1: TButton
           OnClick = Button1Click
         end
@@ -76,7 +87,9 @@ inherited cadCategoriaF: TcadCategoriaF
         Height = 23
         Top = 112
         Width = 202
-        MaxLength = 0
+        DataField = 'ds_categoria_produto'
+        DataSource = dsCadModel
+        MaxLength = 50
         TabOrder = 2
       end
     end
