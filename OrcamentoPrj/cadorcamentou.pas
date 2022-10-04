@@ -91,12 +91,6 @@ end;
 
 procedure TcadOrcamentoF.btnAdicionarItemClick(Sender: TObject);
 begin
-  
-  with DataModuleF.qryItensOrcamentos do
-  begin
-    Close;
-    Open;
-  end;
 end;
 
 procedure TcadOrcamentoF.DBGridDblClick(Sender: TObject);
@@ -106,24 +100,6 @@ begin
   DataModuleF.qryOrcamentosclienteid.AsInteger := DataModuleF.qryClientesclienteid.AsInteger;
   cadOrcamentoF.inputCliente.Text := DataModuleF.qryClientesnome_cliente.AsString;
 
-  with DataModuleF.qryItensOrcamentos do
-  begin
-    Close;
-    SQL.Text :=
-        'SELECT ' +
-	    'OI.orcamentoitemid, ' +
-	    'OI.orcamentoid, ' +
-            'OI.produtoid, ' +
-	    'OI.produtodesc, ' +
-	    'OI.qt_produto, ' +
-	    'OI.vl_unitario, ' +
-	    'OI.vl_total ' +
-        'FROM ORCAMENTO_ITEM OI ' +
-        'WHERE OI.orcamentoid = ' + DataModuleF.qryOrcamentosorcamentoid.AsString + ' ' +
-        'ORDER BY OI.orcamentoitemid'
-        ;
-    Open;
-  end;
 end;
 
 procedure TcadOrcamentoF.DBG_NovoClick(Sender: TObject);
@@ -131,6 +107,16 @@ begin
   inherited;
 
   inputClienteId.SetFocus;
+
+  with DataModuleF.qryItensOrcamentos do
+  begin
+    Close;
+    SQL.Text :=
+        'SELECT * ' +
+        'FROM ORCAMENTO_ITEM OI WHERE 1 = 0'
+        ;
+    Open;
+  end;
 end;
 
 procedure TcadOrcamentoF.dsCadModelStateChange(Sender: TObject);
@@ -156,11 +142,6 @@ procedure TcadOrcamentoF.PageControl1Change(Sender: TObject);
 begin
   inherited;
 
-  with DataModuleF.qryItensOrcamentos do
-  begin
-    Close;
-    Open;
-  end;
 end;
 
 end.

@@ -31,6 +31,7 @@ WHERE
 ;
 
 
+
 INSERT INTO CLIENTE
     (clienteid, tipo_cliente, cpf_cnpj_cliente, nome_cliente)
 VALUES
@@ -91,9 +92,16 @@ WHERE OI.orcamentoid =
 ORDER BY OI.orcamentoitemid 
 ;
 
-
-
-	    'P.ds_produto, ' +     
-
-LEFT JOIN PRODUTO P ' +
-        'ON OI.produtoid = P.produtoid ' +              
+SELECT 
+	OI.orcamentoitemid, 
+	OI.orcamentoid, 
+    OI.produtoid, 
+    P.ds_produto, 
+	OI.produtodesc, 
+	OI.qt_produto, 
+	OI.vl_unitario, 
+	OI.vl_total 
+FROM ORCAMENTO_ITEM OI LEFT JOIN PRODUTO P 
+ON OI.produtoid = P.produtoid 
+WHERE OI.orcamentoid =  DataModuleF.qryOrcamentosorcamentoid.AsString  
+ORDER BY OI.orcamentoitemid;

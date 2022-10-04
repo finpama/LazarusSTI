@@ -1,7 +1,7 @@
 inherited cadOrcamentoF: TcadOrcamentoF
   Left = 229
   Height = 549
-  Top = 142
+  Top = 145
   Width = 356
   Caption = 'Orçamentos'
   ClientHeight = 549
@@ -253,7 +253,35 @@ inherited cadOrcamentoF: TcadOrcamentoF
         Top = 280
         Width = 266
         Color = clWindow
-        Columns = <>
+        Columns = <        
+          item
+            Title.Caption = 'orcamentoitemid'
+            FieldName = 'orcamentoitemid'
+          end        
+          item
+            Title.Caption = 'orcamentoid'
+            FieldName = 'orcamentoid'
+          end        
+          item
+            Title.Caption = 'produtoid'
+            FieldName = 'produtoid'
+          end        
+          item
+            Title.Caption = 'produtodesc'
+            FieldName = 'produtodesc'
+          end        
+          item
+            Title.Caption = 'qt_produto'
+            FieldName = 'qt_produto'
+          end        
+          item
+            Title.Caption = 'vl_unitario'
+            FieldName = 'vl_unitario'
+          end        
+          item
+            Title.Caption = 'vl_total'
+            FieldName = 'vl_total'
+          end>
         DataSource = dsItensOrcamento
         TabOrder = 8
       end

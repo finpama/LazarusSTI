@@ -1,8 +1,8 @@
 object DataModuleF: TDataModuleF
   OldCreateOrder = False
   Height = 306
-  HorizontalOffset = 253
-  VerticalOffset = 221
+  HorizontalOffset = 263
+  VerticalOffset = 326
   Width = 343
   object ZConnection: TZConnection
     ControlsCodePage = cCP_UTF8
@@ -15,7 +15,7 @@ object DataModuleF: TDataModuleF
     HostName = 'localhost'
     Port = 5432
     User = 'postgres'
-    Password = 'admsenha010.'
+    Password = 'adm123'
     Protocol = 'postgresql'
     LibraryLocation = 'C:\Program Files (x86)\PostgreSQL\10\pgAdmin 4\bin\libpq.dll'
     Left = 280
@@ -25,6 +25,7 @@ object DataModuleF: TDataModuleF
     Connection = ZConnection
     UpdateObject = updProdutos
     AfterInsert = qryProdutosAfterInsert
+    Active = True
     SQL.Strings = (
       'SELECT * FROM PRODUTO'
     )
@@ -397,19 +398,42 @@ object DataModuleF: TDataModuleF
     DeleteSQL.Strings = (
       'DELETE FROM ORCAMENTO_ITEM'
       'WHERE'
-      '  ORCAMENTO_ITEM.orcamentoitemid = :OLD_orcamentoitemid'
+      '  ORCAMENTO_ITEM.orcamentoitemid = :OLD_orcamentoitemid AND'
+      '  ORCAMENTO_ITEM.orcamentoid = :OLD_orcamentoid AND'
+      '  ORCAMENTO_ITEM.produtoid = :OLD_produtoid AND'
+      '  ORCAMENTO_ITEM.ds_produto = :OLD_ds_produto AND'
+      '  ((ORCAMENTO_ITEM.produtodesc IS NULL AND :OLD_produtodesc IS NULL) OR (ORCAMENTO_ITEM.produtodesc = :OLD_produtodesc)) AND'
+      '  ORCAMENTO_ITEM.qt_produto = :OLD_qt_produto AND'
+      '  ORCAMENTO_ITEM.vl_unitario = :OLD_vl_unitario AND'
+      '  ORCAMENTO_ITEM.vl_total = :OLD_vl_total'
     )
     InsertSQL.Strings = (
       'INSERT INTO ORCAMENTO_ITEM'
-      '  (orcamentoitemid)'
+      '  (orcamentoitemid, orcamentoid, produtoid, ds_produto, produtodesc, qt_produto, '
+      '   vl_unitario, vl_total)'
       'VALUES'
-      '  (:orcamentoitemid)'
+      '  (:orcamentoitemid, :orcamentoid, :produtoid, :ds_produto, :produtodesc, '
+      '   :qt_produto, :vl_unitario, :vl_total)'
     )
     ModifySQL.Strings = (
       'UPDATE ORCAMENTO_ITEM SET'
-      '  orcamentoitemid = :orcamentoitemid'
+      '  orcamentoitemid = :orcamentoitemid,'
+      '  orcamentoid = :orcamentoid,'
+      '  produtoid = :produtoid,'
+      '  ds_produto = :ds_produto,'
+      '  produtodesc = :produtodesc,'
+      '  qt_produto = :qt_produto,'
+      '  vl_unitario = :vl_unitario,'
+      '  vl_total = :vl_total'
       'WHERE'
-      '  ORCAMENTO_ITEM.orcamentoitemid = :OLD_orcamentoitemid'
+      '  ORCAMENTO_ITEM.orcamentoitemid = :OLD_orcamentoitemid AND'
+      '  ORCAMENTO_ITEM.orcamentoid = :OLD_orcamentoid AND'
+      '  ORCAMENTO_ITEM.produtoid = :OLD_produtoid AND'
+      '  ORCAMENTO_ITEM.ds_produto = :OLD_ds_produto AND'
+      '  ((ORCAMENTO_ITEM.produtodesc IS NULL AND :OLD_produtodesc IS NULL) OR (ORCAMENTO_ITEM.produtodesc = :OLD_produtodesc)) AND'
+      '  ORCAMENTO_ITEM.qt_produto = :OLD_qt_produto AND'
+      '  ORCAMENTO_ITEM.vl_unitario = :OLD_vl_unitario AND'
+      '  ORCAMENTO_ITEM.vl_total = :OLD_vl_total'
     )
     UseSequenceFieldForRefreshSQL = False
     Left = 168
@@ -422,21 +446,101 @@ object DataModuleF: TDataModuleF
       end    
       item
         DataType = ftUnknown
+        Name = 'orcamentoid'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'produtoid'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ds_produto'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'produtodesc'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'qt_produto'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'vl_unitario'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'vl_total'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
         Name = 'OLD_orcamentoitemid'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_orcamentoid'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_produtoid'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_ds_produto'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_produtodesc'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_qt_produto'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_vl_unitario'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_vl_total'
         ParamType = ptUnknown
       end>
   end
   object qryItensOrcamentos: TZQuery
     Connection = ZConnection
     UpdateObject = updItensOrcamentos
-    Active = True
     SQL.Strings = (
-      'SELECT * '
-      'FROM ORCAMENTO_ITEM'
+      'SELECT * FROM ORCAMENTO_ITEM'
+      'WHERE orcamentoid = :orcamentoid'
     )
-    Params = <>
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'orcamentoid'
+        ParamType = ptUnknown
+      end>
     Left = 56
     Top = 216
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'orcamentoid'
+        ParamType = ptUnknown
+      end>
     object qryItensOrcamentosorcamentoitemid: TLongintField
       FieldKind = fkData
       FieldName = 'orcamentoitemid'
@@ -507,57 +611,41 @@ object DataModuleF: TDataModuleF
   end
   object updProdutos: TZUpdateSQL
     DeleteSQL.Strings = (
-      'DELETE FROM PRODUTO P'
+      'DELETE FROM PRODUTO'
       'WHERE'
-      '    P.categoriaprodutoid = :OLD_categoriaprodutoid AND'
-      '    P.obs_produto = :OLD_obs_produto AND'
-      '    P.vl_venda_produto = :OLD_vl_venda_produto AND'
-      '    P.produto = :OLD_produto AND'
-      '    P.produtoid = :OLD_produtoid AND'
-      '    P.ds_produto = :OLD_ds_produto AND'
-      '    P.dt_cadastro_produto = :OLD_dt_cadastro_produto AND'
-      '    P.status_produto = :OLD_status_produto'
+      '  PRODUTO.produtoid = :OLD_produtoid AND'
+      '  PRODUTO.categoriaprodutoid = :OLD_categoriaprodutoid AND'
+      '  PRODUTO.ds_produto = :OLD_ds_produto AND'
+      '  ((PRODUTO.obs_produto IS NULL AND :OLD_obs_produto IS NULL) OR (PRODUTO.obs_produto = :OLD_obs_produto)) AND'
+      '  PRODUTO.vl_venda_produto = :OLD_vl_venda_produto AND'
+      '  PRODUTO.dt_cadastro_produto = :OLD_dt_cadastro_produto AND'
+      '  PRODUTO.status_produto = :OLD_status_produto'
     )
     InsertSQL.Strings = (
-      'INSERT INTO PRODUTO ('
-      '    categoriaprodutoid,'
-      '    obs_produto,'
-      '    vl_venda_produto,'
-      '    produto,'
-      '    produtoid,'
-      '    ds_produto,'
-      '    dt_cadastro_produto,'
-      '    status_produto'
-      ') VALUES (  '
-      '    :categoriaprodutoid,'
-      '    :obs_produto,'
-      '    :vl_venda_produto,'
-      '    :produto,'
-      '    :produtoid,'
-      '    :ds_produto,'
-      '    :dt_cadastro_produto,'
-      '    :status_produto'
-      ')'
+      'INSERT INTO PRODUTO'
+      '  (produtoid, categoriaprodutoid, ds_produto, obs_produto, vl_venda_produto, '
+      '   dt_cadastro_produto, status_produto)'
+      'VALUES'
+      '  (:produtoid, :categoriaprodutoid, :ds_produto, :obs_produto, :vl_venda_produto, '
+      '   :dt_cadastro_produto, :status_produto)'
     )
     ModifySQL.Strings = (
-      'UPDATE PRODUTO P SET    '
-      '    categoriaprodutoid = :categoriaprodutoid'
-      '    obs_produto = :obs_produto'
-      '    vl_venda_produto = :vl_venda_produto'
-      '    produto = :produto'
-      '    produtoid = :produtoid'
-      '    ds_produto = :ds_produto'
-      '    dt_cadastro_produto = :dt_cadastro_produto'
-      '    status_produto = :status_produto'
+      'UPDATE PRODUTO SET'
+      '  produtoid = :produtoid,'
+      '  categoriaprodutoid = :categoriaprodutoid,'
+      '  ds_produto = :ds_produto,'
+      '  obs_produto = :obs_produto,'
+      '  vl_venda_produto = :vl_venda_produto,'
+      '  dt_cadastro_produto = :dt_cadastro_produto,'
+      '  status_produto = :status_produto'
       'WHERE'
-      '    P.categoriaprodutoid = :OLD_categoriaprodutoid AND'
-      '    P.obs_produto = :OLD_obs_produto AND'
-      '    P.vl_venda_produto = :OLD_vl_venda_produto AND'
-      '    P.produto = :OLD_produto AND'
-      '    P.produtoid = :OLD_produtoid AND'
-      '    P.ds_produto = :OLD_ds_produto AND'
-      '    P.dt_cadastro_produto = :OLD_dt_cadastro_produto AND'
-      '    P.status_produto = :OLD_status_produto'
+      '  PRODUTO.produtoid = :OLD_produtoid AND'
+      '  PRODUTO.categoriaprodutoid = :OLD_categoriaprodutoid AND'
+      '  PRODUTO.ds_produto = :OLD_ds_produto AND'
+      '  ((PRODUTO.obs_produto IS NULL AND :OLD_obs_produto IS NULL) OR (PRODUTO.obs_produto = :OLD_obs_produto)) AND'
+      '  PRODUTO.vl_venda_produto = :OLD_vl_venda_produto AND'
+      '  PRODUTO.dt_cadastro_produto = :OLD_dt_cadastro_produto AND'
+      '  PRODUTO.status_produto = :OLD_status_produto'
     )
     UseSequenceFieldForRefreshSQL = False
     Left = 168
@@ -565,7 +653,17 @@ object DataModuleF: TDataModuleF
     ParamData = <    
       item
         DataType = ftUnknown
+        Name = 'produtoid'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
         Name = 'categoriaprodutoid'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ds_produto'
         ParamType = ptUnknown
       end    
       item
@@ -580,21 +678,6 @@ object DataModuleF: TDataModuleF
       end    
       item
         DataType = ftUnknown
-        Name = 'produto'
-        ParamType = ptUnknown
-      end    
-      item
-        DataType = ftUnknown
-        Name = 'produtoid'
-        ParamType = ptUnknown
-      end    
-      item
-        DataType = ftUnknown
-        Name = 'ds_produto'
-        ParamType = ptUnknown
-      end    
-      item
-        DataType = ftUnknown
         Name = 'dt_cadastro_produto'
         ParamType = ptUnknown
       end    
@@ -605,7 +688,17 @@ object DataModuleF: TDataModuleF
       end    
       item
         DataType = ftUnknown
+        Name = 'OLD_produtoid'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
         Name = 'OLD_categoriaprodutoid'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_ds_produto'
         ParamType = ptUnknown
       end    
       item
@@ -616,21 +709,6 @@ object DataModuleF: TDataModuleF
       item
         DataType = ftUnknown
         Name = 'OLD_vl_venda_produto'
-        ParamType = ptUnknown
-      end    
-      item
-        DataType = ftUnknown
-        Name = 'OLD_produto'
-        ParamType = ptUnknown
-      end    
-      item
-        DataType = ftUnknown
-        Name = 'OLD_produtoid'
-        ParamType = ptUnknown
-      end    
-      item
-        DataType = ftUnknown
-        Name = 'OLD_ds_produto'
         ParamType = ptUnknown
       end    
       item

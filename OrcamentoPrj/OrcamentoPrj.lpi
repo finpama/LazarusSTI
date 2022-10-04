@@ -107,6 +107,21 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="orc_modalClienteU"/>
       </Unit>
+      <Unit>
+        <Filename Value="orc_modalprodutosu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="orc_modalProdutosF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="orc_modalProdutosU"/>
+      </Unit>
+      <Unit>
+        <Filename Value="orc_modalnovoitem.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="orc_modalNovoItemF"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="orc_modalNovoItem"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

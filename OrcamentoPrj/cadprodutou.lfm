@@ -9,6 +9,8 @@ inherited cadProdutoF: TcadProdutoF
   inherited PageControl1: TPageControl
     Height = 550
     Width = 350
+    ActivePage = PageCadastro
+    TabIndex = 1
     inherited PagePesquisa: TTabSheet
       ClientHeight = 522
       ClientWidth = 342

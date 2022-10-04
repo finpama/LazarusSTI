@@ -1,0 +1,143 @@
+object orc_modalNovoItemF: Torc_modalNovoItemF
+  Left = 244
+  Height = 240
+  Top = 167
+  Width = 320
+  Caption = 'Adicionar item...'
+  ClientHeight = 240
+  ClientWidth = 320
+  LCLVersion = '2.2.2.0'
+  object btnClientes: TButton
+    Left = 75
+    Height = 25
+    Top = 32
+    Width = 24
+    Caption = '...'
+    OnClick = btnClientesClick
+    TabOrder = 0
+  end
+  object inputProdutoId: TDBEdit
+    Left = 16
+    Height = 23
+    Top = 33
+    Width = 59
+    DataField = 'produtoid'
+    DataSource = dsItensOrcamento
+    Alignment = taRightJustify
+    MaxLength = 0
+    TabOrder = 1
+  end
+  object labelProdutoId: TLabel
+    Left = 16
+    Height = 15
+    Top = 16
+    Width = 59
+    Caption = 'Produto Id:'
+    ParentColor = False
+  end
+  object inputProdutoDs: TDBEdit
+    Left = 16
+    Height = 23
+    Top = 81
+    Width = 283
+    DataField = 'produtodesc'
+    DataSource = dsItensOrcamento
+    Alignment = taRightJustify
+    MaxLength = 0
+    TabOrder = 2
+  end
+  object labelProdutoDs: TLabel
+    Left = 16
+    Height = 15
+    Top = 64
+    Width = 46
+    Caption = 'Produto:'
+    ParentColor = False
+  end
+  object labelClienteSel: TLabel
+    Left = 104
+    Height = 15
+    Top = 37
+    Width = 126
+    Caption = 'Selecione um Produto...'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object inputQuantidade: TDBEdit
+    Left = 160
+    Height = 23
+    Top = 161
+    Width = 51
+    DataField = 'qt_produto'
+    DataSource = dsItensOrcamento
+    Alignment = taRightJustify
+    MaxLength = 0
+    TabOrder = 3
+    OnEditingDone = inputQuantidadeEditingDone
+  end
+  object labelQuantidade: TLabel
+    Left = 160
+    Height = 15
+    Top = 144
+    Width = 26
+    Caption = 'Qtd.:'
+    ParentColor = False
+  end
+  object inputValorUni: TDBEdit
+    Left = 16
+    Height = 23
+    Top = 161
+    Width = 83
+    DataField = 'vl_unitario'
+    DataSource = dsItensOrcamento
+    Alignment = taRightJustify
+    MaxLength = 0
+    TabOrder = 4
+    OnEditingDone = inputValorUniEditingDone
+  end
+  object labelValorUni: TLabel
+    Left = 16
+    Height = 15
+    Top = 144
+    Width = 53
+    Caption = 'Valor Uni.:'
+    ParentColor = False
+  end
+  object inputTotal: TDBEdit
+    Left = 216
+    Height = 23
+    Top = 161
+    Width = 83
+    DataField = 'vl_total'
+    DataSource = dsItensOrcamento
+    Alignment = taRightJustify
+    MaxLength = 0
+    TabOrder = 5
+  end
+  object labelTotal: TLabel
+    Left = 216
+    Height = 15
+    Top = 144
+    Width = 57
+    Caption = 'Valor Total:'
+    ParentColor = False
+  end
+  object btnAdicionar: TButton
+    Left = 216
+    Height = 25
+    Top = 200
+    Width = 83
+    Caption = 'Adicionar'
+    TabOrder = 6
+  end
+  object dsItensOrcamento: TDataSource
+    DataSet = DataModuleF.qryItensOrcamentos
+    Left = 256
+    Top = 192
+  end
+end
