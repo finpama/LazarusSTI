@@ -103,6 +103,7 @@
         <Filename Value="orc_modalclienteu.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="orc_modalClienteF"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="orc_modalClienteU"/>
       </Unit>

@@ -11,6 +11,7 @@ inherited cadOrcamentoF: TcadOrcamentoF
     Width = 356
     ActivePage = PageCadastro
     TabIndex = 1
+    OnChange = PageControl1Change
     inherited PagePesquisa: TTabSheet
       ClientHeight = 521
       ClientWidth = 348
@@ -57,6 +58,7 @@ inherited cadOrcamentoF: TcadOrcamentoF
             Width = 50
             FieldName = 'vl_total_orcamento'
           end>
+        OnDblClick = DBGridDblClick
       end
       inherited Panel1: TPanel
         Top = 481
@@ -186,8 +188,9 @@ inherited cadOrcamentoF: TcadOrcamentoF
         EditLabel.Width = 178
         EditLabel.Caption = 'Cliente:'
         EditLabel.ParentColor = False
+        ReadOnly = True
         TabOrder = 4
-        Text = 'FAZER REQUEST DO CLIENTE PELO ID'
+        OnChange = inputClienteChange
       end
       object inputDataValidade: TDBDateTimePicker[12]
         Left = 38
@@ -250,35 +253,7 @@ inherited cadOrcamentoF: TcadOrcamentoF
         Top = 280
         Width = 266
         Color = clWindow
-        Columns = <        
-          item
-            Title.Caption = 'orcamentoitemid'
-            FieldName = 'orcamentoitemid'
-          end        
-          item
-            Title.Caption = 'orcamentoid'
-            FieldName = 'orcamentoid'
-          end        
-          item
-            Title.Caption = 'produtoid'
-            FieldName = 'produtoid'
-          end        
-          item
-            Title.Caption = 'produtodesc'
-            FieldName = 'produtodesc'
-          end        
-          item
-            Title.Caption = 'qt_produto'
-            FieldName = 'qt_produto'
-          end        
-          item
-            Title.Caption = 'vl_unitario'
-            FieldName = 'vl_unitario'
-          end        
-          item
-            Title.Caption = 'vl_total'
-            FieldName = 'vl_total'
-          end>
+        Columns = <>
         DataSource = dsItensOrcamento
         TabOrder = 8
       end
@@ -288,6 +263,7 @@ inherited cadOrcamentoF: TcadOrcamentoF
         Top = 248
         Width = 99
         Caption = 'Adicionar Item'
+        OnClick = btnAdicionarItemClick
         TabOrder = 9
       end
       object btnExcluirItem: TButton[17]
@@ -297,6 +273,19 @@ inherited cadOrcamentoF: TcadOrcamentoF
         Width = 88
         Caption = 'Excluir Item'
         TabOrder = 10
+      end
+      object labelClienteSel: TLabel[18]
+        Left = 90
+        Height = 15
+        Top = 120
+        Width = 113
+        Caption = 'Selecione-o ao lado...'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clGray
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
       end
     end
   end

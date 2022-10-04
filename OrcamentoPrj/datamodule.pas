@@ -44,14 +44,14 @@ type
     updClientes: TZUpdateSQL;
     ZConnection: TZConnection;
     qryProdutos: TZQuery;
-    updProdutos: TZUpdateSQL;
     qryGenerica: TZQuery;
     updCategoriaProd: TZUpdateSQL;
     qryItensOrcamentos: TZQuery;
     updItensOrcamentos: TZUpdateSQL;
+    updProdutos: TZUpdateSQL;
     procedure qryCategoriaProdAfterInsert();
     procedure qryClientesAfterInsert();
-    procedure qryOrcamentosAfterInsert(DataSet: TDataSet);
+    procedure qryOrcamentosAfterInsert();
     procedure qryProdutosAfterInsert();
   private
 
@@ -93,7 +93,7 @@ begin
   qryClientesclienteid.AsString := getSequence('cliente_clienteid');
 end;
 
-procedure TDataModuleF.qryOrcamentosAfterInsert(DataSet: TDataSet);
+procedure TDataModuleF.qryOrcamentosAfterInsert();
 begin
   qryOrcamentosorcamentoid.AsString := getSequence('orcamento_orcamentoid_seq');
 end;

@@ -1,8 +1,8 @@
 object DataModuleF: TDataModuleF
   OldCreateOrder = False
   Height = 306
-  HorizontalOffset = 242
-  VerticalOffset = 267
+  HorizontalOffset = 253
+  VerticalOffset = 221
   Width = 343
   object ZConnection: TZConnection
     ControlsCodePage = cCP_UTF8
@@ -15,7 +15,7 @@ object DataModuleF: TDataModuleF
     HostName = 'localhost'
     Port = 5432
     User = 'postgres'
-    Password = 'adm123'
+    Password = 'admsenha010.'
     Protocol = 'postgresql'
     LibraryLocation = 'C:\Program Files (x86)\PostgreSQL\10\pgAdmin 4\bin\libpq.dll'
     Left = 280
@@ -25,7 +25,6 @@ object DataModuleF: TDataModuleF
     Connection = ZConnection
     UpdateObject = updProdutos
     AfterInsert = qryProdutosAfterInsert
-    Active = True
     SQL.Strings = (
       'SELECT * FROM PRODUTO'
     )
@@ -101,39 +100,6 @@ object DataModuleF: TDataModuleF
       Required = True
       Size = 10
     end
-  end
-  object updProdutos: TZUpdateSQL
-    DeleteSQL.Strings = (
-      'DELETE FROM PRODUTO'
-      'WHERE'
-      '  PRODUTO.produtoid = :OLD_produtoid'
-    )
-    InsertSQL.Strings = (
-      'INSERT INTO PRODUTO'
-      '  (produtoid)'
-      'VALUES'
-      '  (:produtoid)'
-    )
-    ModifySQL.Strings = (
-      'UPDATE PRODUTO SET'
-      '  produtoid = :produtoid'
-      'WHERE'
-      '  PRODUTO.produtoid = :OLD_produtoid'
-    )
-    UseSequenceFieldForRefreshSQL = False
-    Left = 168
-    Top = 16
-    ParamData = <    
-      item
-        DataType = ftUnknown
-        Name = 'produtoid'
-        ParamType = ptUnknown
-      end    
-      item
-        DataType = ftUnknown
-        Name = 'OLD_produtoid'
-        ParamType = ptUnknown
-      end>
   end
   object qryCategoriaProd: TZQuery
     Connection = ZConnection
@@ -463,26 +429,14 @@ object DataModuleF: TDataModuleF
   object qryItensOrcamentos: TZQuery
     Connection = ZConnection
     UpdateObject = updItensOrcamentos
+    Active = True
     SQL.Strings = (
-      'SELECT *'
+      'SELECT * '
       'FROM ORCAMENTO_ITEM'
-      'WHERE orcamentoid = :orcamentoid'
-      'ORDER BY orcamentoitemid'
     )
-    Params = <    
-      item
-        DataType = ftUnknown
-        Name = 'ORCAMENTOID'
-        ParamType = ptUnknown
-      end>
+    Params = <>
     Left = 56
     Top = 216
-    ParamData = <    
-      item
-        DataType = ftUnknown
-        Name = 'ORCAMENTOID'
-        ParamType = ptUnknown
-      end>
     object qryItensOrcamentosorcamentoitemid: TLongintField
       FieldKind = fkData
       FieldName = 'orcamentoitemid'
@@ -550,5 +504,144 @@ object DataModuleF: TDataModuleF
       Required = True
       Precision = 983042
     end
+  end
+  object updProdutos: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM PRODUTO P'
+      'WHERE'
+      '    P.categoriaprodutoid = :OLD_categoriaprodutoid AND'
+      '    P.obs_produto = :OLD_obs_produto AND'
+      '    P.vl_venda_produto = :OLD_vl_venda_produto AND'
+      '    P.produto = :OLD_produto AND'
+      '    P.produtoid = :OLD_produtoid AND'
+      '    P.ds_produto = :OLD_ds_produto AND'
+      '    P.dt_cadastro_produto = :OLD_dt_cadastro_produto AND'
+      '    P.status_produto = :OLD_status_produto'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO PRODUTO ('
+      '    categoriaprodutoid,'
+      '    obs_produto,'
+      '    vl_venda_produto,'
+      '    produto,'
+      '    produtoid,'
+      '    ds_produto,'
+      '    dt_cadastro_produto,'
+      '    status_produto'
+      ') VALUES (  '
+      '    :categoriaprodutoid,'
+      '    :obs_produto,'
+      '    :vl_venda_produto,'
+      '    :produto,'
+      '    :produtoid,'
+      '    :ds_produto,'
+      '    :dt_cadastro_produto,'
+      '    :status_produto'
+      ')'
+    )
+    ModifySQL.Strings = (
+      'UPDATE PRODUTO P SET    '
+      '    categoriaprodutoid = :categoriaprodutoid'
+      '    obs_produto = :obs_produto'
+      '    vl_venda_produto = :vl_venda_produto'
+      '    produto = :produto'
+      '    produtoid = :produtoid'
+      '    ds_produto = :ds_produto'
+      '    dt_cadastro_produto = :dt_cadastro_produto'
+      '    status_produto = :status_produto'
+      'WHERE'
+      '    P.categoriaprodutoid = :OLD_categoriaprodutoid AND'
+      '    P.obs_produto = :OLD_obs_produto AND'
+      '    P.vl_venda_produto = :OLD_vl_venda_produto AND'
+      '    P.produto = :OLD_produto AND'
+      '    P.produtoid = :OLD_produtoid AND'
+      '    P.ds_produto = :OLD_ds_produto AND'
+      '    P.dt_cadastro_produto = :OLD_dt_cadastro_produto AND'
+      '    P.status_produto = :OLD_status_produto'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    Left = 168
+    Top = 16
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'categoriaprodutoid'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'obs_produto'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'vl_venda_produto'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'produto'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'produtoid'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ds_produto'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'dt_cadastro_produto'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'status_produto'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_categoriaprodutoid'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_obs_produto'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_vl_venda_produto'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_produto'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_produtoid'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_ds_produto'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_dt_cadastro_produto'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_status_produto'
+        ParamType = ptUnknown
+      end>
   end
 end

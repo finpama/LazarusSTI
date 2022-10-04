@@ -14,8 +14,9 @@ type
 
   TcadProdutoF = class(TcadModelF)
     btnCategorias: TButton;
-    dsProdutoCategorias: TDataSource;
     DBG_Categorias: TDBGrid;
+    dsProdutoCategorias: TDataSource;
+    inputCategoria: TEdit;
     inputStatus: TDBComboBox;
     inputData: TDBDateTimePicker;
     inputId: TDBEdit;
@@ -31,11 +32,13 @@ type
     labelProduto: TLabel;
     labelId: TLabel;
     Title2: TLabel;
-    procedure btnCategoriasClick(Sender: TObject);
+    procedure btnCategoriasClick();
     procedure Button1Click(Sender: TObject);
     procedure DBG_BuscarClick(Sender: TObject);
+    procedure DBG_CategoriasDblClick(Sender: TObject);
     procedure DBG_NovoClick(Sender: TObject);
     procedure dsCadModelStateChange(Sender: TObject);
+    procedure labelCategoriaIdClick(Sender: TObject);
   private
 
   public
@@ -51,7 +54,7 @@ implementation
 
 { TcadProdutoF }
 
-procedure TcadProdutoF.btnCategoriasClick(Sender: TObject);
+procedure TcadProdutoF.btnCategoriasClick();
 begin
   if DBG_Categorias.Visible = False then
   begin
@@ -103,6 +106,14 @@ begin
   end;
 end;
 
+procedure TcadProdutoF.DBG_CategoriasDblClick(Sender: TObject);
+begin
+  DataModuleF.qryProdutoscategoriaprodutoid.AsInteger := DataModuleF.qryCategoriaProdcategoriaprodutoid.AsInteger;
+  inputCategoria.Text := DataModuleF.qryCategoriaProdds_categoria_produto.AsString;
+
+  btnCategoriasClick();
+end;
+
 procedure TcadProdutoF.DBG_NovoClick(Sender: TObject);
 begin
   inherited;
@@ -118,6 +129,11 @@ begin
   begin
     DataModuleF.qryProdutosdt_cadastro_produto.AsDateTime := Date;
   end;
+end;
+
+procedure TcadProdutoF.labelCategoriaIdClick(Sender: TObject);
+begin
+
 end;
 
 end.

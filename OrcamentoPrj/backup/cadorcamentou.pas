@@ -24,6 +24,7 @@ type
     inputId: TDBEdit;
     inputClienteId: TDBEdit;
     inputTotal: TDBEdit;
+    labelClienteSel: TLabel;
     labelCliente: TBoundLabel;
     inputCliente: TLabeledEdit;
     labelTotal: TLabel;
@@ -32,10 +33,14 @@ type
     labelClienteId: TLabel;
     labelId: TLabel;
     Title2: TLabel;
+    procedure btnAdicionarItemClick(Sender: TObject);
     procedure btnClientesClick(Sender: TObject);
+    procedure DBGridDblClick(Sender: TObject);
     procedure DBG_BuscarClick();
     procedure DBG_NovoClick(Sender: TObject);
     procedure dsCadModelStateChange(Sender: TObject);
+    procedure inputClienteChange(Sender: TObject);
+    procedure PageControl1Change(Sender: TObject);
   private
 
   public
@@ -84,6 +89,43 @@ begin
   orc_modalClienteF.ShowModal;
 end;
 
+procedure TcadOrcamentoF.btnAdicionarItemClick(Sender: TObject);
+begin
+  
+  with DataModuleF.qryItensOrcamentos do
+  begin
+    Close;
+    Open;
+  end;
+end;
+
+procedure TcadOrcamentoF.DBGridDblClick(Sender: TObject);
+begin
+  inherited;
+
+  DataModuleF.qryOrcamentosclienteid.AsInteger := DataModuleF.qryClientesclienteid.AsInteger;
+  cadOrcamentoF.inputCliente.Text := DataModuleF.qryClientesnome_cliente.AsString;
+
+  with DataModuleF.qryItensOrcamentos do
+  begin
+    Close;
+    SQL.Text :=
+        'SELECT ' +
+	    'OI.orcamentoitemid, ' +
+	    'OI.orcamentoid, ' +
+            'OI.produtoid ' +
+	    'OI.produtodesc, ' +
+	    'OI.qt_produto, ' +
+	    'OI.vl_unitario, ' +
+	    'OI.vl_total ' +
+        'FROM ORCAMENTO_ITEM OI ' +
+        'WHERE OI.orcamentoid = ' + DataModuleF.qryOrcamentosorcamentoid.AsString + ' ' +
+        'ORDER BY OI.orcamentoitemid'
+        ;
+    Open;
+  end;
+end;
+
 procedure TcadOrcamentoF.DBG_NovoClick(Sender: TObject);
 begin
   inherited;
@@ -99,6 +141,25 @@ begin
   begin
     DataModuleF.qryOrcamentosdt_orcamento.AsDateTime := Date;
     DataModuleF.qryOrcamentosdt_validade_orcamento.AsDateTime := Date + 30;
+  end;
+end;
+
+procedure TcadOrcamentoF.inputClienteChange(Sender: TObject);
+begin
+  if Text = '' then
+     labelClienteSel.Visible := True
+  else
+     labelClienteSel.Visible := False;
+end;
+
+procedure TcadOrcamentoF.PageControl1Change(Sender: TObject);
+begin
+  inherited;
+
+  with DataModuleF.qryItensOrcamentos do
+  begin
+    Close;
+    Open;
   end;
 end;
 

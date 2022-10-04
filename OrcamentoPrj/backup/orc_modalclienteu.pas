@@ -73,8 +73,9 @@ end;
 procedure Torc_modalClienteF.DBGrid1DblClick(Sender: TObject);
 begin
   DataModuleF.qryOrcamentosclienteid.AsInteger := DataModuleF.qryClientesclienteid.AsInteger;
-
   cadOrcamentoF.inputCliente.Text := DataModuleF.qryClientesnome_cliente.AsString;
+
+  Close;
 end;
 
 end.

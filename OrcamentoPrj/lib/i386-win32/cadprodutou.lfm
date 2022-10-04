@@ -9,8 +9,6 @@ inherited cadProdutoF: TcadProdutoF
   inherited PageControl1: TPageControl
     Height = 550
     Width = 350
-    ActivePage = PageCadastro
-    TabIndex = 1
     inherited PagePesquisa: TTabSheet
       ClientHeight = 522
       ClientWidth = 342
@@ -135,7 +133,7 @@ inherited cadProdutoF: TcadProdutoF
         Left = 38
         Height = 23
         Top = 296
-        Width = 72
+        Width = 34
         DataField = 'categoriaprodutoid'
         DataSource = dsCadModel
         Alignment = taRightJustify
@@ -173,7 +171,7 @@ inherited cadProdutoF: TcadProdutoF
         TabOrder = 5
       end
       object inputData: TDBDateTimePicker[8]
-        Left = 120
+        Left = 213
         Height = 23
         Top = 296
         Width = 83
@@ -198,7 +196,7 @@ inherited cadProdutoF: TcadProdutoF
       object inputStatus: TDBComboBox[9]
         Left = 215
         Height = 23
-        Top = 296
+        Top = 338
         Width = 81
         DataField = 'status_produto'
         DataSource = dsCadModel
@@ -238,9 +236,10 @@ inherited cadProdutoF: TcadProdutoF
         Left = 38
         Height = 15
         Top = 279
-        Width = 67
-        Caption = 'Categoria Id:'
+        Width = 75
+        Caption = 'Id / Categoria:'
         ParentColor = False
+        OnClick = labelCategoriaIdClick
       end
       object labelObs: TLabel[14]
         Left = 38
@@ -251,17 +250,17 @@ inherited cadProdutoF: TcadProdutoF
         ParentColor = False
       end
       object labelData: TLabel[15]
-        Left = 118
+        Left = 203
         Height = 15
-        Top = 279
-        Width = 90
-        Caption = 'Data de Cadastro'
+        Top = 280
+        Width = 93
+        Caption = 'Data de Cadastro:'
         ParentColor = False
       end
       object labelStatus: TLabel[16]
         Left = 216
         Height = 15
-        Top = 279
+        Top = 321
         Width = 32
         Caption = 'Status'
         ParentColor = False
@@ -295,6 +294,14 @@ inherited cadProdutoF: TcadProdutoF
         ReadOnly = True
         TabOrder = 9
         Visible = False
+        OnDblClick = DBG_CategoriasDblClick
+      end
+      object inputCategoria: TEdit[19]
+        Left = 78
+        Height = 23
+        Top = 296
+        Width = 128
+        TabOrder = 10
       end
     end
   end
